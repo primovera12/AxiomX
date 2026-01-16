@@ -1,0 +1,236 @@
+/* Google Fonts - loaded via Next.js font optimization in layout.tsx */
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Fonts */
+  --font-sans: "Poppins", sans-serif;
+  --font-heading: "Alexandria", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Shadcn theme colors */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Custom Axiom X Colors */
+  --color-primary-green: #53ac70;
+  --color-primary-dark: #19342c;
+  --color-forest-green: #3f7537;
+  --color-accent-lime: #d4fb50;
+  --color-neutral-light: #f5f7f6;
+  --color-neutral-medium: #ececec;
+  --color-neutral-dark: #373737;
+  --color-form-input: #519b66;
+  --color-status-transit: #db5e54;
+  --color-status-shipped: #edc771;
+  --color-status-delivered: #66c5a6;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Axiom X Primary Colors */
+  --primary-green: #53ac70;
+  --primary-dark: #19342c;
+  --forest-green: #3f7537;
+  --accent-lime: #d4fb50;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-light: #f5f7f6;
+  --gray-medium: #ececec;
+  --gray-dark: #373737;
+
+  /* Form Colors */
+  --form-input-bg: #519b66;
+
+  /* Status Colors */
+  --status-transit: #db5e54;
+  --status-shipped: #edc771;
+  --status-delivered: #66c5a6;
+
+  /* Shadcn default theme - customized for Axiom X */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #53ac70;
+  --primary-foreground: #ffffff;
+  --secondary: #19342c;
+  --secondary-foreground: #ffffff;
+  --muted: #f5f7f6;
+  --muted-foreground: #373737;
+  --accent: #d4fb50;
+  --accent-foreground: #19342c;
+  --destructive: #db5e54;
+  --border: #ececec;
+  --input: #ececec;
+  --ring: #53ac70;
+  --chart-1: #53ac70;
+  --chart-2: #19342c;
+  --chart-3: #3f7537;
+  --chart-4: #d4fb50;
+  --chart-5: #66c5a6;
+  --sidebar: #f5f7f6;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #53ac70;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d4fb50;
+  --sidebar-accent-foreground: #19342c;
+  --sidebar-border: #ececec;
+  --sidebar-ring: #53ac70;
+}
+
+.dark {
+  --background: #19342c;
+  --foreground: #ffffff;
+  --card: #1a3a30;
+  --card-foreground: #ffffff;
+  --popover: #1a3a30;
+  --popover-foreground: #ffffff;
+  --primary: #53ac70;
+  --primary-foreground: #ffffff;
+  --secondary: #3f7537;
+  --secondary-foreground: #ffffff;
+  --muted: #1a3a30;
+  --muted-foreground: #ececec;
+  --accent: #d4fb50;
+  --accent-foreground: #19342c;
+  --destructive: #db5e54;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #53ac70;
+  --chart-1: #53ac70;
+  --chart-2: #d4fb50;
+  --chart-3: #66c5a6;
+  --chart-4: #3f7537;
+  --chart-5: #edc771;
+  --sidebar: #1a3a30;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #53ac70;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d4fb50;
+  --sidebar-accent-foreground: #19342c;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #53ac70;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Alexandria", sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-heading {
+    font-family: "Alexandria", sans-serif;
+  }
+
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+/* Marquee animation for partners section */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.84) 0%,
+    rgba(0, 0, 0, 0.48) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Section gradient */
+.section-gradient-green {
+  background: linear-gradient(135deg, #53ac70 0%, #3f7537 100%);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
