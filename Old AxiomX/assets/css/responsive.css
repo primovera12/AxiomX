@@ -1,0 +1,1075 @@
+/* XL Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1449px) {
+    .single-item button {
+        font-size: 30px;
+        height: 90px;
+        width: 400px;
+    }
+
+}
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .container{
+        max-width: 1170px;
+    }
+    .hero-slider .owl-nav .owl-prev {
+        left: -20px;
+    }
+    .hero-slider .owl-nav .owl-next {
+        right: -20px;
+    }
+    .snapshot-info-wrap {
+        padding-right: 75px;
+        padding-left: 25px;
+    }
+    .snapshot-card {
+        margin-top: -85px;
+    }
+    .partners-wrap {
+        gap: 30px;
+    }
+    .our-vision-area {
+        padding: 220px 0;
+    }
+    .value-item:nth-child(4) .value-note {
+        left: -112%;
+    }
+    .value-note {
+        padding: 22px 20px;
+        width: 530px;
+        font-size: 22px;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .hero-slider .owl-nav .owl-prev {
+        left: 15px;
+    }
+    .hero-slider .owl-nav .owl-next {
+        right: 15px;
+    }
+    .hero-slider .owl-nav button {
+        width: 55px;
+        height: 54px;
+        font-size: 22px !important;
+        bottom: 30px;
+    }
+  .value-item:nth-child(4) .value-note {
+        left: -112%;
+    }
+    .value-note {
+        padding: 20px 20px;
+        width: 460px;
+        font-size: 20px;
+    }
+    .brand-value-video {
+        width: 130px;
+        height: 200px;
+    }
+    .value-icon svg {
+        max-width: 60px;
+    }
+    .value-item h4 {
+        font-size: 20px;
+    }
+    .snapshot-card {
+        padding: 20px 20px;
+        gap: 0 15px;
+    }
+    .header-wrap {
+        gap: 30px;
+    }
+    .mainmenu ul {
+        gap: 0 28px;
+    }
+    .header-btn a {
+        padding: 8px 10px;
+        min-width: 118px;
+    }
+    .mainmenu ul li a {
+        font-size: 14px;
+    }
+    .snapshot-info-wrap {
+        padding-right: 90px;
+    }
+    header .container {
+        padding: 0 16px;
+    }
+    .info-box h2 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+    .info-box p {
+        font-size: 16px;
+    }
+    .info-box p span {
+        font-size: 15px;
+    }
+    .title-box {
+        width: 150px;
+        height: 170px;
+    }
+    .title-box h3 {
+        font-size: 40px;
+    }
+    .partners-wrap {
+        gap: 20px;
+    }
+    .partners-logo {
+        height: 80px;
+    }
+    .logo-long {
+        width: auto;
+        max-height: 34px !important;
+    }
+    .partners-logo img {
+        max-height: 75px;
+    }
+    .partners-main {
+        height: 80px;
+        overflow: hidden;
+    }
+    .about-box {
+        padding: 50px 50px;
+        height: 600px;
+    }
+    .about-info {
+        padding-right: 0;
+    }
+    .services-wrapper {
+        border-radius: 32px;
+        padding: 50px 60px;
+    }
+    .story-wrapper {
+        padding: 35px;
+    }
+    .story-title h2 {
+        font-size: 30px;
+    }
+    .our-vision-area {
+        padding: 180px 0;
+    }
+    .play-btn {
+        padding-left: 80px;
+    }
+    .team-info h2 {
+        font-size: 45px;
+    }
+    .team-info h3 {
+        font-size: 22px;
+    }
+    .team-info p {
+        font-size: 18px;
+    }
+    .join-team a {
+        font-size: 24px;
+        height: 76px;
+        width: 360px;
+    }
+    .shipment-traking-wrapper {
+        padding: 50px 40px;
+    }
+    .traking-info h3 {
+        font-size: 28px;
+    }
+    .traking-code h4 {
+        font-size: 22px;
+    }
+    .traking-code input {
+        width: 270px;
+        height: 50px;
+    }
+    .traking-code {
+        gap: 25px;
+    }
+    .delivery-box {
+        width: 500px;
+    }
+    .section-title h2 {
+        font-size: 45px;
+    }
+    .section-title h3 {
+        font-size: 24px;
+    }
+    .section-title p {
+        font-size: 20px;
+    }
+    .single-item label {
+        font-size: 20px;
+    }
+    .single-item input {
+        height: 80px;
+        font-size: 16px;
+    }
+    .single-item textarea {
+        height: 180px;
+        font-size: 16px;
+    }
+    .single-item button {
+        font-size: 28px;
+        height: 80px;
+        width: 360px;
+    }
+    .contact-item {
+        font-size: 24px;
+        padding: 10px 22px;
+    }
+    .contact-info {
+        gap: 20px;
+        margin-top: 80px;
+    }
+    .footer-widget.widget-last p {
+        font-size: 12px;
+    }
+    .team-member:after {
+        height: 450px;
+    }
+    .service-title h2 {
+        font-size: 45px;
+    }
+    .services-tags a {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+
+
+
+}
+ 
+
+
+
+/* SM Small Device 991px. */
+@media only screen and (max-width: 991px) {
+   .header-wrap {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    padding: 24px;
+    padding-top: 100px;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+
+}
+.menu_close{
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    padding:8px 10px;
+    color: #000;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    line-height: 1;
+    height: auto;
+    background-color: transparent;
+}
+.menu_close i{
+    font-size: 28px;
+    font-weight: 400;
+}
+.mainmenu ul {
+    align-items: self-start;
+    gap: 20px;
+    flex-direction: column;
+}
+.mainmenu li {
+    width: 100%;
+}
+.mainmenu li a{
+    width: 100%;
+    font-size: 18px;
+}
+.header-btn {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #fff;
+}
+.header-btn a {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+header .container {
+    padding: 0 25px;
+}
+ .hero-slider-item {
+    height: 550px;
+    padding: 0 50px;
+    border-radius: 15px;
+    padding-bottom: 130px;
+}
+.hero-content h1 {
+    font-size: 40px;
+}
+.hero-content {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero-description {
+    max-width: 440px;
+    margin: 0 auto;
+}
+.hero-content .hero-btns {
+    margin-top: 20px;
+    justify-content: center;
+    border: none;
+}
+.snapshot-info-wrap {
+    padding-right: 0;
+    padding: 0 120px;
+}
+.snapshot-card {
+    margin-top: -85px;
+}
+.snapshot-card {
+    padding: 20px 20px;
+    gap: 0 15px;
+}
+.hero-slider .owl-nav button {
+    width: 60px;
+    height: 60px;
+    font-size: 22px !important;
+}
+.hero-slider .owl-nav .owl-prev {
+    left: 15px;
+}
+.hero-slider .owl-nav .owl-next {
+    right: 15px;
+}
+.custom-btn {
+    padding: 12px 20px;
+}
+.info-box h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.services-info-area {
+    padding: 70px 0;
+}
+.info-box {
+    text-align: center;
+    padding: 15px 0;
+}
+.partners-title h2 {
+    font-size: 24px;
+}
+.menu_trigger {
+    display: inline-block;
+    font-size: 30px;
+    color: #53ac71;
+    cursor: pointer;
+    border: none;
+    padding: 5px 6;
+    line-height: 1;
+    height: a;
+    background-color: transparent;
+}
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+}
+.header-wrap.active {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .title-box {
+        width: 130px;
+        height: 150px;
+    }
+    .title-box h3 {
+        font-size: 38px;
+    }
+    .partners-wrap {
+        gap: 20px;
+    }
+    .partners-logo {
+        height: 75px;
+    }
+    .logo-long {
+        width: auto;
+        max-height: 30px !important;
+    }
+    .partners-logo img {
+        max-height: 70px;
+    }
+    .partners-main {
+        height: 75px;
+    }
+    .account-info-btns a {
+        font-size: 18px;
+        padding: 14px 24px;
+    }
+    .about-slider .owl-nav button {
+        width: 57px;
+        height: 57px;
+        top: -123px;
+    }
+    .about-box {
+        padding: 50px 50px;
+        height: 650px;
+    }
+    .about-card {
+        border-radius: 24px;
+        height: 100px;
+    }
+    .about-info {
+        padding-right: 0;
+    }
+    .services-wrapper {
+        border-radius: 28px;
+        padding: 50px 50px;
+    }
+    .service-title h2 {
+        font-size: 40px;
+        padding-right: 50px;
+    }
+    .accordion-button {
+        font-size: 32px;
+    }
+    .services-content p {
+        font-size: 16px;
+    }
+    .accordion-item.active {
+        padding-left: 40px;
+    }
+    .services-tags a {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+    .story-wrapper {
+        padding: 40px;
+        text-align: center;
+    }
+    .story-title h2 {
+        font-size: 30px;
+    }
+    .story-title{
+        margin-bottom: 25px;
+    }
+    .our-vision-area {
+        padding: 130px 0;
+    }
+
+    .hero-btns {
+        justify-content: flex-start;
+        border: none;
+    }
+    .brand-value-area {
+        padding-top: 60px;
+    }
+    .brand-title {
+        margin-bottom: 35px;
+    }
+    .brand-value-video {
+        width: 110px;
+        height: 180px;
+    }
+    .brand-value-video a {
+        font-size: 32px;
+    }
+    .value-icon svg {
+        max-width: 50px;
+    }
+    .value-item h4 {
+        font-size: 20px;
+    }
+    .value-note {
+        padding: 15px 15px;
+        width: 410px;
+        font-size: 18px;
+        margin-top:55px;
+    }
+    .value-item:hover .value-note {
+        margin-top: 35px;
+    }
+    .value-note::after {
+        width: 45px;
+        height: 28px;
+        top: -25px;
+    }
+    .value-item:nth-child(1) .value-note::after {
+        left: 35%;
+    }
+    .value-item:nth-child(2) .value-note::after {
+        left: 33%;
+    }
+.value-item:nth-child(3) .value-note::after {
+    left: 32%;
+}
+.value-item:nth-child(4) .value-note::after {
+    left: 62%;
+}
+.value-item:nth-child(4) .value-note {
+    left: -140%;
+}
+.team-info {
+    padding-top: 20px;
+}
+.team-info h2 {
+    font-size: 40px;
+}
+.team-info h3 {
+    font-size: 20px;
+}
+.team-info p {
+    font-size: 16px;
+}
+.join-team a {
+    font-size: 20px;
+    height: 60px;
+    width: 281px;
+    justify-content: center;
+    padding: 10px 30px;
+}
+.team-member {
+    padding: 0 35px;
+}
+.team-member:after {
+    height: 360px;
+    border-radius: 24px;
+}
+.shipment-traking-wrapper {
+    padding: 40px 24px;
+    border-radius: 24px;
+    margin-bottom: 50px;
+}
+.delivery-box {
+    position: absolute;
+    bottom: -40px;
+    right: -80px;
+    width: 420px;
+}
+.traking-info h3 {
+    font-size: 22px;
+}
+.traking-code h4 {
+    font-size: 18px;
+}
+.traking-code {
+    gap: 20px;
+    margin-top: 25px;
+}
+.traking-code input {
+    width: 260px;
+    height: 45px;
+}
+.shipment-stats-card {
+    border-radius: 20px;
+    padding: 20px;
+}
+.card-title {
+    font-size: 20px;
+}
+.filter-btn {
+    padding: 4px 16px;
+    font-size: 14px;
+}
+.shipment-info-table {
+    border-radius: 20px;
+    padding: 24px;
+    padding-bottom: 10px;
+}
+.section-title h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.section-title h3 {
+    font-size: 24px;
+}
+.section-title p {
+    font-size: 18px;
+}
+.single-item input {
+    height: 70px;
+    padding: 10px 30px;
+    font-size: 16px;
+}
+.single-item label {
+    font-size: 20px;
+    padding-left: 30px;
+}
+.single-item textarea {
+    height: 180px;
+    padding: 20px 30px;
+    font-size: 16px;
+}
+.single-item button {
+    font-size: 24px;
+    height: 70px;
+    width: 300px;
+}
+.contact-info {
+    gap: 15px;
+    margin-top: 50px;
+}
+.contact-item {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.footer-widget li a {
+    font-size: 14px;
+}
+
+
+}
+
+
+
+/* SM Small Device :320px. */
+@media only screen and (max-width: 767px) {
+   .story-wrapper {
+        padding: 32px;
+        text-align: center;
+    }
+    .story-title h2 {
+        font-size: 25px;
+    }
+    .story-title{
+        margin-bottom: 25px;
+    }
+    .brand-value-wrapper {
+        display: block;
+    }
+    .value-wrap {
+        gap: 25px 0;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 30px;
+    }
+    .brand-value-video {
+        width: 100%;
+        height: 280px;
+        border-radius: 12px;
+    }
+    .value-item {
+        padding: 50px 30px;
+        border-right: 0;
+        border-bottom: 1px solid #000;
+    }
+    .value-note {
+        padding: 13px 16px;
+        font-size: 14px;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        right: 0;
+    }
+    .join-team a {
+        font-size: 20px;
+        height: 64px;
+        width: 280px;
+        padding: 10px 30px;
+    }
+    .team-member {
+        max-width: 400px;
+        padding: 0 25px;
+        margin-top: 60px;
+    }
+    .team-member:after {
+        height: 340px;
+    }
+    .team-info h2 {
+        font-size: 40px;
+    }
+    .team-info h3 {
+        font-size: 20px;
+    }
+    .team-info p {
+        font-size: 16px;
+    }
+    .team-info {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .single-item button {
+        font-size: 24px;
+        height: 70px;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .contact-info {
+        gap:20px;
+        margin-top: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+.contact-item {
+    font-size: 20px;
+    padding: 10px 24px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.footer-left {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.footer-widget {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.copyright-text {
+    margin-top: 0px;
+}
+.newslatter-form{
+    padding: 0 20px;
+}
+.single-item textarea {
+    border-radius: 12px;
+}
+.single-item textarea {
+    width: 100%;
+    height: 140px;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+.single-item input {
+    width: 100%;
+    height: 60px;
+    padding: 10px 24px;
+    font-size: 16px;
+}
+.single-item label {
+    margin-bottom: 15px;
+    padding-left: 0px;
+    font-size: 18px;
+}
+.logo img {
+    width: 110px;
+}
+header {
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+.hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 0px;
+    height: auto;
+}
+.hero-slider-item {
+    padding-top: 60px;
+    padding-bottom: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+}
+
+.hero-btns {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.hero-btns a{
+    width: 100%;
+}
+.snapshot-info-wrap {
+    padding-right: 0;
+    padding: 0;
+}
+.snapshot-card {
+    margin-top: 25px;
+}
+.snapshot-icon {
+    width: 60px;
+    flex-shrink: 0;
+}
+.partners-wrap {
+    width: 100%;
+    display: block;
+}
+.title-box {
+    width: 100%;
+    height: 100px;
+    flex-shrink: 0;
+    margin-bottom: 25px;
+}
+.title-box br {
+    display: none;
+}
+.account-info-btns {
+    gap: 16px;
+    width: auto;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+.account-info-btns a {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 20px;
+}
+.about-box {
+    padding: 30px 15px;
+    border-radius: 16px;
+    height: auto;
+}
+.about-info {
+    padding-right: 0;
+}
+.about-note {
+    text-align: center;
+    margin-top: 60px;
+}
+.about-card {
+    padding: 20px;
+    border-radius: 12px;
+    height: auto;
+}
+.about-note p {
+    font-size: 13px;
+}
+.about-note p br {
+    display: none;
+}
+.about-slider .owl-nav button {
+    width: 50px;
+    height: 50px;
+    top: -80px;
+}
+.partners-logo {
+    height: 70px;
+}
+.partners-logo img {
+    max-height: 64px;
+}
+.logo-long {
+    max-height: 28px !important;
+}
+.partners-main {
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.services-wrapper {
+    border-radius: 20px;
+    padding: 25px 15px;
+}
+.service-title h2 {
+    font-size: 32px;
+    padding-right: 30px;
+}
+.accordion-item.active img.x-logo {
+    display: none;
+}
+.accordion-item::after {
+    height: 100%;
+    display: none;
+}
+.accordion-item.active {
+    padding-left: 0px;
+}
+.accordion-button {
+    font-size: 20px;
+}
+.service-feature img {
+    width: 100%;
+    border-radius: 10px;
+}
+.services-content p {
+    font-size: 14px;
+}
+.services-content p br{
+    display: none;
+}
+.accordion-button::after {
+    width: 24px;
+    height: 22px;
+    background-size: 24px;
+}
+.accordion-item {
+    margin-bottom: 15px;
+}
+.services-tags a {
+    font-size: 13px;
+    padding: 8px 14px;
+}
+.our-vision-area {
+    padding: 80px 0;
+}
+.content-wrap h2 {
+    font-size: 30px;
+}
+.vision-content {
+    text-align: center;
+}
+.play-btn {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 50px;
+}
+.play-btn a img {
+    width: 90px;
+}
+.brand-value-area {
+    padding-top: 60px;
+}
+.value-note {
+    padding: 13px 16px;
+    font-size: 14px;
+    top: 100%;
+    left: 0 !important;
+    width: 100% !important;
+    right: 0 !important;
+    margin-top: -20px !important;
+}
+.value-item:hover .value-icon svg {
+    transform: scale(1.2);
+    top: -10px;
+}
+.value-note::after {
+    width: 40px;
+    height: 28px;
+    content: '';
+    top: -26px;
+    left: 50% !important;
+    z-index: -1;
+    margin-left: -15px;
+}
+.our-team-area {
+    padding: 40px 0;
+}
+.shipment-traking-wrapper {
+    padding:30px 25px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    margin-top: 80px;
+}
+.delivery-box {
+    display: none;
+}
+.traking-info h3 {
+    font-size: 28px;
+    text-align: center;
+}
+.traking-code {
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.traking-code h4 {
+    font-size: 24px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.shipment-info-table {
+    border-radius: 12px;
+    padding: 15px 10px;
+    padding-bottom: 10px;
+}
+.card-title {
+    font-size: 20px;
+}
+.tracking-table thead th {
+    font-size: 12.5px;
+}
+.tracking-table tbody td {
+    font-size: 12.5px;
+}
+.shipment-info-table table {
+    width: 500px;
+}
+.shipment-stats-card {
+    border-radius: 12px;
+    padding: 15px 10px;
+}
+element.style {
+    display: block;
+    box-sizing: border-box;
+    height: 300px !important;
+    width: 100%;
+}
+.contact-area {
+    padding-top: 0;
+}
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.section-title h3 {
+    font-size: 20px;
+}
+.section-title p {
+    font-size: 15px;
+}
+.hero-slider .owl-nav button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px !important;
+}
+.brand-title h2 {
+    font-size: 30px;
+}
+.brand-title {
+    margin-bottom: 35px;
+}
+.hero-slider-item::before {
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.40) 50%);
+}
+.card-header {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* SM Small Device :550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+  
+    
+    
+ 
+}
