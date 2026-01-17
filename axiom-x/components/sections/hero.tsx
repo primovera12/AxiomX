@@ -16,6 +16,7 @@ const heroSlides = [
     description:
       "Your last-mile delivery, warehousing, and back-office operations hold untapped potential. Axiom X unlocks it — transforming complexity into execution, insight, and measurable growth. From inception to final revenue touchpoint, we power the unseen.",
     backgroundVideo: "/videos/video-1.mov",
+    backgroundImage: "",
     ctaPrimary: "Speak to an Expert",
   },
   {
@@ -23,7 +24,8 @@ const heroSlides = [
     headline: "Are you Searching\nfor X ?",
     description:
       "Your operations have untapped potential. Axiom x helps you find it and turn it into execution, insight, and growth. From first mile to final revenue touchpoint, we power the unseen.",
-    backgroundVideo: "/videos/video-2.mp4",
+    backgroundVideo: "",
+    backgroundImage: "/images/backgrounds/bg-1.jpg",
     ctaPrimary: "Speak to an Expert",
   },
 ];
@@ -74,16 +76,26 @@ export function HeroSection() {
                   className="flex-[0_0_100%] min-w-0 relative"
                   style={{ height: "640px" }}
                 >
-                  {/* Background Video */}
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover rounded-[15px]"
-                  >
-                    <source src={slide.backgroundVideo} type="video/mp4" />
-                  </video>
+                  {/* Background Video or Image */}
+                  {slide.backgroundVideo ? (
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover rounded-[15px]"
+                    >
+                      <source src={slide.backgroundVideo} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={slide.backgroundImage}
+                      alt="Hero background"
+                      fill
+                      className="absolute inset-0 w-full h-full object-cover rounded-[15px]"
+                      priority
+                    />
+                  )}
 
                   {/* Dark Gradient Overlay */}
                   <div

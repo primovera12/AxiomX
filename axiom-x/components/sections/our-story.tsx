@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export function OurStorySection() {
   return (
-    <section id="our-story">
+    <section id="our-story" className="mt-[30px] mb-[60px]">
       <div className="container-axiom">
-        {/* Story Wrapper - CSS: background: #53ac70, padding: 50px, border-radius: 20px */}
-        <div className="bg-[#53ac70] p-[50px] rounded-[20px]">
+        {/* Story Wrapper - CSS: background: darker green #3f8f5a, padding: 50px, border-radius: 20px */}
+        <div className="bg-[#3f8f5a] p-[50px] rounded-[20px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Left: Title */}
             <div>

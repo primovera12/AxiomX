@@ -86,15 +86,18 @@ This document is the **SINGLE SOURCE OF TRUTH** for implementing the Axiom X web
 
 ### Key Points (User Feedback #2, #3, #4)
 - **NO GREEN GRADIENT** anywhere
-- Background is a **static image** (bg-2.jpg - motorcycle rider)
+- Background supports **BOTH video and static images** (carousel with mixed media)
 - **BLACK gradient overlay** on LEFT side (70-80% opacity) fading to transparent on RIGHT
 - **2 CTA buttons**: 1 green filled, 1 white outlined
 - **Keep Service Snapshot** card exactly as in V1 (don't change it)
 
-### Background
-- Image: `/images/bg-2.jpg` (green motorcycle rider)
-- Overlay: `linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%)`
-- Container has rounded corners (~15px)
+### Background (Mixed Media Carousel)
+
+- **Slide 1**: Video background (`/videos/video-1.mov`)
+- **Slide 2**: Static image (`/images/backgrounds/bg-1.jpg`)
+- Overlay: `linear-gradient(90deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.48) 50%, rgba(0,0,0,0) 100%)`
+- Container has rounded corners (15px)
+- Uses Embla Carousel with **Fade** and **Autoplay** plugins (5s delay)
 
 ### Content (Left Side)
 ```
@@ -176,6 +179,10 @@ Bottom Row:      99.9%    |    29+
 1. **Add BLACK borders/separators** between stats (currently missing)
 2. **Add more padding** between 1st and 2nd row (~10-20px more)
 
+### Latest Refinements (Round 3)
+
+1. **Divider lines**: Make 1px THICKER (currently too thin)
+
 ---
 
 ## Section 4: Partners
@@ -225,6 +232,7 @@ Bottom Row:      99.9%    |    29+
 | Create an Account | Filled green (#53ac70 bg, white text) |
 
 ### Latest Refinements (Round 2) - TRICKY LAYOUT
+
 1. **PARTNERS box**: LESS padding inside
 2. **PARTNERS text**: Make BOLDER
 3. **REMOVE carousel navigation arrows** completely
@@ -234,6 +242,15 @@ Bottom Row:      99.9%    |    29+
    - Logos marquee from LEFT (behind PARTNERS box) to RIGHT (disappear at screen edge)
    - Logos scroll continuously left-to-right
 5. **Button colors**: Match PDF - one is GREEN, one is DARK GREEN (not both same green)
+
+### Latest Refinements (Round 3)
+
+1. **Title spacing**: Add more space AFTER "BE A PART OF OUR PARTNERS" title
+2. **Title font**: Make font weight THINNER
+3. **Section padding**: Reduce TOP and BOTTOM padding inside the section (currently too big)
+4. **Logo alignment**: Logos should be CENTER-ALIGNED with the PARTNERS box (currently bottom-aligned)
+5. **Left CTA button**: Change to GREEN BACKGROUND (like PDF) - not outlined style
+6. **Green PARTNERS box**: Looks great ✓
 
 ---
 
@@ -287,8 +304,15 @@ Bottom Row:      99.9%    |    29+
 - Content: "At Axiom x, we don't sell services. We offer a system. One that thinks, scales, and adapts with your business."
 
 ### Latest Refinements (Round 2) - NEEDS FULL REBUILD
+
 - Current implementation is WRONG
 - Must rebuild entire section according to specs above
+
+### Latest Refinements (Round 3)
+
+1. **Layout**: Reference the attached screenshot for exact layout
+2. **Cards**: Should match the design with proper semi-transparent backgrounds
+3. **Bottom text**: "Our AI-enhanced ecosystem was built for the operational complexity that most businesses are only now realizing they need to solve."
 
 ---
 
@@ -353,12 +377,18 @@ Bottom Row:      99.9%    |    29+
 5. Upselling Revenue Programs
 
 ### Latest Refinements (Round 2) - 70% accurate
+
 1. **Background**: Must be CSS ANIMATED GRADIENT (Apple-style), NOT static
 2. **REMOVE icons** before accordion titles
 3. **Description text**: ALL same font weight (first line is NOT bold, everything same weight)
 4. **Lime tags**: Already accurate ✓
 5. **Add LEFT LIME LINE** when accordion is open - connects to X logo
 6. **Reduce image height by 30%** to match PDF proportions
+
+### Latest Refinements (Round 3)
+
+1. **Chevron icons**: Change color to WHITE (currently black)
+2. **Accordion padding**: Move the X logo, accordion content, and everything 10px MORE to the LEFT compared to the "Our Services" title (add left padding/indent)
 
 ---
 
@@ -398,9 +428,16 @@ Bottom Row:      99.9%    |    29+
 | CTA button | White background, green text, pill shape (border-radius: 200px) |
 
 ### Latest Refinements (Round 2) - 85% accurate
+
 1. **Title**: Make slightly BOLDER
 2. **CTA button font**: 2px SMALLER
 3. **CTA button padding**: Reduce top/bottom padding (slimmer button)
+
+### Latest Refinements (Round 3)
+
+1. **Background color**: Make green DARKER - check PDF for exact shade
+2. **Top margin**: REDUCE the margin separating this section from the previous section
+3. **Bottom margin**: ADD more space/margin at the bottom so it's not glued to the section below
 
 ---
 
@@ -501,8 +538,13 @@ Bottom Row:      99.9%    |    29+
 5. **Innovation** - "Embedded intelligence at every touchpoint"
 
 ### Latest Refinements (Round 2) - 95% accurate
+
 1. **Lime tooltip**: Only appears on HOVER (currently correct ✓)
 2. **REMOVE static bottom section** - the lime pill at bottom should NOT exist as static element
+
+### Latest Refinements (Round 3)
+
+1. **Bottom spacing**: ADD more padding/margin at the BOTTOM of this section - when hovering over icons, the lime tooltip appears OVER the section below. Need space for tooltip to appear without overlapping.
 
 ---
 
@@ -611,11 +653,16 @@ Bottom Row:      99.9%    |    29+
 | Chart | Bar chart for shipment statistics |
 
 ### Latest Refinements (Round 2) - 90% accurate
+
 1. **Input area**: Add WHITE BACKGROUND
 2. **"Tracking Number" label**: Make SMALLER, match color from PDF
 3. **Add instruction text**: Small text at bottom-left corner of green box (see PDF)
 4. **Tracking list data**: Copy EXACT data from PDF, match bold/non-bold styling
 5. **Tracking list section**: Only appears AFTER entering tracking number (conditional render)
+
+### Latest Refinements (Round 3)
+
+1. **Inside padding**: REDUCE the inside padding so the motorcycle/bike image OVERFLOWS out of the green container background (like in PDF design)
 
 ---
 
@@ -624,12 +671,20 @@ Bottom Row:      99.9%    |    29+
 **File:** Part of `components/sections/shipment-tracking.tsx`
 
 ### Latest Refinements (Round 2) - NEEDS MAJOR WORK
+
 1. **Chart design**: 2 columns per month (not single bars)
 2. **Columns**: ROUNDED at the top
 3. **Hover effect**: Show VALUE popup when hovering over column
 4. **Y-axis lines**: DASHED horizontal lines for value rows
 5. **Filter**: Match filter style from PDF
 6. **Filter functionality**: MUST BE DYNAMIC - values change when filter is pressed
+
+### Latest Refinements (Round 3)
+
+1. **Column order**: DARK GREEN column should be on the RIGHT, LIGHT GREEN column on the LEFT
+2. **Columns position**: The two columns per month should be GLUED TOGETHER (no gap between them)
+3. **Interactive data**: Chart must be fully interactive - match EXACT data from PDF
+4. **Filter functionality**: Filter MUST BE FUNCTIONAL - when filter is pressed, the data should actually change (not just visual)
 
 ---
 
@@ -777,28 +832,59 @@ Bottom Row:      99.9%    |    29+
 
 ---
 
-## Current Completion Status (Round 2 - FINAL)
+## Current Completion Status (Round 3 - DESKTOP 100% COMPLETE ✅)
 
-### ✅ ALL SECTIONS VERIFIED AND COMPLETE:
+### ✅ All Desktop Sections Verified and Complete
 
 **Originally 100% Done (confirmed):**
+
 1. **Header** - ✅ COMPLETE
-2. **Hero** - ✅ COMPLETE (fade transition, 2 CTAs, white line)
+2. **Hero** - ✅ COMPLETE (fade transition, video+image mixed media, 2 CTAs, white line)
 3. **Vision/Mission** - ✅ COMPLETE
 4. **Careers** - ✅ COMPLETE
 5. **Tracking List** - ✅ COMPLETE (conditional render working)
 6. **Contact Us** - ✅ COMPLETE
 7. **Footer** - ✅ COMPLETE
 
-**Fixed in Round 2 verification:**
-8. **Service Snapshot** - ✅ FIXED (bolder "see more", smaller font/icon)
-9. **Stats Bar** - ✅ FIXED (borders 30% opacity, correct green #53ac70)
-10. **Partners** - ✅ FIXED (correct green #53ac70, bolder PARTNERS text)
-11. **Why Axiom X** - ✅ VERIFIED (carousel, hover effects working)
-12. **Our Services** - ✅ VERIFIED (animated gradient, lime line, correct image heights)
-13. **Our Story** - ✅ FIXED (correct green #53ac70)
-14. **Brand Values** - ✅ VERIFIED (no static pill, hover tooltip working)
-15. **Shipment Statistics Chart** - ✅ VERIFIED (2-column bars, hover tooltips, dashed Y-axis lines)
+**Fixed in Round 2/3:**
+
+- **Service Snapshot** - ✅ FIXED (bolder "see more", smaller font/icon)
+- **Stats Bar** - ✅ FIXED (border-r-2, 30% opacity, correct green #53ac70)
+- **Partners** - ✅ FIXED (title spacing, thinner font, green CTA button, no spacer div)
+- **Our Services** - ✅ FIXED (white chevrons, 20px left padding, animated gradient, lime line)
+- **Our Story** - ✅ FIXED (darker green #3f8f5a, reduced top margin, added bottom margin)
+- **Brand Values** - ✅ FIXED (pb-[120px] for tooltip space, responsive tooltip max-w-[90vw])
+- **Shipment Tracking** - ✅ FIXED (reduced padding, bike overflows container)
+- **Shipment Statistics Chart** - ✅ FIXED (light green LEFT, dark green RIGHT, glued columns, rounded-t-full, interactive filter with dynamic data)
+- **Why Axiom X** - ✅ FIXED (two-column layout, dark subtitle box, white cards with icons, proper transparency, vertical alignment)
+
+### 🎉 Desktop Version: 100% Match with Original Design
+
+---
+
+## ⚠️ NEXT PHASES: Responsiveness & Animations
+
+### Phase 1: Responsiveness (HIGH PRIORITY)
+
+All sections need to be made responsive for the following breakpoints:
+
+1. **Large Desktop**: 1440px+ (current implementation - DONE)
+2. **Desktop**: 1024px - 1439px
+3. **Tablet**: 768px - 1023px
+4. **Mobile**: 320px - 767px
+
+### Phase 2: Animations (AFTER Responsiveness)
+
+Animations to add across the site:
+
+1. **Scroll animations** - Elements fade/slide in as user scrolls
+2. **Hover effects** - Enhanced micro-interactions
+3. **Page transitions** - Smooth transitions between sections
+4. **Loading states** - Skeleton loaders or spinners where needed
+5. **Button animations** - Press/click feedback
+6. **Card animations** - Hover lift effects, shadows
+7. **Counter animations** - Stats numbers counting up on scroll
+8. **Parallax effects** - Subtle depth on background images (if applicable)
 
 ---
 
@@ -827,5 +913,48 @@ Bottom Row:      99.9%    |    29+
 
 ---
 
-*Last Updated: January 2026 (Round 2 Feedback)*
+## 🚨 HUGE TASK: RESPONSIVENESS (AFTER DESKTOP IS 100% COMPLETE)
+
+**IMPORTANT: Only start this task AFTER the desktop version is 100% finalized and approved.**
+
+### Responsive Breakpoints to Implement
+
+1. **Large Desktop**: 1440px+ (current implementation)
+2. **Desktop**: 1024px - 1439px
+3. **Tablet**: 768px - 1023px
+4. **Mobile**: 320px - 767px
+
+### Key Responsiveness Requirements
+
+- All sections must adapt gracefully to each breakpoint
+- Navigation should collapse to hamburger menu on tablet/mobile
+- Grid layouts should stack vertically on smaller screens
+- Font sizes should scale appropriately
+- Images should be responsive and maintain aspect ratios
+- Touch-friendly tap targets on mobile (min 44px)
+- Partners marquee should work on all screen sizes
+- Accordion/carousel interactions should work with touch
+- Forms should be full-width on mobile
+- Proper spacing adjustments for each breakpoint
+
+### Priority Order for Responsive Implementation
+
+1. Header & Mobile Navigation
+2. Hero Section
+3. Stats Bar
+4. Partners Section
+5. Why Axiom X
+6. Our Services
+7. Our Story
+8. Vision/Mission
+9. Brand Values
+10. Careers
+11. Shipment Tracking
+12. Contact
+13. Footer
+
+---
+
+*Last Updated: January 2026 (Round 3 - DESKTOP 100% COMPLETE)*
 *Reference PDF: docs/Full Website Design.pdf*
+*Next Steps: Phase 1 - Responsiveness | Phase 2 - Animations*

@@ -25,15 +25,15 @@ const partners = [
 export function PartnersSection() {
   return (
     <section id="partners" className="pb-10">
-      {/* Partners Title */}
-      <div className="container-axiom text-center mb-[40px]">
-        <h2 className="text-[28px] tracking-[3px] font-medium uppercase font-heading">
+      {/* Partners Title - added more space after, thinner font weight */}
+      <div className="container-axiom text-center mb-[60px]">
+        <h2 className="text-[28px] tracking-[3px] font-light uppercase font-heading mb-[20px]">
           BE A PART OF OUR PARTNERS
         </h2>
       </div>
 
-      {/* Partners Wrapper - Special layout: boxed left, full-width right */}
-      <div className="bg-[#ececec] py-[20px] relative overflow-hidden">
+      {/* Partners Wrapper - Special layout: boxed left, full-width right - reduced padding */}
+      <div className="bg-[#ececec] py-[10px] relative overflow-hidden">
         {/* Container for PARTNERS box (boxed width on left) */}
         <div className="container-axiom relative z-10">
           <div className="flex items-center">
@@ -50,13 +50,13 @@ export function PartnersSection() {
         <div className="absolute inset-y-0 left-0 right-0 flex items-center overflow-hidden">
           {/* Offset to start after PARTNERS box area */}
           <div className="ml-[calc((100vw-1250px)/2+180px)] lg:ml-[calc((100vw-1250px)/2+180px)] flex-1 overflow-hidden">
-            {/* Marquee animation container */}
-            <div className="flex animate-marquee">
+            {/* Marquee animation container - centered with PARTNERS box */}
+            <div className="flex animate-marquee items-center h-[160px]">
               {/* First set of logos */}
               {partners.map((partner) => (
                 <div
                   key={partner.id}
-                  className="flex-shrink-0 px-6 flex items-center h-[110px]"
+                  className="flex-shrink-0 px-6 flex items-center justify-center h-[160px]"
                 >
                   <Image
                     src={partner.logo}
@@ -75,7 +75,7 @@ export function PartnersSection() {
               {partners.map((partner) => (
                 <div
                   key={`dup-${partner.id}`}
-                  className="flex-shrink-0 px-6 flex items-center h-[110px]"
+                  className="flex-shrink-0 px-6 flex items-center justify-center h-[160px]"
                 >
                   <Image
                     src={partner.logo}
@@ -94,17 +94,15 @@ export function PartnersSection() {
           </div>
         </div>
 
-        {/* Spacer to maintain height */}
-        <div className="h-[160px] lg:h-[160px]"></div>
       </div>
 
-      {/* CTA Buttons - One green outlined, one dark green filled */}
+      {/* CTA Buttons - Both green filled as per PDF design */}
       <div className="container-axiom">
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-          {/* Green outlined button */}
+          {/* Green filled button */}
           <Link
             href="#contact"
-            className="inline-flex justify-center items-center px-6 py-4 border-2 border-[#53ac70] text-[#53ac70] bg-transparent rounded-lg font-medium transition-all duration-300 hover:bg-[#53ac70] hover:text-white"
+            className="inline-flex justify-center items-center px-6 py-4 bg-[#53ac70] text-white rounded-lg font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
           >
             Speak to an Expert
           </Link>

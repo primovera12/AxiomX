@@ -42,21 +42,38 @@ const trackingData = [
   },
 ];
 
-// Chart data
-const chartData = [
-  { month: "Jan", completed: 30, reject: 10 },
-  { month: "Feb", completed: 20, reject: 8 },
-  { month: "Mar", completed: 35, reject: 5 },
-  { month: "Apr", completed: 25, reject: 12 },
-  { month: "May", completed: 40, reject: 15 },
-  { month: "Jun", completed: 70, reject: 20 },
-  { month: "Jul", completed: 45, reject: 18 },
-  { month: "Aug", completed: 38, reject: 10 },
-  { month: "Sep", completed: 50, reject: 12 },
-  { month: "Oct", completed: 35, reject: 8 },
-  { month: "Nov", completed: 42, reject: 14 },
-  { month: "Dec", completed: 55, reject: 16 },
-];
+// Chart data by filter type
+const chartDataByFilter = {
+  Year: [
+    { month: "Jan", completed: 30, reject: 10 },
+    { month: "Feb", completed: 20, reject: 8 },
+    { month: "Mar", completed: 35, reject: 5 },
+    { month: "Apr", completed: 25, reject: 12 },
+    { month: "May", completed: 40, reject: 15 },
+    { month: "Jun", completed: 70, reject: 20 },
+    { month: "Jul", completed: 45, reject: 18 },
+    { month: "Aug", completed: 38, reject: 10 },
+    { month: "Sep", completed: 50, reject: 12 },
+    { month: "Oct", completed: 35, reject: 8 },
+    { month: "Nov", completed: 42, reject: 14 },
+    { month: "Dec", completed: 55, reject: 16 },
+  ],
+  Month: [
+    { month: "Week 1", completed: 15, reject: 3 },
+    { month: "Week 2", completed: 22, reject: 5 },
+    { month: "Week 3", completed: 18, reject: 4 },
+    { month: "Week 4", completed: 25, reject: 6 },
+  ],
+  Week: [
+    { month: "Mon", completed: 8, reject: 2 },
+    { month: "Tue", completed: 12, reject: 3 },
+    { month: "Wed", completed: 15, reject: 4 },
+    { month: "Thu", completed: 10, reject: 2 },
+    { month: "Fri", completed: 18, reject: 5 },
+    { month: "Sat", completed: 6, reject: 1 },
+    { month: "Sun", completed: 4, reject: 1 },
+  ],
+};
 
 export function ShipmentTrackingSection() {
   const [trackingNumber, setTrackingNumber] = useState("");
@@ -88,13 +105,15 @@ export function ShipmentTrackingSection() {
     }
   };
 
+  // Get chart data based on active filter
+  const chartData = chartDataByFilter[activeFilter as keyof typeof chartDataByFilter];
   const maxValue = Math.max(...chartData.map((d) => d.completed + d.reject));
 
   return (
     <section className="pb-[80px] overflow-hidden">
       <div className="container-axiom">
-        {/* Tracking Wrapper - Green Box */}
-        <div className="relative py-[80px] px-[60px] bg-[#519b66] rounded-[24px] mb-[50px] mt-[80px]">
+        {/* Tracking Wrapper - Green Box - reduced padding for bike overflow */}
+        <div className="relative py-[50px] px-[60px] bg-[#519b66] rounded-[24px] mb-[50px] mt-[80px]">
           {/* Tracking Info */}
           <div>
             <h3 className="text-[32px] text-white font-semibold">
@@ -132,13 +151,13 @@ export function ShipmentTrackingSection() {
             </p>
           </div>
 
-          {/* Delivery Bike - overflows container */}
+          {/* Delivery Bike - overflows container more visibly */}
           <Image
             src="/images/bike.png"
             alt="Delivery-bike"
             width={620}
             height={400}
-            className="absolute bottom-[-70px] right-[-90px] w-[620px] h-auto"
+            className="absolute bottom-[-100px] right-[-60px] w-[620px] h-auto"
           />
         </div>
 
@@ -264,20 +283,20 @@ export function ShipmentTrackingSection() {
                         Completed: {data.completed} | Reject: {data.reject}
                       </div>
 
-                      {/* Stacked bars - 2 columns side by side */}
-                      <div className="flex items-end gap-[4px]">
-                        {/* Completed bar */}
+                      {/* Stacked bars - 2 columns glued together, light green on left, dark green on right */}
+                      <div className="flex items-end gap-0">
+                        {/* Reject bar (light green) - LEFT */}
                         <div
-                          className="w-[16px] bg-[#19342c] rounded-t-[6px] transition-all duration-300 hover:opacity-80 cursor-pointer"
-                          style={{
-                            height: `${(data.completed / maxValue) * 250}px`,
-                          }}
-                        ></div>
-                        {/* Reject bar */}
-                        <div
-                          className="w-[16px] bg-[#d4fb50] rounded-t-[6px] transition-all duration-300 hover:opacity-80 cursor-pointer"
+                          className="w-[16px] bg-[#d4fb50] rounded-t-full transition-all duration-300 hover:opacity-80 cursor-pointer"
                           style={{
                             height: `${(data.reject / maxValue) * 250}px`,
+                          }}
+                        ></div>
+                        {/* Completed bar (dark green) - RIGHT */}
+                        <div
+                          className="w-[16px] bg-[#19342c] rounded-t-full transition-all duration-300 hover:opacity-80 cursor-pointer"
+                          style={{
+                            height: `${(data.completed / maxValue) * 250}px`,
                           }}
                         ></div>
                       </div>

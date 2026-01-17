@@ -69,7 +69,7 @@ export function StatsBar() {
             <div
               key={stat.id}
               className={`info-box text-center px-8 md:px-12 ${
-                index < 3 ? "border-r border-black/30" : ""
+                index < 3 ? "border-r-2 border-black/30" : ""
               }`}
             >
               <h2 className="text-[#53ac70] text-[50px] font-semibold mb-[20px] transition-all duration-300">
@@ -98,7 +98,7 @@ export function StatsBar() {
             <div
               key={stat.id}
               className={`info-box text-center px-12 md:px-16 ${
-                index < 1 ? "border-r border-black/30" : ""
+                index < 1 ? "border-r-2 border-black/30" : ""
               }`}
             >
               <h2 className="text-[#53ac70] text-[50px] font-semibold mb-[20px] transition-all duration-300">

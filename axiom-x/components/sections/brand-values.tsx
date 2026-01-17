@@ -40,8 +40,8 @@ export function BrandValuesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    /* Section - CSS: padding-top: 100px, padding-bottom: 20px */
-    <section className="pt-[100px] pb-[20px]">
+    /* Section - CSS: padding-top: 100px, padding-bottom: 120px for tooltip space */
+    <section className="pt-[100px] pb-[120px]">
       <div className="container-axiom">
         {/* Title - CSS: margin-bottom: 50px, text-align: center */}
         <div className="text-center mb-[50px]">
@@ -103,12 +103,9 @@ export function BrandValuesSection() {
                     {value.label}
                   </h4>
 
-                  {/* Tooltip Note - CSS: background: #d4fb50, padding: 24px 20px,
-                      border-radius: 200px, width: 580px, font-size: 25px, font-weight: 400,
-                      font-family: Inter, position: absolute, top: 100%, margin-top: 60px (hover: 45px),
-                      box-shadow: 0px 7px 15px rgba(0,0,0,0.2), opacity: 0 (hover: 1), z-index: 9 */}
+                  {/* Tooltip Note - responsive width, text wraps to fit */}
                   <span
-                    className={`absolute left-1/2 -translate-x-1/2 bg-[#d4fb50] py-[24px] px-[20px] rounded-[200px] w-[580px] text-[25px] font-normal z-[9] shadow-[0px_7px_15px_rgba(0,0,0,0.2)] transition-all duration-300 whitespace-nowrap ${
+                    className={`absolute left-1/2 -translate-x-1/2 bg-[#d4fb50] py-[18px] px-[30px] rounded-[200px] max-w-[90vw] text-[20px] font-normal z-[9] shadow-[0px_7px_15px_rgba(0,0,0,0.2)] transition-all duration-300 text-center whitespace-nowrap ${
                       isHovered
                         ? "opacity-100 visible mt-[45px]"
                         : "opacity-0 invisible mt-[60px]"

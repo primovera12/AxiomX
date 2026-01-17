@@ -21,13 +21,13 @@ export function ServicesSection() {
           </div>
 
           {/* Accordion */}
-          <div className="relative z-10">
+          <div className="relative z-10 pl-[20px]">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 className={cn(
                   "relative mb-[20px] transition-all duration-300",
-                  activeIndex === index ? "pl-[50px]" : "pl-0"
+                  activeIndex === index ? "pl-[60px]" : "pl-[10px]"
                 )}
               >
                 {/* X Logo - shows when accordion is open */}
@@ -37,7 +37,7 @@ export function ServicesSection() {
                   width={35}
                   height={35}
                   className={cn(
-                    "absolute left-[-17px] top-[11px] w-[35px] h-auto transition-all duration-300",
+                    "absolute left-[-7px] top-[11px] w-[35px] h-auto transition-all duration-300",
                     activeIndex === index
                       ? "opacity-100 visible"
                       : "opacity-0 invisible"
@@ -47,7 +47,7 @@ export function ServicesSection() {
                 {/* Left Lime Line - connects to X logo when open */}
                 <div
                   className={cn(
-                    "absolute left-0 bottom-0 h-[94%] w-[2px] bg-[#d4fb50] transition-all duration-300 -z-10 rounded-full",
+                    "absolute left-[10px] bottom-0 h-[94%] w-[2px] bg-[#d4fb50] transition-all duration-300 -z-10 rounded-full",
                     activeIndex === index
                       ? "opacity-100 visible"
                       : "opacity-0 invisible"
@@ -61,10 +61,10 @@ export function ServicesSection() {
                   style={{ fontFamily: "'Alexandria', sans-serif" }}
                 >
                   <span>{service.title}</span>
-                  {/* Arrow - rotates 180° when open */}
+                  {/* Arrow - rotates 180° when open, white color */}
                   <svg
                     className={cn(
-                      "w-[36px] h-[34px] transition-transform duration-300 invert flex-shrink-0",
+                      "w-[36px] h-[34px] transition-transform duration-300 flex-shrink-0 text-white",
                       activeIndex === index && "rotate-180"
                     )}
                     viewBox="0 0 16 16"
