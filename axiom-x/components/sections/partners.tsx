@@ -49,7 +49,7 @@ export function PartnersSection() {
         {/* Marquee - Responsive sizing and positioning */}
         <div className="absolute inset-y-0 left-0 right-0 flex items-center overflow-hidden">
           {/* On mobile: start from edge, on desktop: offset for PARTNERS box */}
-          <div className="ml-0 lg:ml-[calc((100vw-1250px)/2+180px)] flex-1 overflow-hidden">
+          <div className="ml-0 lg:ml-[200px] flex-1 overflow-hidden">
             {/* Marquee animation container - Responsive height */}
             <div className="flex animate-marquee items-center h-[80px] md:h-[120px] lg:h-[160px]">
               {/* First set of logos */}

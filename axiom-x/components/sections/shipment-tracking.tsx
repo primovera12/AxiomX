@@ -113,7 +113,7 @@ export function ShipmentTrackingSection() {
     <section className="pb-[40px] md:pb-[60px] lg:pb-[80px] overflow-hidden">
       <div className="container-axiom">
         {/* Tracking Wrapper - Green Box - Responsive padding */}
-        <div className="relative py-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] bg-[#519b66] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
+        <div className="relative py-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] bg-[#519b66] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px] overflow-hidden">
           {/* Tracking Info */}
           <div className="relative z-10">
             <h3 className="text-[22px] md:text-[26px] lg:text-[32px] text-white font-semibold">

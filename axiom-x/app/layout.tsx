@@ -69,12 +69,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <body
-        className={`${poppins.variable} ${alexandria.variable} ${inter.variable} antialiased`}
+        className={`${poppins.variable} ${alexandria.variable} ${inter.variable} antialiased overflow-x-hidden`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <Footer />
         <Toaster position="top-right" richColors />
       </body>
