@@ -20,14 +20,14 @@ export function WhyAxiomSection() {
       <div className="container-axiom">
         {/* Full-width container with background image - Responsive min-height and border-radius */}
         <div
-          className="relative rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden min-h-[450px] md:min-h-[600px] lg:min-h-[750px] bg-cover bg-center"
+          className="relative rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden min-h-[720px] md:min-h-[600px] lg:min-h-[750px] bg-cover bg-center"
           style={{ backgroundImage: "url(/images/backgrounds/bg-2.jpg)" }}
         >
           {/* Dark border/frame effect */}
           <div className="absolute inset-0 rounded-[16px] md:rounded-[18px] lg:rounded-[20px] border-[3px] md:border-[4px] border-[#1a1a2e]" />
 
           {/* Content - Responsive padding and min-height */}
-          <div className="relative z-10 py-[25px] px-[20px] md:py-[32px] md:px-[35px] lg:py-[40px] lg:px-[50px] h-full flex flex-col min-h-[450px] md:min-h-[600px] lg:min-h-[750px]">
+          <div className="relative z-10 py-[25px] px-[20px] md:py-[32px] md:px-[35px] lg:py-[40px] lg:px-[50px] h-full flex flex-col min-h-[720px] md:min-h-[600px] lg:min-h-[750px]">
             {/* Top row: Title on left, White cards on right */}
             <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
               {/* Left column: Title + Dark box below */}

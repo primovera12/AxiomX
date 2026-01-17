@@ -74,73 +74,76 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Account - Responsive text */}
-            <div className="lg:col-span-2">
-              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Account</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    My Account
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/login" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Login / Register
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Cart
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Wishlist
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Shop
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            {/* Columns 2 & 3: Account + Quick Link - Side by side on mobile */}
+            <div className="grid grid-cols-2 md:contents gap-6">
+              {/* Column 2: Account - Responsive text */}
+              <div className="lg:col-span-2">
+                <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Account</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      My Account
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/login" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Login / Register
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Cart
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Wishlist
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Shop
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-            {/* Column 3: Quick Link - Responsive text */}
-            <div className="lg:col-span-2">
-              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Quick Link</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Terms Of Use
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
+              {/* Column 3: Quick Link - Responsive text */}
+              <div className="lg:col-span-2">
+                <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Quick Link</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Terms Of Use
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      FAQ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#contact" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Column 4: Download App - Responsive */}
-            <div className="lg:col-span-4 text-center md:text-left lg:text-center">
+            <div className="lg:col-span-4 text-left md:text-left lg:text-center">
               <h4 className="text-base md:text-lg font-semibold mb-2">Download App</h4>
               <p className="text-[12px] md:text-[13px] mb-3 md:mb-4">Save $3 with App New User Only</p>
 
               {/* Social Links - Touch-friendly sizing */}
               <div className="mt-6 md:mt-8 lg:mt-10">
-                <ul className="flex items-center justify-center md:justify-start lg:justify-center gap-4 md:gap-5 lg:gap-6">
+                <ul className="flex items-center justify-start md:justify-start lg:justify-center gap-4 md:gap-5 lg:gap-6">
                   <li>
                     <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
                       <Facebook className="h-5 w-5" />

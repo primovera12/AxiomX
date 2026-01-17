@@ -39,7 +39,7 @@ export function OurStorySection() {
               <div className="mt-[18px] md:mt-[22px] lg:mt-[25px]">
                 <Link
                   href="/about"
-                  className="inline-block bg-white text-[#53ac70] font-medium text-[13px] md:text-[13px] lg:text-[14px] py-[8px] px-[20px] md:px-[28px] lg:px-[35px] rounded-[200px] leading-[130%] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                  className="inline-block bg-white text-[#53ac70] font-medium text-[13px] md:text-[13px] lg:text-[14px] py-[8px] px-[20px] md:px-[28px] lg:px-[35px] rounded-[8px] md:rounded-[200px] leading-[130%] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
                 >
                   Read full story
                 </Link>

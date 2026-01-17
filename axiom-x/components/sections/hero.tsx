@@ -73,7 +73,7 @@ export function HeroSection() {
               {heroSlides.map((slide, index) => (
                 <div
                   key={slide.id}
-                  className="flex-[0_0_100%] min-w-0 relative min-h-[420px] md:min-h-[520px] lg:min-h-[640px]"
+                  className="flex-[0_0_100%] min-w-0 relative min-h-[567px] md:min-h-[520px] lg:min-h-[640px]"
                 >
                   {/* Background Video or Image */}
                   {slide.backgroundVideo ? (
@@ -138,7 +138,7 @@ export function HeroSection() {
 
                       {/* CTA Buttons - Responsive layout */}
                       <div
-                        className="mt-[30px] md:mt-[45px] lg:mt-[60px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-[12px] lg:gap-[15px]"
+                        className="mt-[30px] md:mt-[45px] lg:mt-[60px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-row items-center gap-2 md:gap-[12px] lg:gap-[15px]"
                         style={{
                           transitionDelay: selectedIndex === index ? "0.45s" : "0s",
                           borderTop: "3px solid rgba(255, 255, 255, 0.6)",
@@ -189,8 +189,8 @@ export function HeroSection() {
 
       {/* Hero Bottom - Service Snapshot Card - Responsive */}
       <div className="container-axiom">
-        <div className="flex justify-center lg:justify-end">
-          <div className="w-full lg:w-7/12 pr-0 lg:pr-20 px-4 md:px-0">
+        <div className="flex justify-center py-[3px] px-[10px] md:p-0">
+          <div className="w-full max-w-[500px] lg:max-w-none lg:w-7/12 lg:ml-auto lg:pr-20">
             <div className="bg-[#f5f7f6] p-4 px-4 md:p-5 md:px-5 lg:px-6 flex gap-3 md:gap-4 lg:gap-5 rounded-[12px] md:rounded-[14px] lg:rounded-[15px] -mt-[40px] md:-mt-[55px] lg:-mt-[75px] relative z-10">
               {/* X Logo Icon - Responsive */}
               <div className="w-[50px] md:w-[60px] lg:w-[70px] flex-shrink-0">

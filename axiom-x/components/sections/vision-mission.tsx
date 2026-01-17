@@ -7,7 +7,7 @@ export function VisionMissionSection() {
   return (
     /* Section - Responsive padding */
     <section
-      className="py-[80px] md:py-[160px] lg:py-[280px] bg-cover bg-center flex items-center relative z-[1]"
+      className="py-[80px] md:py-[160px] lg:py-[280px] bg-cover bg-right md:bg-center flex items-center relative z-[1]"
       style={{ backgroundImage: "url(/images/vission.jpg)" }}
     >
       {/* Overlay */}
@@ -62,7 +62,7 @@ export function VisionMissionSection() {
           </div>
 
           {/* Right: Play Button - Responsive padding and sizing */}
-          <div className="pl-0 md:pl-[15px] lg:pl-[25px] flex justify-center lg:justify-end mt-6 lg:mt-0">
+          <div className="pl-0 md:pl-[15px] lg:pl-[25px] flex justify-start lg:justify-end mt-6 lg:mt-0">
             <button
               className="transition-all duration-300 hover:scale-110"
               aria-label="Play video"

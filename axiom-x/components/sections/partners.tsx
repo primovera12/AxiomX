@@ -33,7 +33,7 @@ export function PartnersSection() {
       </div>
 
       {/* Partners Wrapper - Responsive padding and height */}
-      <div className="bg-[#ececec] py-[8px] md:py-[10px] relative overflow-hidden">
+      <div className="bg-[#ececec] p-[60px] lg:py-[10px] lg:px-0 relative overflow-hidden">
         {/* Container for PARTNERS box (boxed width on left) */}
         <div className="container-axiom relative z-10">
           <div className="flex items-center">
@@ -98,7 +98,7 @@ export function PartnersSection() {
 
       {/* CTA Buttons - Responsive sizing */}
       <div className="container-axiom px-4 md:px-0">
-        <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 mt-6 md:mt-8 lg:mt-10">
+        <div className="flex flex-row justify-center gap-2 md:gap-4 mt-6 md:mt-8 lg:mt-10">
           {/* Green filled button */}
           <Link
             href="#contact"

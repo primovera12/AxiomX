@@ -6,10 +6,10 @@ import { services } from "@/data/services";
 import { cn } from "@/lib/utils";
 
 export function ServicesSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section id="services" className="pb-[30px] md:pb-[45px] lg:pb-[60px]">
+    <section id="services" className="pb-[30px] md:pb-[45px] lg:pb-[10px]">
       <div className="container-axiom">
         {/* Services Wrapper - CSS animated gradient background (Apple-style) - Responsive padding */}
         <div className="services-gradient-bg rounded-[20px] md:rounded-[30px] lg:rounded-[40px] py-[30px] px-4 md:py-[45px] md:px-[40px] lg:py-[60px] lg:px-[80px] mb-[20px] md:mb-[30px] lg:mb-[40px] relative overflow-hidden">
@@ -56,7 +56,7 @@ export function ServicesSection() {
 
                 {/* Accordion Button - Responsive text */}
                 <button
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                   className="w-full flex items-center justify-between py-2 md:py-[8px] lg:py-[10px] px-0 bg-transparent text-white text-[16px] md:text-[24px] lg:text-[36px] font-semibold tracking-[0.5px] border-none outline-none cursor-pointer"
                   style={{ fontFamily: "'Alexandria', sans-serif" }}
                 >
