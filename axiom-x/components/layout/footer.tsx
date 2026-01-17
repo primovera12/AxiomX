@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 import { toast } from "sonner";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -33,7 +34,7 @@ export function Footer() {
         <div className="container-axiom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-7 lg:gap-8">
             {/* Column 1: Logo + Subscribe */}
-            <div className="lg:col-span-4 pr-0 md:pr-2.5">
+            <AnimatedElement variant="fadeUp" className="lg:col-span-4 pr-0 md:pr-2.5">
               {/* Logo - Responsive sizing */}
               <div className="mb-6 md:mb-7 lg:mb-8">
                 <Link href="/">
@@ -72,10 +73,10 @@ export function Footer() {
                   </button>
                 </form>
               </div>
-            </div>
+            </AnimatedElement>
 
             {/* Columns 2 & 3: Account + Quick Link - Side by side on mobile */}
-            <div className="grid grid-cols-2 md:contents gap-6">
+            <AnimatedElement variant="fadeUp" delay={0.1} className="grid grid-cols-2 md:contents gap-6">
               {/* Column 2: Account - Responsive text */}
               <div className="lg:col-span-2">
                 <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Account</h4>
@@ -134,10 +135,10 @@ export function Footer() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </AnimatedElement>
 
             {/* Column 4: Download App - Responsive */}
-            <div className="lg:col-span-4 text-left md:text-left lg:text-center">
+            <AnimatedElement variant="fadeUp" delay={0.2} className="lg:col-span-4 text-left md:text-left lg:text-center">
               <h4 className="text-base md:text-lg font-semibold mb-2">Download App</h4>
               <p className="text-[12px] md:text-[13px] mb-3 md:mb-4">Save $3 with App New User Only</p>
 
@@ -166,7 +167,7 @@ export function Footer() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </AnimatedElement>
           </div>
         </div>
       </div>

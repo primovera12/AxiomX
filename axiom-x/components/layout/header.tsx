@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -34,7 +35,12 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white py-4 md:py-5 lg:py-5">
+      <motion.header
+        className="sticky top-0 z-50 bg-white py-4 md:py-5 lg:py-5"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+      >
         <div className="container-axiom">
           <div className="flex items-center justify-between">
             {/* Logo - Responsive sizing */}
@@ -97,7 +103,7 @@ export function Header() {
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

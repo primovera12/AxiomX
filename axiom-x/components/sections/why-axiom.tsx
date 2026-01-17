@@ -1,5 +1,7 @@
 "use client";
 
+import { AnimatedElement } from "@/components/shared/section-wrapper";
+
 // Card content data
 const cards = [
   {
@@ -31,7 +33,7 @@ export function WhyAxiomSection() {
             {/* Top row: Title on left, White cards on right */}
             <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
               {/* Left column: Title + Dark box below */}
-              <div className="flex flex-col gap-3 md:gap-4 lg:w-[320px] flex-shrink-0">
+              <AnimatedElement variant="slideLeft" className="flex flex-col gap-3 md:gap-4 lg:w-[320px] flex-shrink-0">
                 {/* Title - Responsive font size */}
                 <h2 className="text-[26px] md:text-[32px] lg:text-[38px] font-bold text-white leading-tight italic m-0">
                   Why Axiom <span className="text-[#d4fb50]">x</span> ?
@@ -47,13 +49,15 @@ export function WhyAxiomSection() {
                     and out-deliver.
                   </p>
                 </div>
-              </div>
+              </AnimatedElement>
 
               {/* Right column: Two white cards side by side */}
               <div className="flex flex-col lg:flex-row gap-3 md:gap-4 flex-1">
-                {cards.map((card) => (
-                  <div
+                {cards.map((card, index) => (
+                  <AnimatedElement
                     key={card.id}
+                    variant="slideRight"
+                    delay={0.1 + index * 0.15}
                     className="bg-white/70 backdrop-blur-sm py-3 px-4 md:py-4 md:px-5 rounded-[16px] md:rounded-[18px] lg:rounded-[20px] flex items-center gap-2 md:gap-3 flex-1"
                   >
                     {/* Icon - Responsive sizing */}
@@ -69,16 +73,18 @@ export function WhyAxiomSection() {
                     <p className="text-[11px] md:text-[12px] lg:text-[13px] leading-[1.5] font-normal m-0 text-black">
                       {card.content}
                     </p>
-                  </div>
+                  </AnimatedElement>
                 ))}
               </div>
             </div>
 
             {/* Bottom text - Responsive padding and font size */}
-            <p className="text-white/90 text-[11px] md:text-[12px] lg:text-[13px] mt-auto pt-[25px] md:pt-[32px] lg:pt-[40px] text-center font-normal">
-              Our AI-enhanced ecosystem was built for the operational complexity
-              that most businesses are only now realizing they need to solve.
-            </p>
+            <AnimatedElement variant="fadeUp" delay={0.3} className="mt-auto pt-[25px] md:pt-[32px] lg:pt-[40px]">
+              <p className="text-white/90 text-[11px] md:text-[12px] lg:text-[13px] text-center font-normal m-0">
+                Our AI-enhanced ecosystem was built for the operational complexity
+                that most businesses are only now realizing they need to solve.
+              </p>
+            </AnimatedElement>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function VisionMissionSection() {
   return (
@@ -21,7 +22,7 @@ export function VisionMissionSection() {
       <div className="container-axiom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-7 lg:gap-8 items-center">
           {/* Left: Vision & Mission Content */}
-          <div>
+          <AnimatedElement variant="slideLeft">
             {/* Vision - Responsive margin */}
             <div className="mb-[25px] md:mb-[32px] lg:mb-[40px]">
               {/* h2 - Responsive font size */}
@@ -59,10 +60,10 @@ export function VisionMissionSection() {
                 CAREERS
               </Link>
             </div>
-          </div>
+          </AnimatedElement>
 
           {/* Right: Play Button - Responsive padding and sizing */}
-          <div className="pl-0 md:pl-[15px] lg:pl-[25px] flex justify-start lg:justify-end mt-6 lg:mt-0">
+          <AnimatedElement variant="scaleUp" delay={0.2} className="pl-0 md:pl-[15px] lg:pl-[25px] flex justify-start lg:justify-end mt-6 lg:mt-0">
             <button
               className="transition-all duration-300 hover:scale-110"
               aria-label="Play video"
@@ -75,7 +76,7 @@ export function VisionMissionSection() {
                 className="w-[100px] md:w-[120px] lg:w-[140px] h-auto"
               />
             </button>
-          </div>
+          </AnimatedElement>
         </div>
       </div>
     </section>

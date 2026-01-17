@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 // Sample tracking data from PDF
 const trackingData = [
@@ -113,6 +114,7 @@ export function ShipmentTrackingSection() {
     <section className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
       <div className="container-axiom">
         {/* Tracking Wrapper - Green Box - Responsive padding */}
+        <AnimatedElement variant="slideUp">
         <div className="relative pt-[140px] pb-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] bg-[#519b66] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
           {/* Mobile-only Bike Image - Shows before title with overflow effect */}
           <div className="sm:hidden -mt-[140px] mb-4 flex justify-center">
@@ -171,6 +173,7 @@ export function ShipmentTrackingSection() {
             className="absolute bottom-[-50px] right-[-30px] w-[280px] md:bottom-[-70px] md:right-[-40px] md:w-[420px] lg:bottom-[-100px] lg:right-[-60px] lg:w-[620px] h-auto hidden sm:block"
           />
         </div>
+        </AnimatedElement>
 
         {/* Tracking Table - Only shows after entering tracking number */}
         {showResults && (

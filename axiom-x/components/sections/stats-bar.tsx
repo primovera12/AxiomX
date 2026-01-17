@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 // Stats data matching the PDF design
 const stats = [
@@ -64,7 +65,7 @@ export function StatsBar() {
     <section id="stats" className="py-[40px] md:py-[60px] lg:py-[80px]" ref={ref}>
       <div className="container-axiom">
         {/* First row - 4 stats: 2x2 grid on mobile, 4 columns on desktop */}
-        <div className="grid grid-cols-2 md:flex md:justify-center md:items-stretch gap-y-6 md:gap-y-0 mb-[30px] md:mb-[45px] lg:mb-[55px]">
+        <AnimatedElement variant="fadeUp" className="grid grid-cols-2 md:flex md:justify-center md:items-stretch gap-y-6 md:gap-y-0 mb-[30px] md:mb-[45px] lg:mb-[55px]">
           {stats.slice(0, 4).map((stat, index) => (
             <div
               key={stat.id}
@@ -90,10 +91,10 @@ export function StatsBar() {
               </p>
             </div>
           ))}
-        </div>
+        </AnimatedElement>
 
         {/* Second row - 2 stats centered with separator */}
-        <div className="flex justify-center items-stretch">
+        <AnimatedElement variant="fadeUp" delay={0.15} className="flex justify-center items-stretch">
           {stats.slice(4).map((stat, index) => (
             <div
               key={stat.id}
@@ -119,7 +120,7 @@ export function StatsBar() {
               </p>
             </div>
           ))}
-        </div>
+        </AnimatedElement>
       </div>
     </section>
   );

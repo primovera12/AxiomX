@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { services } from "@/data/services";
 import { cn } from "@/lib/utils";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
@@ -14,14 +15,14 @@ export function ServicesSection() {
         {/* Services Wrapper - CSS animated gradient background (Apple-style) - Responsive padding */}
         <div className="services-gradient-bg rounded-[20px] md:rounded-[30px] lg:rounded-[40px] py-[30px] px-4 md:py-[45px] md:px-[40px] lg:py-[60px] lg:px-[80px] mb-[20px] md:mb-[30px] lg:mb-[40px] relative overflow-hidden">
           {/* Title Container - Responsive margin */}
-          <div className="mb-[25px] md:mb-[35px] lg:mb-[50px] relative z-10">
+          <AnimatedElement variant="fadeUp" className="mb-[25px] md:mb-[35px] lg:mb-[50px] relative z-10">
             <h2 className="text-[28px] md:text-[40px] lg:text-[55px] text-white leading-[1] font-bold inline-block border-b-[1.5px] border-[#d4fb50] pb-[8px] md:pb-[10px] pr-[30px] md:pr-[45px] lg:pr-[60px] m-0">
               Our Services
             </h2>
-          </div>
+          </AnimatedElement>
 
           {/* Accordion - Responsive left padding */}
-          <div className="relative z-10 pl-[10px] md:pl-[15px] lg:pl-[20px]">
+          <AnimatedElement variant="fadeUp" delay={0.15} className="relative z-10 pl-[10px] md:pl-[15px] lg:pl-[20px]">
             {services.map((service, index) => (
               <div
                 key={service.id}
@@ -122,7 +123,7 @@ export function ServicesSection() {
                 </div>
               </div>
             ))}
-          </div>
+          </AnimatedElement>
         </div>
       </div>
 

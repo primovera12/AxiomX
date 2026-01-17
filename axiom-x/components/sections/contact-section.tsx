@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ export function ContactSection() {
       <div className="container-axiom">
         <div className="max-w-full px-4 md:max-w-[800px] md:px-0 mx-auto">
           {/* Section Title - Responsive margin */}
-          <div className="mb-[30px] md:mb-[40px] lg:mb-[50px]">
+          <AnimatedElement variant="fadeUp" className="mb-[30px] md:mb-[40px] lg:mb-[50px]">
             {/* h2 - Responsive font size */}
             <h2
               className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] mb-[10px]"
@@ -47,9 +48,10 @@ export function ContactSection() {
               operations, or unlock new revenue — Axiom x is your growth
               partner.
             </p>
-          </div>
+          </AnimatedElement>
 
           {/* Contact Form */}
+          <AnimatedElement variant="fadeUp" delay={0.1}>
           <form onSubmit={handleSubmit}>
             {/* Name Field - Responsive spacing */}
             <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
@@ -120,10 +122,11 @@ export function ContactSection() {
               </button>
             </div>
           </form>
+          </AnimatedElement>
         </div>
 
         {/* Contact Info - Responsive gap and margin */}
-        <div className="flex items-center justify-center gap-3 md:gap-5 lg:gap-[30px] mt-[40px] md:mt-[60px] lg:mt-[80px] flex-wrap px-4 md:px-0">
+        <AnimatedElement variant="fadeUp" delay={0.2} className="flex items-center justify-center gap-3 md:gap-5 lg:gap-[30px] mt-[40px] md:mt-[60px] lg:mt-[80px] flex-wrap px-4 md:px-0">
           {/* contact-item - Responsive text and padding */}
           <p
             className="m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-[#529b66]"
@@ -147,7 +150,7 @@ export function ContactSection() {
           >
             +971 4 123 4567
           </a>
-        </div>
+        </AnimatedElement>
       </div>
     </section>
   );

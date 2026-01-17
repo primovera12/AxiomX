@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function CareersCTASection() {
   // Section - Responsive padding
@@ -10,7 +11,7 @@ export function CareersCTASection() {
       <div className="container-axiom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
           {/* Left: Team Info - Responsive padding */}
-          <div className="pt-0 lg:pt-[40px] px-4 md:px-0">
+          <AnimatedElement variant="slideLeft" className="pt-0 lg:pt-[40px] px-4 md:px-0">
             {/* h2 - Responsive font size */}
             <h2
               className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] mb-[10px]"
@@ -55,10 +56,10 @@ export function CareersCTASection() {
                 Join the <span className="text-[#d4fb51]">X</span> Team
               </Link>
             </div>
-          </div>
+          </AnimatedElement>
 
           {/* Right: Team Member - Responsive sizing */}
-          <div className="relative max-w-[300px] md:max-w-[400px] lg:max-w-[520px] mx-auto px-4 md:px-[30px] lg:px-[50px] mt-8 lg:mt-0">
+          <AnimatedElement variant="slideUp" delay={0.15} className="relative max-w-[300px] md:max-w-[400px] lg:max-w-[520px] mx-auto px-4 md:px-[30px] lg:px-[50px] mt-8 lg:mt-0">
             {/* Background - Responsive height */}
             <div
               className="absolute inset-x-0 bottom-[1px] h-[300px] md:h-[400px] lg:h-[520px] -z-[1] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] bg-cover bg-center bg-[#eee]"
@@ -73,7 +74,7 @@ export function CareersCTASection() {
               height={600}
               className="relative z-[1] w-full h-auto"
             />
-          </div>
+          </AnimatedElement>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 // Partner logos
 const partners = [
@@ -26,11 +27,11 @@ export function PartnersSection() {
   return (
     <section id="partners" className="pb-6 md:pb-8 lg:pb-10">
       {/* Partners Title - Responsive sizing */}
-      <div className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
+      <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
         <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-light uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
           BE A PART OF OUR PARTNERS
         </h2>
-      </div>
+      </AnimatedElement>
 
       {/* Partners Wrapper - Responsive padding and height */}
       <div className="bg-[#ececec] p-[60px] lg:py-[10px] lg:px-0 relative overflow-hidden">
@@ -100,7 +101,7 @@ export function PartnersSection() {
       </div>
 
       {/* CTA Buttons - Responsive sizing */}
-      <div className="container-axiom px-4 md:px-0">
+      <AnimatedElement variant="fadeUp" delay={0.1} className="container-axiom px-4 md:px-0">
         <div className="flex flex-row justify-center gap-2 md:gap-4 mt-6 md:mt-8 lg:mt-10">
           {/* Green filled button */}
           <Link
@@ -117,7 +118,7 @@ export function PartnersSection() {
             Create an Account
           </Link>
         </div>
-      </div>
+      </AnimatedElement>
 
       {/* CSS for marquee animation */}
       <style jsx>{`

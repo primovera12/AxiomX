@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Play, Target, Zap, Shield, HeartHandshake, Lightbulb } from "lucide-react";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 const brandValues = [
   {
@@ -43,14 +44,14 @@ export function BrandValuesSection() {
     <section className="pt-[60px] pb-[30px] md:pt-[80px] md:pb-[110px] lg:pt-[100px] lg:pb-[120px]">
       <div className="container-axiom">
         {/* Title - Responsive margin and text */}
-        <div className="text-center mb-[30px] md:mb-[40px] lg:mb-[50px]">
+        <AnimatedElement variant="fadeUp" className="text-center mb-[30px] md:mb-[40px] lg:mb-[50px]">
           <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-[#529b66] font-bold tracking-[0.4px]">
             BRAND VALUES
           </h2>
-        </div>
+        </AnimatedElement>
 
         {/* Mobile Layout - Row style with visible lime boxes */}
-        <div className="md:hidden">
+        <AnimatedElement variant="fadeUp" delay={0.1} className="md:hidden">
           {/* Video Play Button */}
           <div className="bg-[#19342c] flex items-center justify-center w-full h-[80px] rounded-t-[12px]">
             <button className="text-[#d4fb50]" aria-label="Play video">
@@ -95,10 +96,10 @@ export function BrandValuesSection() {
               );
             })}
           </div>
-        </div>
+        </AnimatedElement>
 
         {/* Desktop/Tablet Layout - Original grid with hover effect */}
-        <div className="hidden md:flex flex-row items-center relative bg-[#eeeeee] rounded-[12px] p-0">
+        <AnimatedElement variant="fadeUp" delay={0.1} className="hidden md:flex flex-row items-center relative bg-[#eeeeee] rounded-[12px] p-0">
           {/* Video Play Button - Responsive sizing */}
           <div className="bg-[#19342c] flex items-center justify-center w-[120px] lg:w-[150px] h-[180px] lg:h-[220px] rounded-tl-[12px] rounded-bl-[12px] flex-shrink-0">
             <button className="text-[#d4fb50]" aria-label="Play video">
@@ -160,7 +161,7 @@ export function BrandValuesSection() {
               );
             })}
           </div>
-        </div>
+        </AnimatedElement>
       </div>
     </section>
   );

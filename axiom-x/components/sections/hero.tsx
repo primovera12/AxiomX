@@ -8,6 +8,8 @@ import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AnimatedElement } from "@/components/shared/section-wrapper";
+import { motion } from "framer-motion";
 
 const heroSlides = [
   {
@@ -63,7 +65,13 @@ export function HeroSection() {
   }, [emblaApi]);
 
   return (
-    <section id="home" className="relative">
+    <motion.section
+      id="home"
+      className="relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+    >
       {/* Hero Area */}
       <div className="container-axiom">
         <div className="relative">
@@ -188,6 +196,7 @@ export function HeroSection() {
       </div>
 
       {/* Hero Bottom - Service Snapshot Card - Responsive */}
+      <AnimatedElement variant="slideUp" delay={0.3}>
       <div className="container-axiom">
         <div className="flex justify-center py-[3px] px-[10px] md:p-0">
           <div className="w-full max-w-[500px] lg:max-w-none lg:w-7/12 lg:ml-auto lg:pr-20">
@@ -231,6 +240,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+      </AnimatedElement>
+    </motion.section>
   );
 }
