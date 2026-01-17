@@ -110,10 +110,10 @@ export function ShipmentTrackingSection() {
   const maxValue = Math.max(...chartData.map((d) => d.completed + d.reject));
 
   return (
-    <section className="pb-[40px] md:pb-[60px] lg:pb-[80px] overflow-hidden">
+    <section className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
       <div className="container-axiom">
         {/* Tracking Wrapper - Green Box - Responsive padding */}
-        <div className="relative pt-[140px] pb-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] bg-[#519b66] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px] overflow-hidden">
+        <div className="relative pt-[140px] pb-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] bg-[#519b66] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
           {/* Mobile-only Bike Image - Shows before title with overflow effect */}
           <div className="sm:hidden -mt-[140px] mb-4 flex justify-center">
             <Image
