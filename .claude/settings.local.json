@@ -24,7 +24,8 @@
       "Bash(if not exist \"axiom-x\\\\public\\\\fonts\" mkdir \"axiom-x\\\\public\\\\fonts\")",
       "Bash(curl:*)",
       "Bash(taskkill:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(ls:*)"
     ]
   }
 }

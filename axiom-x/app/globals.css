@@ -204,11 +204,23 @@
     font-family: 'Aloevera-Regular', sans-serif;
   }
 
-  /* Container max-width matching original design (1250px) */
+  /* Container max-width matching original design (1250px) - Responsive padding */
   .container-axiom {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 16px;
+  }
+
+  @media (min-width: 768px) {
+    .container-axiom {
+      padding: 0 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-axiom {
+      padding: 0 30px;
+    }
   }
 
   /* Custom button styles matching PDF design */

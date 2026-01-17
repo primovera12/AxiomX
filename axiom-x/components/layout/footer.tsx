@@ -28,31 +28,31 @@ export function Footer() {
 
   return (
     <footer className="bg-white">
-      {/* Main Footer Content */}
-      <div className="border-t border-[#e0e0e0] pt-12 pb-5">
+      {/* Main Footer Content - Responsive padding */}
+      <div className="border-t border-[#e0e0e0] pt-8 md:pt-10 lg:pt-12 pb-4 md:pb-5">
         <div className="container-axiom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-7 lg:gap-8">
             {/* Column 1: Logo + Subscribe */}
-            <div className="lg:col-span-4 pr-2.5">
-              {/* Logo */}
-              <div className="mb-8">
+            <div className="lg:col-span-4 pr-0 md:pr-2.5">
+              {/* Logo - Responsive sizing */}
+              <div className="mb-6 md:mb-7 lg:mb-8">
                 <Link href="/">
                   <Image
                     src="/images/logo-2.png"
                     alt="Axiom X"
                     width={120}
                     height={40}
-                    className="w-[120px] h-auto"
+                    className="w-[100px] md:w-[110px] lg:w-[120px] h-auto"
                   />
                 </Link>
               </div>
 
               {/* Subscribe Section */}
               <div>
-                <h4 className="text-xl font-semibold mb-2.5 leading-[90%] text-black opacity-90">
+                <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-2.5 leading-[90%] text-black opacity-90">
                   Subscribe
                 </h4>
-                <label className="text-[15px] font-medium text-black opacity-90 block">
+                <label className="text-[14px] md:text-[15px] font-medium text-black opacity-90 block">
                   Get 10% off your first order
                 </label>
                 <form onSubmit={handleNewsletterSubmit} className="mt-5 relative h-10">
@@ -74,90 +74,90 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Account */}
+            {/* Column 2: Account - Responsive text */}
             <div className="lg:col-span-2">
-              <h4 className="text-lg font-semibold mb-4">Account</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Account</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     My Account
                   </Link>
                 </li>
                 <li>
-                  <Link href="/login" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="/login" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Login / Register
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Cart
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Wishlist
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Shop
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Column 3: Quick Link */}
+            {/* Column 3: Quick Link - Responsive text */}
             <div className="lg:col-span-2">
-              <h4 className="text-lg font-semibold mb-4">Quick Link</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Quick Link</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Terms Of Use
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link href="#contact" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                  <Link href="#contact" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Column 4: Download App */}
-            <div className="lg:col-span-4 text-center">
-              <h4 className="text-lg font-semibold mb-2">Download App</h4>
-              <p className="text-[13px] mb-4">Save $3 with App New User Only</p>
+            {/* Column 4: Download App - Responsive */}
+            <div className="lg:col-span-4 text-center md:text-left lg:text-center">
+              <h4 className="text-base md:text-lg font-semibold mb-2">Download App</h4>
+              <p className="text-[12px] md:text-[13px] mb-3 md:mb-4">Save $3 with App New User Only</p>
 
-              {/* Social Links */}
-              <div className="mt-10">
-                <ul className="flex items-center justify-center gap-6 text-xl">
+              {/* Social Links - Touch-friendly sizing */}
+              <div className="mt-6 md:mt-8 lg:mt-10">
+                <ul className="flex items-center justify-center md:justify-start lg:justify-center gap-4 md:gap-5 lg:gap-6">
                   <li>
-                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
                       <Facebook className="h-5 w-5" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
                       <Twitter className="h-5 w-5" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
                       <Instagram className="h-5 w-5" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </li>
@@ -168,10 +168,10 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="border-t border-[#e0e0e0] py-5 mt-14">
+      {/* Copyright - Responsive margin and text */}
+      <div className="border-t border-[#e0e0e0] py-4 md:py-5 mt-8 md:mt-10 lg:mt-14">
         <div className="container-axiom text-center">
-          <p className="text-[15px] m-0">
+          <p className="text-[13px] md:text-[14px] lg:text-[15px] m-0">
             Copyright Axiomx.com All right reserved
           </p>
         </div>

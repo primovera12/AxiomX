@@ -4,17 +4,16 @@ import Link from "next/link";
 
 export function OurStorySection() {
   return (
-    <section id="our-story" className="mt-[30px] mb-[60px]">
+    <section id="our-story" className="mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[40px] md:mb-[50px] lg:mb-[60px]">
       <div className="container-axiom">
-        {/* Story Wrapper - CSS: background: darker green #3f8f5a, padding: 50px, border-radius: 20px */}
-        <div className="bg-[#3f8f5a] p-[50px] rounded-[20px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {/* Story Wrapper - Responsive padding and border-radius */}
+        <div className="bg-[#3f8f5a] p-[25px] md:p-[35px] lg:p-[50px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 lg:gap-8 items-start">
             {/* Left: Title */}
             <div>
-              {/* h2 - CSS: font-size: 36px, text-transform: uppercase, color: #fff,
-                  line-height: 120%, margin: 0, font-weight: 700, font-family: Inter */}
+              {/* h2 - Responsive font size */}
               <h2
-                className="text-[36px] uppercase text-white leading-[120%] m-0 font-extrabold"
+                className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white leading-[120%] m-0 font-extrabold"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 OUR STORY: FROM
@@ -25,9 +24,9 @@ export function OurStorySection() {
 
             {/* Right: Content */}
             <div>
-              {/* p - CSS: color: #fff, font-size: 16px, font-family: Inter */}
+              {/* p - Responsive font size */}
               <p
-                className="text-white text-[16px] mb-0"
+                className="text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 We started in 1997 as Axiom x Telecom — building the Middle East&apos;s
@@ -36,13 +35,11 @@ export function OurStorySection() {
                 fulfillment.
               </p>
 
-              {/* Button - CSS: margin-top: 25px */}
-              <div className="mt-[25px]">
-                {/* a - CSS: background: #fff, color: #53ac70, font-weight: 500,
-                    padding: 12px 40px, border-radius: 30px, line-height: 130%, border: 1px solid #fff */}
+              {/* Button - Responsive margin and padding */}
+              <div className="mt-[18px] md:mt-[22px] lg:mt-[25px]">
                 <Link
                   href="/about"
-                  className="inline-block bg-white text-[#53ac70] font-medium text-[14px] py-[8px] px-[35px] rounded-[200px] leading-[130%] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                  className="inline-block bg-white text-[#53ac70] font-medium text-[13px] md:text-[13px] lg:text-[14px] py-[8px] px-[20px] md:px-[28px] lg:px-[35px] rounded-[200px] leading-[130%] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
                 >
                   Read full story
                 </Link>

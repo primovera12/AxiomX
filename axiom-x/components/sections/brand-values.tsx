@@ -40,62 +40,55 @@ export function BrandValuesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    /* Section - CSS: padding-top: 100px, padding-bottom: 120px for tooltip space */
-    <section className="pt-[100px] pb-[120px]">
+    /* Section - Responsive padding */
+    <section className="pt-[60px] pb-[100px] md:pt-[80px] md:pb-[110px] lg:pt-[100px] lg:pb-[120px]">
       <div className="container-axiom">
-        {/* Title - CSS: margin-bottom: 50px, text-align: center */}
-        <div className="text-center mb-[50px]">
-          {/* h2 - CSS: color: #529b66, font-weight: 700, letter-spacing: 0.4px, font-size: 36px */}
-          <h2 className="text-[36px] text-[#529b66] font-bold tracking-[0.4px]">
+        {/* Title - Responsive margin and text */}
+        <div className="text-center mb-[30px] md:mb-[40px] lg:mb-[50px]">
+          <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-[#529b66] font-bold tracking-[0.4px]">
             BRAND VALUES
           </h2>
         </div>
 
-        {/* Brand Value Wrapper - CSS: display: flex, align-items: center, position: relative,
-            background-color: #eeeeee, border-radius: 12px, padding: 0 */}
-        <div className="flex items-center relative bg-[#eeeeee] rounded-[12px] p-0">
-          {/* Video Play Button - CSS: bg: #19342c, width: 150px, height: 220px,
-              border-top-left-radius: 12px, border-bottom-left-radius: 12px */}
-          <div className="bg-[#19342c] flex items-center justify-center w-[150px] h-[220px] rounded-tl-[12px] rounded-bl-[12px] flex-shrink-0">
-            {/* Play icon - CSS: font-size: 40px, color: #d4fb50 */}
-            <button className="text-[40px] text-[#d4fb50]" aria-label="Play video">
-              <Play className="w-10 h-10 fill-[#d4fb50]" />
+        {/* Brand Value Wrapper - Responsive flex direction */}
+        <div className="flex flex-col md:flex-row items-center relative bg-[#eeeeee] rounded-[12px] p-0">
+          {/* Video Play Button - Responsive sizing */}
+          <div className="bg-[#19342c] flex items-center justify-center w-full md:w-[120px] lg:w-[150px] h-[80px] md:h-[180px] lg:h-[220px] rounded-t-[12px] md:rounded-t-none md:rounded-tl-[12px] md:rounded-bl-[12px] flex-shrink-0">
+            <button className="text-[#d4fb50]" aria-label="Play video">
+              <Play className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 fill-[#d4fb50]" />
             </button>
           </div>
 
-          {/* Value Items Grid - CSS: display: grid, grid-template-columns: repeat(5, 1fr),
-              align-items: center, width: 100% */}
-          <div className="grid grid-cols-5 items-center w-full relative">
+          {/* Value Items Grid - Responsive columns */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-center w-full relative">
             {brandValues.map((value, index) => {
               const Icon = value.icon;
               const isHovered = hoveredIndex === index;
 
               return (
-                /* Value Item - CSS: text-align: center, padding: 20px 0,
-                   border-right: 1px solid #000, cursor: pointer, position: relative */
+                {/* Value Item - Responsive padding and borders */}
                 <div
                   key={value.id}
-                  className={`text-center py-[20px] cursor-pointer relative ${
-                    index < brandValues.length - 1 ? "border-r border-black" : ""
+                  className={`text-center py-3 md:py-4 lg:py-[20px] cursor-pointer relative ${
+                    index < brandValues.length - 1 ? "md:border-r border-black/20 lg:border-black" : ""
                   }`}
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {/* Icon - CSS: margin-bottom: 20px, max-width: 65px, transition: .4s */}
-                  <div className="mb-[20px] flex justify-center">
+                  {/* Icon - Responsive sizing */}
+                  <div className="mb-3 md:mb-4 lg:mb-[20px] flex justify-center">
                     <Icon
-                      className={`w-[65px] h-[65px] transition-all duration-400 ${
+                      className={`w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[65px] lg:h-[65px] transition-all duration-400 ${
                         isHovered
-                          ? "scale-[1.6] -translate-y-5 text-[#3f7537]"
+                          ? "scale-[1.4] md:scale-[1.5] lg:scale-[1.6] -translate-y-3 md:-translate-y-4 lg:-translate-y-5 text-[#3f7537]"
                           : "text-[#334045]"
                       }`}
                     />
                   </div>
 
-                  {/* Label - CSS: margin: 0, font-size: 22px, font-weight: 400 (hover: 600),
-                      color: #000, font-family: Inter */}
+                  {/* Label - Responsive text size */}
                   <h4
-                    className={`m-0 text-[22px] text-black transition-all duration-300 ${
+                    className={`m-0 text-[14px] md:text-[17px] lg:text-[22px] text-black transition-all duration-300 ${
                       isHovered ? "font-semibold" : "font-normal"
                     }`}
                     style={{ fontFamily: "'Inter', sans-serif" }}
@@ -103,12 +96,12 @@ export function BrandValuesSection() {
                     {value.label}
                   </h4>
 
-                  {/* Tooltip Note - responsive width, text wraps to fit */}
+                  {/* Tooltip Note - Responsive sizing and positioning */}
                   <span
-                    className={`absolute left-1/2 -translate-x-1/2 bg-[#d4fb50] py-[18px] px-[30px] rounded-[200px] max-w-[90vw] text-[20px] font-normal z-[9] shadow-[0px_7px_15px_rgba(0,0,0,0.2)] transition-all duration-300 text-center whitespace-nowrap ${
+                    className={`absolute left-1/2 -translate-x-1/2 bg-[#d4fb50] py-2 px-4 md:py-3 md:px-5 lg:py-[18px] lg:px-[30px] rounded-[200px] max-w-[85vw] md:max-w-[90vw] text-[12px] md:text-[14px] lg:text-[20px] font-normal z-[9] shadow-[0px_7px_15px_rgba(0,0,0,0.2)] transition-all duration-300 text-center whitespace-nowrap ${
                       isHovered
-                        ? "opacity-100 visible mt-[45px]"
-                        : "opacity-0 invisible mt-[60px]"
+                        ? "opacity-100 visible mt-[30px] md:mt-[35px] lg:mt-[45px]"
+                        : "opacity-0 invisible mt-[45px] md:mt-[50px] lg:mt-[60px]"
                     }`}
                     style={{
                       fontFamily: "'Inter', sans-serif",

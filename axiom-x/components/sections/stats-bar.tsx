@@ -61,18 +61,18 @@ export function StatsBar() {
   });
 
   return (
-    <section id="stats" className="py-[80px]" ref={ref}>
+    <section id="stats" className="py-[40px] md:py-[60px] lg:py-[80px]" ref={ref}>
       <div className="container-axiom">
-        {/* First row - 4 stats with separators */}
-        <div className="flex justify-center items-stretch mb-[55px]">
+        {/* First row - 4 stats: 2x2 grid on mobile, 4 columns on desktop */}
+        <div className="grid grid-cols-2 md:flex md:justify-center md:items-stretch gap-y-6 md:gap-y-0 mb-[30px] md:mb-[45px] lg:mb-[55px]">
           {stats.slice(0, 4).map((stat, index) => (
             <div
               key={stat.id}
-              className={`info-box text-center px-8 md:px-12 ${
-                index < 3 ? "border-r-2 border-black/30" : ""
-              }`}
+              className={`info-box text-center px-3 md:px-8 lg:px-12 ${
+                index < 3 ? "md:border-r-2 md:border-black/30" : ""
+              } ${index % 2 === 0 ? "border-r border-black/20 md:border-r-0" : ""}`}
             >
-              <h2 className="text-[#53ac70] text-[50px] font-semibold mb-[20px] transition-all duration-300">
+              <h2 className="text-[#53ac70] text-[28px] md:text-[38px] lg:text-[50px] font-semibold mb-[10px] md:mb-[15px] lg:mb-[20px] transition-all duration-300">
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
@@ -80,10 +80,10 @@ export function StatsBar() {
                   isInView={inView}
                 />
               </h2>
-              <p className="text-[18px] font-semibold">
+              <p className="text-[12px] md:text-[14px] lg:text-[18px] font-semibold">
                 {stat.label}
                 {stat.sublabel && (
-                  <span className="block mt-[5px] font-normal text-[16px]">
+                  <span className="block mt-[3px] md:mt-[4px] lg:mt-[5px] font-normal text-[11px] md:text-[13px] lg:text-[16px]">
                     {stat.sublabel}
                   </span>
                 )}
@@ -97,11 +97,11 @@ export function StatsBar() {
           {stats.slice(4).map((stat, index) => (
             <div
               key={stat.id}
-              className={`info-box text-center px-12 md:px-16 ${
-                index < 1 ? "border-r-2 border-black/30" : ""
+              className={`info-box text-center px-6 md:px-10 lg:px-16 ${
+                index < 1 ? "border-r md:border-r-2 border-black/20 md:border-black/30" : ""
               }`}
             >
-              <h2 className="text-[#53ac70] text-[50px] font-semibold mb-[20px] transition-all duration-300">
+              <h2 className="text-[#53ac70] text-[28px] md:text-[38px] lg:text-[50px] font-semibold mb-[10px] md:mb-[15px] lg:mb-[20px] transition-all duration-300">
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
@@ -109,10 +109,10 @@ export function StatsBar() {
                   isInView={inView}
                 />
               </h2>
-              <p className="text-[18px] font-semibold">
+              <p className="text-[12px] md:text-[14px] lg:text-[18px] font-semibold">
                 {stat.label}
                 {stat.sublabel && (
-                  <span className="block mt-[5px] font-normal text-[16px]">
+                  <span className="block mt-[3px] md:mt-[4px] lg:mt-[5px] font-normal text-[11px] md:text-[13px] lg:text-[16px]">
                     {stat.sublabel}
                   </span>
                 )}

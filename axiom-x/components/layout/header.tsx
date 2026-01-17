@@ -34,10 +34,10 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white" style={{ padding: "20px 0" }}>
+      <header className="sticky top-0 z-50 bg-white py-4 md:py-5 lg:py-5">
         <div className="container-axiom">
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* Logo - Responsive sizing */}
             <div className="logo">
               <Link href="/">
                 <Image
@@ -45,7 +45,7 @@ export function Header() {
                   alt="Axiom X"
                   width={120}
                   height={40}
-                  className="w-[120px] h-auto"
+                  className="w-[100px] md:w-[110px] lg:w-[120px] h-auto"
                   priority
                 />
               </Link>

@@ -24,20 +24,20 @@ const partners = [
 
 export function PartnersSection() {
   return (
-    <section id="partners" className="pb-10">
-      {/* Partners Title - added more space after, thinner font weight */}
-      <div className="container-axiom text-center mb-[60px]">
-        <h2 className="text-[28px] tracking-[3px] font-light uppercase font-heading mb-[20px]">
+    <section id="partners" className="pb-6 md:pb-8 lg:pb-10">
+      {/* Partners Title - Responsive sizing */}
+      <div className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
+        <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-light uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
           BE A PART OF OUR PARTNERS
         </h2>
       </div>
 
-      {/* Partners Wrapper - Special layout: boxed left, full-width right - reduced padding */}
-      <div className="bg-[#ececec] py-[10px] relative overflow-hidden">
+      {/* Partners Wrapper - Responsive padding and height */}
+      <div className="bg-[#ececec] py-[8px] md:py-[10px] relative overflow-hidden">
         {/* Container for PARTNERS box (boxed width on left) */}
         <div className="container-axiom relative z-10">
           <div className="flex items-center">
-            {/* PARTNERS Box - Sticky on left, less padding, bolder text */}
+            {/* PARTNERS Box - Hidden on mobile/tablet, visible on desktop */}
             <div className="hidden lg:flex w-[160px] h-[160px] bg-[#53ac70] rounded-[15px] justify-center items-center flex-shrink-0 relative z-20">
               <h3 className="text-white text-[40px] font-bold leading-[75%] m-0 text-center">
                 PA<br />RT<br />NE<br />RS
@@ -46,17 +46,17 @@ export function PartnersSection() {
           </div>
         </div>
 
-        {/* Marquee - Full width, positioned to flow behind PARTNERS box and to screen edge */}
+        {/* Marquee - Responsive sizing and positioning */}
         <div className="absolute inset-y-0 left-0 right-0 flex items-center overflow-hidden">
-          {/* Offset to start after PARTNERS box area */}
-          <div className="ml-[calc((100vw-1250px)/2+180px)] lg:ml-[calc((100vw-1250px)/2+180px)] flex-1 overflow-hidden">
-            {/* Marquee animation container - centered with PARTNERS box */}
-            <div className="flex animate-marquee items-center h-[160px]">
+          {/* On mobile: start from edge, on desktop: offset for PARTNERS box */}
+          <div className="ml-0 lg:ml-[calc((100vw-1250px)/2+180px)] flex-1 overflow-hidden">
+            {/* Marquee animation container - Responsive height */}
+            <div className="flex animate-marquee items-center h-[80px] md:h-[120px] lg:h-[160px]">
               {/* First set of logos */}
               {partners.map((partner) => (
                 <div
                   key={partner.id}
-                  className="flex-shrink-0 px-6 flex items-center justify-center h-[160px]"
+                  className="flex-shrink-0 px-3 md:px-4 lg:px-6 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
                 >
                   <Image
                     src={partner.logo}
@@ -65,8 +65,8 @@ export function PartnersSection() {
                     height={100}
                     className={
                       partner.type === "long"
-                        ? "w-auto max-h-[45px]"
-                        : "w-auto max-h-[70px]"
+                        ? "w-auto max-h-[30px] md:max-h-[38px] lg:max-h-[45px]"
+                        : "w-auto max-h-[45px] md:max-h-[55px] lg:max-h-[70px]"
                     }
                   />
                 </div>
@@ -75,7 +75,7 @@ export function PartnersSection() {
               {partners.map((partner) => (
                 <div
                   key={`dup-${partner.id}`}
-                  className="flex-shrink-0 px-6 flex items-center justify-center h-[160px]"
+                  className="flex-shrink-0 px-3 md:px-4 lg:px-6 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
                 >
                   <Image
                     src={partner.logo}
@@ -84,8 +84,8 @@ export function PartnersSection() {
                     height={100}
                     className={
                       partner.type === "long"
-                        ? "w-auto max-h-[45px]"
-                        : "w-auto max-h-[70px]"
+                        ? "w-auto max-h-[30px] md:max-h-[38px] lg:max-h-[45px]"
+                        : "w-auto max-h-[45px] md:max-h-[55px] lg:max-h-[70px]"
                     }
                   />
                 </div>
@@ -96,20 +96,20 @@ export function PartnersSection() {
 
       </div>
 
-      {/* CTA Buttons - Both green filled as per PDF design */}
-      <div className="container-axiom">
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+      {/* CTA Buttons - Responsive sizing */}
+      <div className="container-axiom px-4 md:px-0">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 mt-6 md:mt-8 lg:mt-10">
           {/* Green filled button */}
           <Link
             href="#contact"
-            className="inline-flex justify-center items-center px-6 py-4 bg-[#53ac70] text-white rounded-lg font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
+            className="inline-flex justify-center items-center px-4 py-3 md:px-5 md:py-3.5 lg:px-6 lg:py-4 bg-[#53ac70] text-white text-[14px] md:text-[15px] lg:text-base rounded-lg font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
           >
             Speak to an Expert
           </Link>
           {/* Dark green filled button */}
           <Link
             href="/signup"
-            className="inline-flex justify-center items-center px-6 py-4 bg-[#19342c] text-white rounded-lg font-medium border-2 border-[#19342c] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
+            className="inline-flex justify-center items-center px-4 py-3 md:px-5 md:py-3.5 lg:px-6 lg:py-4 bg-[#19342c] text-white text-[14px] md:text-[15px] lg:text-base rounded-lg font-medium border-2 border-[#19342c] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
           >
             Create an Account
           </Link>
