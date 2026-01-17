@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd axiom-x && npm install && npm run build",
+  "outputDirectory": "axiom-x/.next",
+  "installCommand": "cd axiom-x && npm install",
+  "framework": "nextjs"
+}
