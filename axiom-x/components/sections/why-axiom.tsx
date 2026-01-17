@@ -1,101 +1,112 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Button } from "@/components/ui/button";
-import { content, whyAxiomSlides } from "@/lib/constants";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
+// Card content data
+const cards = [
+  {
+    id: 1,
+    content: "At Axiom x, we don't sell services. We offer a system. One that thinks, scales, and adapts with your business.",
+  },
+  {
+    id: 2,
+    content: "Our AI-enhanced ecosystem was built for the operational complexity that most businesses are only now realizing they need to solve.",
+  },
+  {
+    id: 3,
+    content: "From logistics to customer engagement, we power the unseen infrastructure that drives growth.",
+  },
+  {
+    id: 4,
+    content: "We transform complexity into execution, insight, and measurable growth across every touchpoint.",
+  },
+];
 
 export function WhyAxiomSection() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const slide = whyAxiomSlides[0];
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      slidesToScroll: 1,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
 
   return (
-    <section id="why-axiom" className="py-16 md:py-24 overflow-hidden" ref={ref}>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-dark mb-4">
-              {content.whyAxiom.headline}
+    <section id="why-axiom" className="py-[60px]">
+      <div className="container-axiom">
+        {/* Full-width container with background image and rounded corners */}
+        <div
+          className="relative rounded-[40px] overflow-hidden py-[80px] px-[60px] bg-cover bg-center"
+          style={{ backgroundImage: "url(/images/bg-3.jpg)" }}
+        >
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-black/50" />
+
+          {/* Content */}
+          <div className="relative z-10">
+            {/* Title - white text, large */}
+            <h2 className="text-[48px] md:text-[55px] font-bold text-white mb-4 leading-tight">
+              Why Axiom <span className="text-[#d4fb50]">x</span> ?
             </h2>
-            <p className="text-lg md:text-xl text-primary font-medium mb-6">
-              {content.whyAxiom.subheadline}
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              {content.whyAxiom.description}
+
+            {/* Subtitle - white text, NO green */}
+            <p className="text-[22px] md:text-[26px] text-white font-normal mb-[50px] leading-[1.4] max-w-[600px]">
+              You don&apos;t just need to outsource.
+              <br />
+              You need to outsmart, outscale, and out-deliver.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary-forest text-white font-medium"
-                asChild
-              >
-                <Link href="#contact">{content.whyAxiom.ctaPrimary}</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary/5 font-medium"
-                asChild
-              >
-                <Link href="/signup">{content.whyAxiom.ctaSecondary}</Link>
-              </Button>
+            {/* Carousel Cards - 2 visible at a time */}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex gap-6">
+                {cards.map((card, index) => {
+                  // Alternate between white and black cards
+                  const isWhiteCard = index % 2 === 0;
+                  const isHovered = hoveredCard === card.id;
+
+                  // On hover, colors swap
+                  const showWhite = isHovered ? !isWhiteCard : isWhiteCard;
+
+                  return (
+                    <div
+                      key={card.id}
+                      className="flex-[0_0_calc(50%-12px)] min-w-0"
+                      onMouseEnter={() => setHoveredCard(card.id)}
+                      onMouseLeave={() => setHoveredCard(null)}
+                    >
+                      <div
+                        className={`
+                          p-8 rounded-[20px] h-full min-h-[200px] flex items-center
+                          transition-all duration-500 cursor-pointer
+                          ${showWhite
+                            ? "bg-white/80 backdrop-blur-sm"
+                            : "bg-black/80 backdrop-blur-sm"
+                          }
+                        `}
+                      >
+                        <p
+                          className={`
+                            text-[18px] md:text-[20px] leading-[1.5] font-normal m-0
+                            transition-colors duration-500
+                            ${showWhite ? "text-black" : "text-white"}
+                          `}
+                        >
+                          {card.content}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </motion.div>
 
-          {/* Right: Cards */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
-            {slide.cards.map((card, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Image
-                      src={card.icon}
-                      alt={card.title}
-                      width={32}
-                      height={32}
-                      className="w-8 h-8"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-lg font-semibold text-primary-dark mb-2">
-                      {card.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {card.text}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-
-            {/* Note */}
-            <p className="text-sm text-gray-500 italic pl-4 border-l-2 border-primary/30">
-              {slide.note}
-            </p>
-          </motion.div>
+            {/* NO buttons - they're already in partners section */}
+          </div>
         </div>
       </div>
     </section>

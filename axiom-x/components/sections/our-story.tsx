@@ -1,71 +1,54 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { content } from "@/lib/constants";
 
 export function OurStorySection() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   return (
-    <section
-      id="our-story"
-      ref={ref}
-      className="py-16 md:py-24 bg-primary-dark text-white relative overflow-hidden"
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-      </div>
+    <section id="our-story">
+      <div className="container-axiom">
+        {/* Story Wrapper - CSS: background: #53ac70, padding: 50px, border-radius: 20px */}
+        <div className="bg-[#53ac70] p-[50px] rounded-[20px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left: Title */}
+            <div>
+              {/* h2 - CSS: font-size: 36px, text-transform: uppercase, color: #fff,
+                  line-height: 120%, margin: 0, font-weight: 700, font-family: Inter */}
+              <h2
+                className="text-[36px] uppercase text-white leading-[120%] m-0 font-extrabold"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                OUR STORY: FROM
+                <br />
+                1997 TO THE AI ERA
+              </h2>
+            </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
-          >
-            {content.ourStory.headline}
-          </motion.h2>
+            {/* Right: Content */}
+            <div>
+              {/* p - CSS: color: #fff, font-size: 16px, font-family: Inter */}
+              <p
+                className="text-white text-[16px] mb-0"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                We started in 1997 as Axiom x Telecom — building the Middle East&apos;s
+                largest mobility distribution engine. We helped global brands scale
+                through precision logistics, resilient warehousing, and high-volume
+                fulfillment.
+              </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-white/80 leading-relaxed mb-10"
-          >
-            {content.ourStory.content}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-dark font-medium group"
-              asChild
-            >
-              <Link href="/about">
-                {content.ourStory.cta}
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </motion.div>
+              {/* Button - CSS: margin-top: 25px */}
+              <div className="mt-[25px]">
+                {/* a - CSS: background: #fff, color: #53ac70, font-weight: 500,
+                    padding: 12px 40px, border-radius: 30px, line-height: 130%, border: 1px solid #fff */}
+                <Link
+                  href="/about"
+                  className="inline-block bg-white text-[#53ac70] font-medium text-[14px] py-[8px] px-[35px] rounded-[200px] leading-[130%] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                >
+                  Read full story
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

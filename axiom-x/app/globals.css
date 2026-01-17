@@ -2,6 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
+/* Custom Aloevera font for service tags */
+@font-face {
+  font-family: 'Aloevera-Regular';
+  src: url('/fonts/AloeveraDisplay-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -190,6 +199,70 @@
   .font-body {
     font-family: "Inter", sans-serif;
   }
+
+  .font-aloevera {
+    font-family: 'Aloevera-Regular', sans-serif;
+  }
+
+  /* Container max-width matching original design (1250px) */
+  .container-axiom {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  /* Custom button styles matching PDF design */
+  .btn-green {
+    background: #53ac70;
+    border: 1px solid #53ac70;
+    color: #fff;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .btn-green:hover {
+    background: transparent;
+    color: #53ac70;
+  }
+
+  .btn-dark {
+    background: #19342c;
+    border: 1px solid #19342c;
+    color: #fff;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .btn-dark:hover {
+    background: transparent;
+    color: #19342c;
+  }
+
+  .btn-pill {
+    border-radius: 50px;
+  }
+
+  /* Service tags matching PDF */
+  .service-tag {
+    display: inline-block;
+    background: #d4fb50;
+    color: #000;
+    font-family: 'Aloevera-Regular', sans-serif;
+    font-size: 16px;
+    padding: 14px 24px;
+    border-radius: 40px;
+    border: 1px solid #d4fb50;
+    transition: all 0.3s ease;
+  }
+
+  .service-tag:hover {
+    background: transparent;
+    color: #d4fb50;
+  }
 }
 
 /* Marquee animation for partners section */
@@ -225,7 +298,7 @@
   background: linear-gradient(135deg, #53ac70 0%, #3f7537 100%);
 }
 
-/* Hover lift effect */
+/* Hover lift effect for cards */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -233,4 +306,141 @@
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(83, 172, 112, 0.25);
+}
+
+.btn-hover:active {
+  transform: scale(0.98);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Form focus effects */
+.input-focus {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-focus:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(83, 172, 112, 0.15);
+}
+
+/* Scale on hover */
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Slide background effect for tabs */
+.tab-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-green);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.tab-slide:hover::before {
+  transform: translateX(0);
+}
+
+/* Success animation keyframes */
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-checkmark {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: checkmark 0.5s ease forwards;
+}
+
+/* Pulse animation for loading states */
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Stagger delay utilities */
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+.delay-500 {
+  animation-delay: 500ms;
 }

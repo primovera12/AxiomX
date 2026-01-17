@@ -1,46 +1,137 @@
 "use client";
 
 import Image from "next/image";
-import { partners } from "@/lib/constants";
+import Link from "next/link";
+
+// Partner logos
+const partners = [
+  { id: 1, logo: "/images/l-1.png", name: "Partner 1", type: "long" },
+  { id: 2, logo: "/images/l-2.png", name: "Partner 2", type: "box" },
+  { id: 3, logo: "/images/l-11.png", name: "Partner 3", type: "long" },
+  { id: 4, logo: "/images/l-3.png", name: "Partner 4", type: "long" },
+  { id: 5, logo: "/images/l-4.png", name: "Partner 5", type: "long" },
+  { id: 6, logo: "/images/l-18.png", name: "Partner 6", type: "box" },
+  { id: 7, logo: "/images/l-5.webp", name: "Partner 7", type: "long" },
+  { id: 8, logo: "/images/l-6.png", name: "Partner 8", type: "long" },
+  { id: 9, logo: "/images/l-7.png", name: "Partner 9", type: "box" },
+  { id: 10, logo: "/images/l-8.png", name: "Partner 10", type: "long" },
+  { id: 11, logo: "/images/l-9.jpeg", name: "Partner 11", type: "long" },
+  { id: 12, logo: "/images/l-10.png", name: "Partner 12", type: "box" },
+  { id: 13, logo: "/images/l-13.png", name: "Partner 13", type: "long" },
+  { id: 14, logo: "/images/l-12.png", name: "Partner 14", type: "box" },
+  { id: 15, logo: "/images/l-20.png", name: "Partner 15", type: "long" },
+];
 
 export function PartnersSection() {
-  // Double the partners array for seamless loop
-  const allPartners = [...partners, ...partners];
-
   return (
-    <section className="py-12 md:py-16 bg-neutral-medium overflow-hidden">
-      <div className="container mx-auto px-4 mb-8">
-        <h2 className="text-center text-sm font-semibold uppercase tracking-wider text-gray-500">
-          Be a Part of Our Partners
+    <section id="partners" className="pb-10">
+      {/* Partners Title */}
+      <div className="container-axiom text-center mb-[40px]">
+        <h2 className="text-[28px] tracking-[3px] font-medium uppercase font-heading">
+          BE A PART OF OUR PARTNERS
         </h2>
       </div>
 
-      {/* Marquee Container */}
-      <div className="relative group">
-        {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-neutral-medium to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-neutral-medium to-transparent z-10 pointer-events-none" />
-
-        {/* Scrolling Track */}
-        <div className="flex animate-marquee group-hover:[animation-play-state:paused]">
-          {allPartners.map((partner, index) => (
-            <div
-              key={`${partner.id}-${index}`}
-              className="flex-shrink-0 mx-6 md:mx-10 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
-            >
-              <div className="w-24 md:w-32 h-12 md:h-16 relative flex items-center justify-center">
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={120}
-                  height={60}
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
+      {/* Partners Wrapper - Special layout: boxed left, full-width right */}
+      <div className="bg-[#ececec] py-[20px] relative overflow-hidden">
+        {/* Container for PARTNERS box (boxed width on left) */}
+        <div className="container-axiom relative z-10">
+          <div className="flex items-center">
+            {/* PARTNERS Box - Sticky on left, less padding, bolder text */}
+            <div className="hidden lg:flex w-[160px] h-[160px] bg-[#53ac70] rounded-[15px] justify-center items-center flex-shrink-0 relative z-20">
+              <h3 className="text-white text-[40px] font-bold leading-[75%] m-0 text-center">
+                PA<br />RT<br />NE<br />RS
+              </h3>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Marquee - Full width, positioned to flow behind PARTNERS box and to screen edge */}
+        <div className="absolute inset-y-0 left-0 right-0 flex items-center overflow-hidden">
+          {/* Offset to start after PARTNERS box area */}
+          <div className="ml-[calc((100vw-1250px)/2+180px)] lg:ml-[calc((100vw-1250px)/2+180px)] flex-1 overflow-hidden">
+            {/* Marquee animation container */}
+            <div className="flex animate-marquee">
+              {/* First set of logos */}
+              {partners.map((partner) => (
+                <div
+                  key={partner.id}
+                  className="flex-shrink-0 px-6 flex items-center h-[110px]"
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={150}
+                    height={100}
+                    className={
+                      partner.type === "long"
+                        ? "w-auto max-h-[45px]"
+                        : "w-auto max-h-[70px]"
+                    }
+                  />
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {partners.map((partner) => (
+                <div
+                  key={`dup-${partner.id}`}
+                  className="flex-shrink-0 px-6 flex items-center h-[110px]"
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={150}
+                    height={100}
+                    className={
+                      partner.type === "long"
+                        ? "w-auto max-h-[45px]"
+                        : "w-auto max-h-[70px]"
+                    }
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Spacer to maintain height */}
+        <div className="h-[160px] lg:h-[160px]"></div>
+      </div>
+
+      {/* CTA Buttons - One green outlined, one dark green filled */}
+      <div className="container-axiom">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+          {/* Green outlined button */}
+          <Link
+            href="#contact"
+            className="inline-flex justify-center items-center px-6 py-4 border-2 border-[#53ac70] text-[#53ac70] bg-transparent rounded-lg font-medium transition-all duration-300 hover:bg-[#53ac70] hover:text-white"
+          >
+            Speak to an Expert
+          </Link>
+          {/* Dark green filled button */}
+          <Link
+            href="/signup"
+            className="inline-flex justify-center items-center px-6 py-4 bg-[#19342c] text-white rounded-lg font-medium border-2 border-[#19342c] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
+          >
+            Create an Account
+          </Link>
         </div>
       </div>
+
+      {/* CSS for marquee animation */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 30s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }

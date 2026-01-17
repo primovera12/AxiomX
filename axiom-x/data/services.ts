@@ -1,93 +1,85 @@
 export interface Service {
   id: string;
+  emoji: string;
   title: string;
+  boldText: string;
   description: string;
-  features: string[];
+  tags: string[];
   image: string;
-  icon?: string; // Lucide icon name
 }
 
+// 5 services as shown in PDF (NO Last Mile Delivery)
 export const services: Service[] = [
   {
-    id: "last-mile",
-    title: "Last Mile Delivery",
-    description:
-      "The promise of speed, delivered. From AI-based dispatch to branded delivery fleets, we make sure the last step of your customer journey reflects everything you stand for.",
-    features: [
-      "Same-Day & Next-Day Delivery",
-      "On-Demand & Express Delivery",
-      "B2C & B2B Deliveries",
-      "Reverse Logistics",
-      "Customized delivery solutions",
-    ],
-    image: "/images/services/service-1.jpg",
-    icon: "Truck",
-  },
-  {
     id: "warehousing",
-    title: "Warehousing & Inventory Management",
+    emoji: "🏪",
+    title: "Warehousing & Inventory",
+    boldText: "Storage built for action, not stagnation.",
     description:
-      "Storage built for action, not stagnation. From inventory intelligence to optimized flow, our fulfillment-first warehouses are ready for your growth — and your complexity.",
-    features: [
-      "Inventory Management",
-      "Storage solutions",
-      "Inbound & Outbound",
-      "Order Fulfillment",
+      "From inventory intelligence to optimized flow, our fulfillment-first warehouses are ready for your growth — and your complexity.",
+    tags: [
+      "29 warehouses, 122K+ sqft capacity",
+      "99.9% inventory accuracy",
+      "Real-time dashboards via WMS integrations",
+      "Modular zoning, temperature-controlled environments",
     ],
-    image: "/images/services/service-1.jpg",
-    icon: "Warehouse",
+    image: "/images/service-1.jpg",
   },
   {
     id: "call-center",
+    emoji: "📞",
     title: "Call Center Support",
+    boldText: "Where customer empathy meets automated efficiency.",
     description:
-      "Where customer empathy meets automated efficiency. Whether you're resolving issues or driving conversions, we power conversations that matter. With a scale of 1M+ annual interactions yearly at 30 sec response time.",
-    features: [
+      "Whether you're resolving issues or driving conversions, we power conversations that matter.",
+    tags: [
       "Omnichannel Customer Support",
       "AI / Multilingual Voice Agents / Chat",
       "Inbound Customer Care",
       "Outbound Engagement",
     ],
-    image: "/images/services/service-1.jpg",
-    icon: "Headphones",
+    image: "/images/service-1.jpg",
   },
   {
     id: "back-office",
+    emoji: "💼",
     title: "Back Office Services",
+    boldText: "Because the backend shouldn't slow you down.",
     description:
-      "Because the backend shouldn't slow you down. We handle the data, the documents, and the details — so your team can focus on building. With a proven track record of 160K+ technical ticket resolution yearly.",
-    features: [
+      "We handle the data, the documents, and the details — so your team can focus on building.",
+    tags: [
       "Onshore Back Office Services",
       "Offshore Back Office Services",
       "Multi level technical support",
     ],
-    image: "/images/services/service-1.jpg",
-    icon: "FileText",
+    image: "/images/service-1.jpg",
   },
   {
     id: "vas",
+    emoji: "📦",
     title: "Value-Added Services (VAS)",
+    boldText: "Your packaging, presentation, and post-sale excellence — all handled.",
     description:
-      "Your packaging, presentation, and post-sale excellence — all handled. From kitting to IMEI tracking, we extend your customer promise beyond the delivery itself.",
-    features: [
+      "From kitting to IMEI tracking, we extend your customer promise beyond the delivery itself.",
+    tags: [
       "Packaging, Kitting & Customization",
       "Post-Delivery Assembly & Installation",
       "Returns, Exchange & Reverse Processing",
       "Refurbishment & Repair Services",
     ],
-    image: "/images/services/service-1.jpg",
-    icon: "Package",
+    image: "/images/service-1.jpg",
   },
   {
     id: "upselling",
+    emoji: "📈",
     title: "Upselling Revenue Programs",
+    boldText: "We don't just fulfill demand — we create it.",
     description:
-      "We don't just fulfill demand — we create it. We activate upsell logic across your call centers, field teams, and support scripts — delivering real revenue from service interactions.",
-    features: [
+      "We activate upsell logic across your call centers, field teams, and support scripts.",
+    tags: [
       "Embedded Upselling at Every Touchpoint",
       "Brand presentation & merchandising activity",
     ],
-    image: "/images/services/service-1.jpg",
-    icon: "TrendingUp",
+    image: "/images/service-1.jpg",
   },
 ];

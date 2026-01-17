@@ -1,59 +1,88 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Eye, Target } from "lucide-react";
-import { content } from "@/lib/constants";
+import Link from "next/link";
+import Image from "next/image";
 
 export function VisionMissionSection() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  const cards = [
-    {
-      icon: Eye,
-      title: content.vision.headline,
-      text: content.vision.content,
-      gradient: "from-primary to-primary-forest",
-    },
-    {
-      icon: Target,
-      title: content.mission.headline,
-      text: content.mission.content,
-      gradient: "from-primary-dark to-primary-forest",
-    },
-  ];
-
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-neutral-light">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-          {cards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`relative rounded-2xl p-8 md:p-10 text-white overflow-hidden bg-gradient-to-br ${card.gradient}`}
+    /* Section - CSS: padding: 280px 0, background-image: vission.jpg, background-position: center,
+       background-size: cover, display: flex, align-items: center, position: relative, z-index: 1 */
+    <section
+      className="py-[280px] bg-cover bg-center flex items-center relative z-[1]"
+      style={{ backgroundImage: "url(/images/vission.jpg)" }}
+    >
+      {/* Overlay - CSS: linear-gradient(90deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.40) 94%) */}
+      <div
+        className="absolute inset-0 -z-[1]"
+        style={{
+          background: "linear-gradient(90deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 94%)",
+        }}
+      />
+
+      <div className="container-axiom">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left: Vision & Mission Content */}
+          <div>
+            {/* Vision - CSS: margin-bottom: 40px */}
+            <div className="mb-[40px]">
+              {/* h2 - CSS: font-size: 36px, text-transform: uppercase, color: #fff,
+                  font-weight: 700, line-height: 110%, margin-bottom: 10px */}
+              <h2 className="text-[36px] uppercase text-white font-bold leading-[110%] mb-[10px]">
+                Vision
+              </h2>
+              {/* p - CSS: font-size: 16px, color: #fff */}
+              <p className="text-[16px] text-white font-medium">
+                To be the unseen force powering the next era of business operations.
+              </p>
+            </div>
+
+            {/* Mission - CSS: margin-bottom: 40px */}
+            <div className="mb-[40px]">
+              <h2 className="text-[36px] uppercase text-white font-bold leading-[110%] mb-[10px]">
+                Mission
+              </h2>
+              <p className="text-[16px] text-white font-medium">
+                To simplify, enable, and scale modern operations through intelligent, AI-driven services.
+              </p>
+            </div>
+
+            {/* Buttons - CSS: vision-btn border: none, padding: 0 */}
+            <div className="flex items-center gap-[15px]">
+              {/* READ MORE button - CSS: width: 160px, padding: 10px, font-size: 16px,
+                  uppercase, bg: #3f7537, border-color: #3f7537 */}
+              <Link
+                href="/about"
+                className="w-[160px] text-center p-[10px] text-[16px] uppercase font-semibold bg-[#3f7537] text-white rounded-[8px] border border-[#3f7537] transition-all duration-300 hover:bg-[#53ac71] hover:border-[#53ac71]"
+              >
+                READ MORE
+              </Link>
+              {/* CAREERS button - CSS: width: 160px, padding: 10px, font-size: 16px,
+                  uppercase, bg: #fff, border: 1px solid #fff, color: #000 */}
+              <Link
+                href="/careers"
+                className="w-[160px] text-center p-[10px] text-[16px] uppercase font-semibold bg-white text-black rounded-[8px] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+              >
+                CAREERS
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: Play Button - CSS: padding-left: 25px */}
+          <div className="pl-[25px] flex justify-center lg:justify-end">
+            {/* Play button - CSS: width: 140px, transition: .3s */}
+            <button
+              className="transition-all duration-300 hover:scale-110"
+              aria-label="Play video"
             >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mb-6">
-                <card.icon className="w-7 h-7 text-white" />
-              </div>
-
-              {/* Content */}
-              <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-                {card.title}
-              </h3>
-              <p className="text-white/90 leading-relaxed">{card.text}</p>
-
-              {/* Decorative Element */}
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-white/5" />
-              <div className="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-white/5" />
-            </motion.div>
-          ))}
+              <Image
+                src="/images/play-btn.svg"
+                alt="Play"
+                width={140}
+                height={140}
+                className="w-[140px] h-auto"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -3,12 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin, Loader2 } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { SmoothScrollLink } from "@/components/shared/smooth-scroll-link";
-import { siteConfig, footerLinks, content } from "@/lib/constants";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -16,196 +12,168 @@ export function Footer() {
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!email || !email.includes("@")) {
-      toast.error("Please enter a valid email address");
-      return;
-    }
+    if (!email) return;
 
     setIsSubmitting(true);
-
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast.success("Successfully subscribed to our newsletter!");
-    setEmail("");
-    setIsSubmitting(false);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      toast.success("Successfully subscribed to our newsletter!");
+      setEmail("");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const socialLinks = [
-    { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
-    { icon: Twitter, href: siteConfig.social.twitter, label: "Twitter" },
-    { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
-    { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
-  ];
-
   return (
-    <footer className="bg-primary-dark text-white">
+    <footer className="bg-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Column 1: Logo + Description */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6">
-              <Image
-                src="/images/logo/logo.png"
-                alt={siteConfig.name}
-                width={140}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
-              />
-            </Link>
-            <p className="text-white/70 text-sm leading-relaxed mb-6">
-              {siteConfig.tagline}. From first mile to final revenue touchpoint,
-              we power the unseen.
-            </p>
+      <div className="border-t border-[#e0e0e0] pt-12 pb-5">
+        <div className="container-axiom">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+            {/* Column 1: Logo + Subscribe */}
+            <div className="lg:col-span-4 pr-2.5">
+              {/* Logo */}
+              <div className="mb-8">
+                <Link href="/">
+                  <Image
+                    src="/images/logo-2.png"
+                    alt="Axiom X"
+                    width={120}
+                    height={40}
+                    className="w-[120px] h-auto"
+                  />
+                </Link>
+              </div>
 
-            {/* App Download Placeholders */}
-            <div className="flex flex-col gap-3">
-              <p className="text-sm text-white/50">Download our app</p>
-              <div className="flex gap-3">
-                <a
-                  href="#"
-                  className="bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 text-sm transition-colors"
-                >
-                  App Store
-                </a>
-                <a
-                  href="#"
-                  className="bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 text-sm transition-colors"
-                >
-                  Google Play
-                </a>
+              {/* Subscribe Section */}
+              <div>
+                <h4 className="text-xl font-semibold mb-2.5 leading-[90%] text-black opacity-90">
+                  Subscribe
+                </h4>
+                <label className="text-[15px] font-medium text-black opacity-90 block">
+                  Get 10% off your first order
+                </label>
+                <form onSubmit={handleNewsletterSubmit} className="mt-5 relative h-10">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full border-0 border-b border-[#eee] p-2.5 text-base outline-none"
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-[#d8d8d8] hover:text-[#53ac71] transition-colors text-lg cursor-pointer"
+                  >
+                    <Send className="h-4 w-4" />
+                  </button>
+                </form>
               </div>
             </div>
-          </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {footerLinks.quickLinks.map((link) =>
-                link.href.startsWith("#") ? (
-                  <li key={link.label}>
-                    <SmoothScrollLink
-                      href={link.href}
-                      className="text-white/70 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </SmoothScrollLink>
-                  </li>
-                ) : (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Column 3: Account */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Account</h3>
-            <ul className="space-y-3">
-              {footerLinks.account.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
+            {/* Column 2: Account */}
+            <div className="lg:col-span-2">
+              <h4 className="text-lg font-semibold mb-4">Account</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    My Account
                   </Link>
                 </li>
-              ))}
-            </ul>
+                <li>
+                  <Link href="/login" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Login / Register
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Cart
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Wishlist
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Shop
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-            {/* Contact Info */}
-            <div className="mt-8">
-              <h4 className="text-sm font-semibold mb-3">Contact</h4>
-              <div className="space-y-2 text-sm text-white/70">
-                <p>{siteConfig.contact.regions.join(" | ")}</p>
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="block hover:text-white transition-colors"
-                >
-                  {siteConfig.contact.email}
-                </a>
-                <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
-                  className="block hover:text-white transition-colors"
-                >
-                  {siteConfig.contact.phone}
-                </a>
+            {/* Column 3: Quick Link */}
+            <div className="lg:col-span-2">
+              <h4 className="text-lg font-semibold mb-4">Quick Link</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Terms Of Use
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#contact" className="text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4: Download App */}
+            <div className="lg:col-span-4 text-center">
+              <h4 className="text-lg font-semibold mb-2">Download App</h4>
+              <p className="text-[13px] mb-4">Save $3 with App New User Only</p>
+
+              {/* Social Links */}
+              <div className="mt-10">
+                <ul className="flex items-center justify-center gap-6 text-xl">
+                  <li>
+                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                      <Facebook className="h-5 w-5" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                      <Twitter className="h-5 w-5" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                      <Instagram className="h-5 w-5" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-black hover:text-[#53ac71] transition-colors">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-
-          {/* Column 4: Newsletter */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2">
-              {content.newsletter.headline}
-            </h3>
-            <p className="text-white/70 text-sm mb-4">
-              {content.newsletter.description}
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <Input
-                type="email"
-                placeholder={content.newsletter.placeholder}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-primary"
-              />
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary-forest"
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Subscribing...
-                  </>
-                ) : (
-                  content.newsletter.buttonText
-                )}
-              </Button>
-            </form>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Copyright */}
-            <p className="text-sm text-white/50">
-              &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-              reserved.
-            </p>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/50 hover:text-white transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </div>
+      {/* Copyright */}
+      <div className="border-t border-[#e0e0e0] py-5 mt-14">
+        <div className="container-axiom text-center">
+          <p className="text-[15px] m-0">
+            Copyright Axiomx.com All right reserved
+          </p>
         </div>
       </div>
     </footer>

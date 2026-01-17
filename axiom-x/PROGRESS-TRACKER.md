@@ -1,7 +1,8 @@
-# Axiom X Website - Progress Tracker
+# Axiom X Website - REBUILD Progress Tracker
 
 > **Last Updated:** January 16, 2025
-> **Current Phase:** Phase 6 Complete, Ready for Phase 7
+> **Status:** COMPLETE REBUILD - Starting Fresh
+> **Goal:** Exact 1:1 copy of PDF design
 
 ---
 
@@ -9,431 +10,251 @@
 
 | Phase | Status | Progress |
 |-------|--------|----------|
-| Phase 1: Project Setup | ✅ Complete | 100% |
-| Phase 2: Layout (Header + Footer) | ✅ Complete | 100% |
-| Phase 3: Hero Carousel | ✅ Complete | 100% |
-| Phase 4: Stats Bar | ✅ Complete | 100% |
-| Phase 5: Services Section | ✅ Complete | 100% |
-| Phase 6: Content Sections | ✅ Complete | 100% |
-| Phase 7: Contact + Tracking | ⏳ Pending | 0% |
-| Phase 8: Animations + Polish | ⏳ Pending | 0% |
-| Phase 9: Responsive Testing | ⏳ Pending | 0% |
-| Phase 10: Final Review | ⏳ Pending | 0% |
+| Phase 1: Setup & Assets | ⏳ In Progress | 10% |
+| Phase 2: Header + Footer | ⏳ Pending | 0% |
+| Phase 3: Hero + Snapshot + Stats | ⏳ Pending | 0% |
+| Phase 4: Partners + Why Axiom | ⏳ Pending | 0% |
+| Phase 5: Services + Our Story | ⏳ Pending | 0% |
+| Phase 6: Vision/Mission + Brand Values | ⏳ Pending | 0% |
+| Phase 7: Careers + Contact | ⏳ Pending | 0% |
+| Phase 8: Shipment Tracking | ⏳ Pending | 0% |
+| Final: PDF Verification | ⏳ Pending | 0% |
 
 ---
 
-## Phase 1: Project Setup ✅ COMPLETE
+## Reference Documents
 
-### 1.1 Initialize Next.js Project
-- [x] Create Next.js 16 project with TypeScript
-- [x] Configure Tailwind CSS 4
-- [x] Setup ESLint
-- [x] Configure App Router
-- [x] Setup import alias `@/*`
-
-### 1.2 Install Dependencies
-- [x] framer-motion (animations)
-- [x] react-intersection-observer (scroll detection)
-- [x] @number-flow/react (animated counters)
-- [x] embla-carousel-react (carousel)
-- [x] embla-carousel-autoplay (carousel autoplay)
-- [x] react-hook-form (forms)
-- [x] zod (validation)
-- [x] @hookform/resolvers (form validation)
-- [x] @tanstack/react-query (data fetching)
-- [x] sonner (toast notifications)
-- [x] usehooks-ts (utility hooks)
-- [x] clsx + tailwind-merge (class utilities)
-- [x] lucide-react (icons)
-- [x] prettier + prettier-plugin-tailwindcss (formatting)
-- [x] tailwindcss-animate (animation utilities)
-
-### 1.3 Initialize shadcn/ui
-- [x] Run shadcn init
-- [x] Add button component
-- [x] Add input component
-- [x] Add textarea component
-- [x] Add card component
-- [x] Add accordion component
-- [x] Add sheet component
-- [x] Add form component
-- [x] Add skeleton component
-
-### 1.4 Create Folder Structure
-- [x] components/layout/
-- [x] components/sections/
-- [x] components/sections/services/
-- [x] components/features/
-- [x] components/shared/
-- [x] data/
-- [x] hooks/
-- [x] lib/
-- [x] app/actions/
-- [x] app/login/
-- [x] app/signup/
-- [x] public/images/ (with subfolders)
-- [x] public/videos/
-- [x] public/fonts/
-
-### 1.5 Setup Configuration Files
-- [x] Update globals.css with Axiom X design tokens
-- [x] Configure custom colors (primary green, dark navy, lime accent)
-- [x] Setup Google Fonts (Poppins, Alexandria, Inter)
-- [x] Update layout.tsx with fonts and metadata
-- [x] Create .prettierrc
-
-### 1.6 Create Data Files
-- [x] data/site-config.ts
-- [x] data/navigation.ts
-- [x] data/hero-slides.ts
-- [x] data/stats.ts
-- [x] data/services.ts
-- [x] data/brand-values.ts
-- [x] data/partners.ts
-- [x] data/content.ts
-- [x] lib/validations.ts
-- [x] lib/constants.ts
-- [x] hooks/use-media-query.ts
-
-### 1.7 Migrate Assets
-- [x] Copy logos to public/images/logo/
-- [x] Copy backgrounds to public/images/backgrounds/
-- [x] Copy partner logos to public/images/partners/
-- [x] Copy icons to public/images/icons/
-- [x] Copy service images to public/images/services/
-- [x] Copy videos to public/videos/
-
-### 1.8 Verify Setup
-- [x] npm run build passes
-- [x] No TypeScript errors
-- [x] Basic page.tsx with placeholder sections
+- **PRIMARY:** `docs/Full Website Design.pdf` - THE SOURCE OF TRUTH
+- **Secondary:** `Old AxiomX/index.html` - HTML structure reference
+- **Styles:** `Old AxiomX/assets/css/style.css` - Exact CSS values
+- **Assets:** `Old AxiomX/assets/` - Images, videos, fonts
 
 ---
 
-## Phase 2: Layout (Header + Footer) ✅ COMPLETE
+## Phase 1: Setup & Assets ⏳ IN PROGRESS
 
-### 2.1 Smooth Scroll Link Component
-- [x] Create components/shared/smooth-scroll-link.tsx
-- [x] Handle anchor navigation
-- [x] Account for fixed header offset
+### 1.1 Copy Assets
+- [x] Create action plan file (REBUILD-ACTION-PLAN.md)
+- [x] Reset progress tracker
+- [ ] Copy images from `Old AxiomX/assets/img/` → `public/images/`
+- [ ] Copy videos from `Old AxiomX/assets/video/` → `public/videos/`
+- [ ] Copy fonts from `Old AxiomX/assets/fonts/` → `public/fonts/`
 
-### 2.2 Header Component
-- [x] Create components/layout/header.tsx
-- [x] Logo on left
-- [x] Nav links center (Home, Services, Why AxiomX, About, Contact)
-- [x] CTAs right (Sign Up, Login)
-- [x] Scroll detection for backdrop blur
-- [x] Responsive: hamburger menu on mobile
+### 1.2 Configure Design System
+- [ ] Update `tailwind.config.ts` with exact colors:
+  - Primary Green: `#53ac70`
+  - Dark Navy: `#19342c`
+  - Forest Green: `#3f7537`
+  - Accent Lime: `#d4fb50`
+  - Light Gray: `#ececec`
+  - Form Green: `#519b66`
+- [ ] Configure fonts in `globals.css`:
+  - Poppins (body)
+  - Alexandria (headings)
+  - Inter (UI elements)
+  - Aloevera Display (service tags)
 
-### 2.3 Mobile Navigation
-- [x] Create components/layout/mobile-nav.tsx
-- [x] Use shadcn Sheet component
-- [x] Slide from right
-- [x] All nav links + CTAs
-- [x] Close on link click
-
-### 2.4 Footer Component
-- [x] Create components/layout/footer.tsx
-- [x] Company logo + description
-- [x] Quick links section
-- [x] Account links section
-- [x] Newsletter signup form
-- [x] App download placeholders
-- [x] Contact info (regions, email, phone)
-- [x] Social links
-- [x] Copyright
-
-### 2.5 Update Layout
-- [x] Add Header to layout.tsx
-- [x] Add Footer to layout.tsx
-- [x] Update page.tsx with proper section IDs
-
-### 2.6 Test Navigation
-- [x] Smooth scroll works for all sections
-- [x] Mobile menu opens/closes
-- [x] Header blur on scroll
-- [x] Responsive breakpoints correct
+### 1.3 Verify Setup
+- [ ] Build passes without errors
+- [ ] All assets accessible
 
 ---
 
-## Phase 3: Hero Carousel ✅ COMPLETE
+## Phase 2: Header + Footer ⏳ PENDING
 
-### 3.1 Hero Section Component
-- [x] Create components/sections/hero.tsx
-- [x] Full-width, full-viewport-height
-- [x] Setup Embla Carousel with autoplay
-- [x] 5-second intervals
+### 2.1 Header Component
+- [ ] Logo (120px width)
+- [ ] Navigation: Home, Services, Why AxiomX, Contact, About
+- [ ] "Let's Talk" button (green pill, 124px min-width)
+- [ ] Mobile hamburger menu
+- [ ] **PDF MATCH:** ☐
 
-### 3.2 Slide Content
-- [x] Headline text
-- [x] Subtext/description
-- [x] Two CTAs (Speak to Expert, Create Account)
-- [x] Background video/image support
-
-### 3.3 Navigation
-- [x] Custom green navigation arrows (desktop)
-- [x] Dot indicators (mobile)
-- [x] Hide arrows on mobile
-- [x] Enable swipe gestures
-
-### 3.4 Animations
-- [x] Framer Motion text animations
-- [x] Staggered fade-in on slide change
-- [x] Slide crossfade transitions
-
-### 3.5 Responsive
-- [x] Stack CTAs vertically on mobile
-- [x] Adjust text sizes
-- [x] Test swipe on mobile
+### 2.2 Footer Component
+- [ ] Logo + Subscribe section
+- [ ] Account links column
+- [ ] Quick Links column
+- [ ] Download App + Social icons
+- [ ] Copyright bar
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Phase 4: Stats Bar ✅ COMPLETE
+## Phase 3: Hero + Snapshot + Stats ⏳ PENDING
 
-### 4.1 Animated Counter Component
-- [x] Create components/shared/animated-counter.tsx
-- [x] Use @number-flow/react
-- [x] Trigger on scroll into view
-- [x] Support suffix (%, +, etc.)
+### 3.1 Hero Section
+- [ ] Video background carousel (640px height)
+- [ ] Dark gradient overlay
+- [ ] "Are you Searching for X?" headline (X in lime)
+- [ ] Description text
+- [ ] "Speak to an Expert" button
+- [ ] Carousel navigation arrows (green squares)
+- [ ] Slide animations
+- [ ] **PDF MATCH:** ☐
 
-### 4.2 Stats Bar Section
-- [x] Create components/sections/stats-bar.tsx
-- [x] Import stats from data file
-- [x] Grid: 4 columns desktop, 2x2 mobile
-- [x] Style matching design
+### 3.2 Service Snapshot Card
+- [ ] Overlapping position (-75px margin-top)
+- [ ] X logo icon
+- [ ] "Service Snapshot" title
+- [ ] Description + "See more" link
+- [ ] **PDF MATCH:** ☐
 
-### 4.3 Testing
-- [x] Numbers animate on scroll
-- [x] Animation triggers once
-- [x] Responsive grid works
-
----
-
-## Phase 5: Services Section ✅ COMPLETE
-
-### 5.1 Services Desktop Component
-- [x] Create components/sections/services/services-desktop.tsx
-- [x] Left panel: vertical tabs
-- [x] Right panel: content + image
-- [x] Active indicator animation
-- [x] Framer Motion content transitions
-
-### 5.2 Services Mobile Component
-- [x] Create components/sections/services/services-mobile.tsx
-- [x] Vertical accordion
-- [x] One item open at a time
-- [x] Image above text
-
-### 5.3 Services Section Wrapper
-- [x] Create components/sections/services/index.tsx
-- [x] Use useIsDesktop hook
-- [x] Render appropriate component
-
-### 5.4 Styling
-- [x] Match design colors
-- [x] Feature checkmarks
-- [x] Proper typography
+### 3.3 Stats Bar
+- [ ] 8 stats with animated counters
+- [ ] Green numbers (#53ac71, 50px)
+- [ ] Grid layout (4 cols desktop, 2 mobile)
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Phase 6: Content Sections ✅ COMPLETE
+## Phase 4: Partners + Why Axiom ⏳ PENDING
 
-### 6.1 Section Wrapper Component
-- [x] Create components/shared/section-wrapper.tsx
-- [x] Scroll animation (fade up)
-- [x] useInView trigger
+### 4.1 Partners Section
+- [ ] "BE A PART OF OUR PARTNERS" title
+- [ ] Gray background (#ececec)
+- [ ] Auto-scrolling logo carousel
+- [ ] 15 partner logos
+- [ ] **PDF MATCH:** ☐
 
-### 6.2 Why Axiom X Section
-- [x] Create components/sections/why-axiom.tsx
-- [x] Headline + subheadline
-- [x] Body text
-- [x] Two CTAs
-- [x] Layout: text left, visual right (desktop)
-
-### 6.3 Partners Section
-- [x] Create components/sections/partners.tsx
-- [x] Horizontal marquee
-- [x] Partner logos from data
-- [x] Gradient fade edges
-- [x] Pause on hover
-
-### 6.4 Our Story Section
-- [x] Create components/sections/our-story.tsx
-- [x] Headline
-- [x] Story text
-- [x] CTA button
-
-### 6.5 Vision & Mission Section
-- [x] Create components/sections/vision-mission.tsx
-- [x] Two cards side by side
-- [x] Icon + title + text each
-- [x] Stack on mobile
-
-### 6.6 Brand Values Section
-- [x] Create components/sections/brand-values.tsx
-- [x] 5 values with icons
-- [x] Horizontal row (desktop)
-- [x] Horizontal scroll with snap (mobile)
-
-### 6.7 Careers CTA Section
-- [x] Create components/sections/careers-cta.tsx
-- [x] Full-width banner
-- [x] Headline + subtext
-- [x] Two CTAs
+### 4.2 Why Axiom X Section
+- [ ] Carousel with background image
+- [ ] 700px height
+- [ ] "Why Axiom x?" title (italic)
+- [ ] Description card (dark bg)
+- [ ] 2 feature cards with icons
+- [ ] Navigation arrows
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Phase 7: Contact + Tracking ⏳ PENDING
+## Phase 5: Services + Our Story ⏳ PENDING
 
-### 7.1 Contact Form Component
-- [ ] Create components/features/contact-form.tsx
-- [ ] Fields: Full Name, Email, Message
-- [ ] React Hook Form + Zod validation
-- [ ] Loading state
-- [ ] Success/error toasts
+### 5.1 Services Section
+- [ ] Background image (services-bg.jpg)
+- [ ] "Our Services" title with lime underline
+- [ ] Accordion with 6 services
+- [ ] X-logo indicator on active
+- [ ] Service tags (lime pills, Aloevera font)
+- [ ] **PDF MATCH:** ☐
 
-### 7.2 Server Action
-- [ ] Create app/actions/contact.ts
-- [ ] Validate form data
-- [ ] Log submission (email integration later)
-
-### 7.3 Tracking Widget
-- [ ] Create components/features/tracking-widget.tsx
-- [ ] Input for tracking number
-- [ ] Track button with loading
-- [ ] Mock data results
-- [ ] Timeline display
-- [ ] Status badges
-
-### 7.4 Contact Section
-- [ ] Create components/sections/contact-section.tsx
-- [ ] Form left, tracking right (desktop)
-- [ ] Stack on mobile
-
-### 7.5 Newsletter Form
-- [ ] Update footer newsletter
-- [ ] Zod validation
-- [ ] Toast feedback
+### 5.2 Our Story Section
+- [ ] Green background (#53ac71)
+- [ ] Two-column layout
+- [ ] "Read full story" button
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Phase 8: Animations + Polish ⏳ PENDING
+## Phase 6: Vision/Mission + Brand Values ⏳ PENDING
 
-### 8.1 Page Load Animation
-- [ ] Fade in on mount
-- [ ] Stagger children
+### 6.1 Vision/Mission Section
+- [ ] Full-width background image
+- [ ] Dark overlay (40%)
+- [ ] Vision + Mission text
+- [ ] "READ MORE" + "CAREERS" buttons
+- [ ] Play button for video (140px)
+- [ ] **PDF MATCH:** ☐
 
-### 8.2 Magnetic Button Component
-- [ ] Create components/shared/magnetic-button.tsx
-- [ ] Subtle follow cursor effect
-
-### 8.3 Hover Effects
-- [ ] Buttons: scale + shadow
-- [ ] Cards: lift effect
-- [ ] Links: underline animation
-- [ ] Service tabs: background slide
-
-### 8.4 Micro-interactions
-- [ ] Form field focus states
-- [ ] Button click feedback
-- [ ] Loading spinners
-- [ ] Success checkmarks
-
-### 8.5 Performance Check
-- [ ] No animation jank
-- [ ] Test on lower-end devices
-- [ ] Lighthouse performance
+### 6.2 Brand Values Section
+- [ ] "BRAND VALUES" title (green)
+- [ ] Dark video play button
+- [ ] 5 values with SVG icons
+- [ ] Hover tooltips (lime pills)
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Phase 9: Responsive Testing ⏳ PENDING
+## Phase 7: Careers + Contact ⏳ PENDING
 
-### 9.1 Test Breakpoints
-- [ ] 375px (iPhone SE)
-- [ ] 390px (iPhone 14)
-- [ ] 768px (iPad)
-- [ ] 1024px (iPad Pro / laptop)
-- [ ] 1280px (Desktop)
-- [ ] 1536px (Large desktop)
+### 7.1 Careers Section
+- [ ] Two-column layout
+- [ ] "Careers" title (55px)
+- [ ] "Build the future of operations." subtitle
+- [ ] "Join the X Team" button (440px width)
+- [ ] Team image with background
+- [ ] **PDF MATCH:** ☐
 
-### 9.2 Section Checks
-- [ ] Header: mobile menu, sticky behavior
-- [ ] Hero: swipe, text readable, CTAs
-- [ ] Stats: grid changes
-- [ ] Services: accordion/tabs switch
-- [ ] Why Axiom: stacks properly
-- [ ] Partners: marquee smooth
-- [ ] Story: text readable
-- [ ] Vision/Mission: cards stack
-- [ ] Values: horizontal scroll
-- [ ] Careers: full-width good
-- [ ] Contact: forms usable
-- [ ] Footer: single column
-
-### 9.3 Touch Interactions
-- [ ] Tap targets min 44px
-- [ ] Carousel swipe smooth
-- [ ] Horizontal scroll sections
-- [ ] No hover-only interactions
+### 7.2 Contact Section
+- [ ] "Contact Us" title
+- [ ] "Let's talk scale." subtitle
+- [ ] Form fields (green bg, pill shape)
+- [ ] Submit button (440px width)
+- [ ] Contact info pills
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Phase 10: Final Review ⏳ PENDING
+## Phase 8: Shipment Tracking ⏳ PENDING
 
-### 10.1 Code Cleanup
-- [ ] Remove console.logs
-- [ ] Remove unused imports
-- [ ] Remove commented code
-- [ ] Run Prettier
+### 8.1 Tracking Widget
+- [ ] Green header card
+- [ ] Tracking input field
+- [ ] Delivery bike image (overflow)
+- [ ] **PDF MATCH:** ☐
 
-### 10.2 Accessibility
-- [ ] All images have alt text
-- [ ] Form labels associated
-- [ ] Color contrast WCAG AA
-- [ ] Keyboard navigation
-- [ ] Focus states visible
+### 8.2 Tracking Table
+- [ ] Order ID, Date, Category, Route, Status columns
+- [ ] Color-coded status badges
+- [ ] **PDF MATCH:** ☐
 
-### 10.3 SEO
-- [ ] Page title set
-- [ ] Meta description
-- [ ] OG tags
-- [ ] Semantic HTML
-
-### 10.4 Performance
-- [ ] Images optimized
-- [ ] Fonts optimized
-- [ ] No layout shift
-- [ ] Bundle size check
-
-### 10.5 Final Build
-- [ ] npm run build passes
-- [ ] Test production locally
-- [ ] All pages render
+### 8.3 Statistics Chart
+- [ ] Bar chart (Chart.js style)
+- [ ] Filter buttons (1D, 1M, 3M, 1Y)
+- [ ] Legend (Completed, Reject)
+- [ ] **PDF MATCH:** ☐
 
 ---
 
-## Notes & Issues
+## Final Verification ⏳ PENDING
 
-### Known Issues
-- None currently
+### Visual Match
+- [ ] Header matches PDF exactly
+- [ ] Hero matches PDF exactly
+- [ ] Stats matches PDF exactly
+- [ ] Partners matches PDF exactly
+- [ ] Why Axiom matches PDF exactly
+- [ ] Services matches PDF exactly
+- [ ] Our Story matches PDF exactly
+- [ ] Vision/Mission matches PDF exactly
+- [ ] Brand Values matches PDF exactly
+- [ ] Careers matches PDF exactly
+- [ ] Contact matches PDF exactly
+- [ ] Tracking matches PDF exactly
+- [ ] Footer matches PDF exactly
 
-### Pending Decisions
-- Tracking API endpoint (client to provide)
-- Login/Signup app URLs (client to provide)
-- App store download links (client to provide)
-
-### Asset Notes
-- video-2.mp4 is 33.9MB - consider compression
-- member-1.png is 2.1MB - needs optimization
+### Functionality
+- [ ] All links work
+- [ ] Forms submit
+- [ ] Carousels work
+- [ ] Animations smooth
+- [ ] Responsive on all devices
 
 ---
 
-## Git Commits Log
+## Notes
 
-| Date | Commit | Description |
-|------|--------|-------------|
-| 2025-01-16 | TBD | Phase 1: Project Setup Complete |
+### Color Reference (from style.css)
+```css
+Primary Green: #53ac70 / #52ac70 / #53ac71 / #519b66
+Dark Navy: #19342c
+Forest Green: #3f7537
+Accent Lime: #d4fb50 / #d4fb51
+Light Gray: #ececec / #f5f7f6
+Dark Card: #373737
+```
+
+### Typography Reference
+```css
+Body: font-family: "Poppins", sans-serif
+Headings: font-family: "Alexandria", sans-serif
+UI: font-family: "Inter", sans-serif
+Tags: font-family: 'Aloevera-Regular'
+```
+
+### Assets to Copy
+- 30+ images from `Old AxiomX/assets/img/`
+- 2 videos from `Old AxiomX/assets/video/`
+- Aloevera font from `Old AxiomX/assets/fonts/`
 
 ---
 
-*This tracker is updated as development progresses. Check the status column for current progress.*
+*This tracker is updated as each section is completed and verified against the PDF.*

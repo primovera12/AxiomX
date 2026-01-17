@@ -5,16 +5,35 @@ import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Fade from "embla-carousel-fade";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { heroSlides } from "@/lib/constants";
+
+const heroSlides = [
+  {
+    id: 1,
+    headline: "Are you Searching\nfor X ?",
+    description:
+      "Your last-mile delivery, warehousing, and back-office operations hold untapped potential. Axiom X unlocks it — transforming complexity into execution, insight, and measurable growth. From inception to final revenue touchpoint, we power the unseen.",
+    backgroundVideo: "/videos/video-1.mov",
+    ctaPrimary: "Speak to an Expert",
+  },
+  {
+    id: 2,
+    headline: "Are you Searching\nfor X ?",
+    description:
+      "Your operations have untapped potential. Axiom x helps you find it and turn it into execution, insight, and growth. From first mile to final revenue touchpoint, we power the unseen.",
+    backgroundVideo: "/videos/video-2.mp4",
+    ctaPrimary: "Speak to an Expert",
+  },
+];
 
 export function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  // Using Fade plugin for smooth fade transitions instead of slide
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Fade(),
     Autoplay({ delay: 5000, stopOnInteraction: false }),
   ]);
 
@@ -25,13 +44,6 @@ export function HeroSection() {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-
-  const scrollTo = useCallback(
-    (index: number) => {
-      if (emblaApi) emblaApi.scrollTo(index);
-    },
-    [emblaApi]
-  );
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -49,158 +61,164 @@ export function HeroSection() {
   }, [emblaApi]);
 
   return (
-    <section id="hero" className="relative h-screen min-h-[600px]">
-      {/* Carousel Container */}
-      <div className="overflow-hidden h-full" ref={emblaRef}>
-        <div className="flex h-full">
-          {heroSlides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className="flex-[0_0_100%] min-w-0 relative h-full"
-            >
-              {/* Background Video or Image */}
-              {slide.backgroundVideo ? (
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="absolute inset-0 w-full h-full object-cover"
+    <section id="home" className="relative">
+      {/* Hero Area */}
+      <div className="container-axiom">
+        <div className="relative">
+          {/* Carousel Container */}
+          <div className="overflow-hidden rounded-[15px]" ref={emblaRef}>
+            <div className="flex">
+              {heroSlides.map((slide, index) => (
+                <div
+                  key={slide.id}
+                  className="flex-[0_0_100%] min-w-0 relative"
+                  style={{ height: "640px" }}
                 >
-                  <source src={slide.backgroundVideo} type="video/mp4" />
-                  <source
-                    src={slide.backgroundVideo.replace(".mp4", ".mov")}
-                    type="video/quicktime"
+                  {/* Background Video */}
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover rounded-[15px]"
+                  >
+                    <source src={slide.backgroundVideo} type="video/mp4" />
+                  </video>
+
+                  {/* Dark Gradient Overlay */}
+                  <div
+                    className="absolute inset-0 rounded-[15px]"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.48) 50%, rgba(0, 0, 0, 0) 100%)",
+                    }}
                   />
-                </video>
-              ) : slide.backgroundImage ? (
-                <Image
-                  src={slide.backgroundImage}
-                  alt=""
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
-                />
-              ) : (
-                <div className="absolute inset-0 bg-primary-dark" />
-              )}
 
-              {/* Gradient Overlay */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 100%)",
-                }}
-              />
-
-              {/* Content */}
-              <div className="relative z-10 h-full flex items-center">
-                <div className="container mx-auto px-4">
-                  <AnimatePresence mode="wait">
-                    {selectedIndex === index && (
-                      <motion.div
-                        key={slide.id}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="max-w-3xl"
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex items-end pb-[100px] px-20">
+                    <div
+                      className={cn(
+                        "w-[550px] transition-all duration-700",
+                        selectedIndex === index
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-5"
+                      )}
+                    >
+                      {/* Headline */}
+                      <h1
+                        className="text-white text-[50px] font-semibold leading-[125%] mb-5 font-heading"
+                        style={{
+                          transitionDelay: selectedIndex === index ? "0.15s" : "0s",
+                        }}
                       >
-                        <motion.h1
-                          initial={{ opacity: 0, y: 30 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.1, duration: 0.6 }}
-                          className="font-heading text-4xl md:text-5xl lg:text-hero font-semibold text-white mb-6 leading-tight"
-                        >
-                          {slide.headline}
-                        </motion.h1>
+                        Are you Searching <br /> for{" "}
+                        <span className="text-[#d4fb51]">X</span> ?
+                      </h1>
 
-                        <motion.p
-                          initial={{ opacity: 0, y: 30 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.2, duration: 0.6 }}
-                          className="text-base md:text-lg lg:text-xl text-white/80 mb-8 max-w-2xl"
-                        >
-                          {slide.subtext}
-                        </motion.p>
+                      {/* Description */}
+                      <div
+                        className="max-w-[440px]"
+                        style={{
+                          transitionDelay: selectedIndex === index ? "0.3s" : "0s",
+                        }}
+                      >
+                        <p className="text-white text-sm">{slide.description}</p>
+                      </div>
 
-                        <motion.div
-                          initial={{ opacity: 0, y: 30 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.3, duration: 0.6 }}
-                          className="flex flex-col sm:flex-row gap-4"
+                      {/* CTA Buttons - White line separator with 2 buttons */}
+                      <div
+                        className="mt-[60px] pt-[25px] flex items-center gap-[15px]"
+                        style={{
+                          transitionDelay: selectedIndex === index ? "0.45s" : "0s",
+                          borderTop: "3px solid rgba(255, 255, 255, 0.6)",
+                          borderRadius: "2px",
+                        }}
+                      >
+                        {/* Green filled button */}
+                        <Link
+                          href="#contact"
+                          className="inline-block py-[12px] px-[24px] bg-[#53ac70] text-white text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
                         >
-                          <Button
-                            size="lg"
-                            className="bg-primary hover:bg-primary-forest text-white font-medium px-8"
-                            asChild
-                          >
-                            <Link href="#contact">{slide.ctaPrimary}</Link>
-                          </Button>
-                          <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-medium px-8"
-                            asChild
-                          >
-                            <Link href="/signup">{slide.ctaSecondary}</Link>
-                          </Button>
-                        </motion.div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                          {slide.ctaPrimary}
+                        </Link>
+
+                        {/* White outlined button */}
+                        <Link
+                          href="#signup"
+                          className="inline-block py-[12px] px-[24px] bg-white text-[#53ac70] text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                        >
+                          Create an Account
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={scrollPrev}
+            className="hidden lg:flex absolute left-[-25px] bottom-10 z-20 w-[70px] h-[70px] items-center justify-center rounded-lg bg-[#53ac70] text-white transition-transform duration-300 hover:scale-110"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button
+            onClick={scrollNext}
+            className="hidden lg:flex absolute right-[-25px] bottom-10 z-20 w-[70px] h-[70px] items-center justify-center rounded-lg bg-[#53ac70] text-white transition-transform duration-300 hover:scale-110"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
 
-      {/* Navigation Arrows - Desktop Only */}
-      <button
-        onClick={scrollPrev}
-        className="hidden lg:flex absolute left-8 top-1/2 -translate-y-1/2 z-20 w-14 h-14 items-center justify-center rounded-full bg-primary text-white hover:bg-primary-forest transition-colors shadow-lg"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
+      {/* Hero Bottom - Service Snapshot Card */}
+      <div className="container-axiom">
+        <div className="flex justify-end">
+          <div className="w-full lg:w-7/12 pr-0 lg:pr-20">
+            <div className="bg-[#f5f7f6] p-5 px-6 flex gap-5 rounded-[15px] -mt-[75px] relative z-10">
+              {/* X Logo Icon */}
+              <div className="w-[70px] flex-shrink-0">
+                <Image
+                  src="/images/x-logo.png"
+                  alt="Axiom X"
+                  width={70}
+                  height={70}
+                  className="w-full"
+                />
+              </div>
 
-      <button
-        onClick={scrollNext}
-        className="hidden lg:flex absolute right-8 top-1/2 -translate-y-1/2 z-20 w-14 h-14 items-center justify-center rounded-full bg-primary text-white hover:bg-primary-forest transition-colors shadow-lg"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-
-      {/* Dot Indicators - Mobile Only */}
-      <div className="flex lg:hidden absolute bottom-8 left-1/2 -translate-x-1/2 z-20 gap-3">
-        {heroSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollTo(index)}
-            className={cn(
-              "w-3 h-3 rounded-full transition-all duration-300",
-              selectedIndex === index
-                ? "bg-primary w-8"
-                : "bg-white/50 hover:bg-white/70"
-            )}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden lg:flex flex-col items-center gap-2">
-        <span className="text-white/60 text-sm">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center pt-2"
-        >
-          <div className="w-1.5 h-1.5 bg-white/60 rounded-full" />
-        </motion.div>
+              {/* Snapshot Info */}
+              <div>
+                <h3 className="text-[15px] font-bold mb-2.5 text-black">
+                  Service Snapshot
+                </h3>
+                <p className="text-black text-[10px] leading-[120%]">
+                  Axiom x isn&apos;t just a service provider we&apos;re your
+                  operational growth engine. Our AI-augmented ecosystem brings
+                  together logistics, warehousing, customer engagement, and
+                  back-office performance into one unified infrastructure designed
+                  to move as fast as your ambition.
+                </p>
+                <div className="mt-[15px]">
+                  <Link
+                    href="#services"
+                    className="flex items-center gap-[12px] text-[#53ac70] font-bold text-[11px] group"
+                  >
+                    See more
+                    <span className="w-6 h-6 bg-[#53ac70] text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

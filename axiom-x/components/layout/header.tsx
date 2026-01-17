@@ -1,122 +1,161 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { SmoothScrollLink } from "@/components/shared/smooth-scroll-link";
-import { MobileNav } from "./mobile-nav";
-import { navLinks, siteConfig } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#services", label: "Services" },
+  { href: "#why-axiom", label: "Why AxiomX" },
+  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About" },
+];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
-        )}
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+      <header className="sticky top-0 z-50 bg-white" style={{ padding: "20px 0" }}>
+        <div className="container-axiom">
+          <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo/logo.png"
-                alt={siteConfig.name}
-                width={140}
-                height={40}
-                className={cn(
-                  "h-10 w-auto transition-all duration-300",
-                  isScrolled ? "" : "brightness-0 invert"
-                )}
-                priority
-              />
-            </Link>
+            <div className="logo">
+              <Link href="/">
+                <Image
+                  src="/images/logo-2.png"
+                  alt="Axiom X"
+                  width={120}
+                  height={40}
+                  className="w-[120px] h-auto"
+                  priority
+                />
+              </Link>
+            </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <SmoothScrollLink
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "text-sm font-medium transition-colors relative",
-                    "after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full",
-                    isScrolled
-                      ? "text-gray-700 hover:text-primary"
-                      : "text-white hover:text-white/80"
-                  )}
+            {/* Desktop Navigation + CTAs */}
+            <div className="hidden lg:flex items-center gap-[40px]">
+              {/* Main Menu */}
+              <nav>
+                <ul className="flex items-center gap-x-[40px]">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleNavClick(e, link.href)}
+                        className="font-medium text-black transition-colors duration-300 hover:text-[#53ac70]"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              {/* Header Buttons */}
+              <div className="flex items-center gap-[15px]">
+                <Link
+                  href="/signup"
+                  className="inline-flex justify-center items-center min-w-[110px] px-5 py-[7px] bg-[#53ac70] text-white font-medium text-[14px] rounded-[200px] border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-[#53ac70]"
                 >
-                  {link.label}
-                </SmoothScrollLink>
-              ))}
-            </nav>
-
-            {/* Desktop CTAs */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Button
-                variant="ghost"
-                asChild
-                className={cn(
-                  "font-medium",
-                  isScrolled
-                    ? "text-gray-700 hover:text-primary hover:bg-primary/10"
-                    : "text-white hover:text-white hover:bg-white/10"
-                )}
-              >
-                <Link href="/signup">Sign Up</Link>
-              </Button>
-              <Button
-                asChild
-                className="bg-primary hover:bg-primary-forest text-white font-medium"
-              >
-                <Link href="/login">Login</Link>
-              </Button>
+                  Sign Up
+                </Link>
+                <Link
+                  href="/login"
+                  className="inline-flex justify-center items-center min-w-[110px] px-5 py-[7px] bg-[#53ac70] text-white font-medium text-[14px] rounded-[200px] border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-[#53ac70]"
+                >
+                  Login
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "lg:hidden",
-                isScrolled ? "text-gray-700" : "text-white"
-              )}
+            <button
+              className="lg:hidden p-2 text-black"
               onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Open menu"
             >
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Open menu</span>
-            </Button>
+            </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
-      {/* Mobile Navigation */}
-      <MobileNav
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] lg:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+
+          {/* Menu Panel */}
+          <div className="absolute top-0 right-0 w-[280px] h-full bg-white shadow-xl">
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-gray-600 hover:text-black"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {/* Mobile Nav Links */}
+            <nav className="pt-20 px-6">
+              <ul className="space-y-4">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      className="block py-2 text-black font-medium hover:text-[#53ac70] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile CTAs */}
+              <div className="mt-8 space-y-3">
+                <Link
+                  href="/signup"
+                  className="block w-full text-center px-4 py-3 bg-[#53ac70] text-white font-medium rounded-[200px] transition-all duration-300 hover:bg-[#428f5c]"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Sign Up
+                </Link>
+                <Link
+                  href="/login"
+                  className="block w-full text-center px-4 py-3 bg-[#53ac70] text-white font-medium rounded-[200px] transition-all duration-300 hover:bg-[#428f5c]"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Login
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
     </>
   );
 }

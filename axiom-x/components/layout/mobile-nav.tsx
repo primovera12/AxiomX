@@ -20,7 +20,7 @@ interface MobileNavProps {
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="right" className="w-[300px] sm:w-[350px] bg-white">
+      <SheetContent side="right" className="w-4/5 max-w-[350px] bg-white">
         <SheetHeader className="text-left">
           <SheetTitle className="sr-only">{siteConfig.name} Menu</SheetTitle>
           <Image
