@@ -65,8 +65,8 @@ export function BrandValuesSection() {
               const Icon = value.icon;
               const isHovered = hoveredIndex === index;
 
+              // Value Item - Responsive padding and borders
               return (
-                {/* Value Item - Responsive padding and borders */}
                 <div
                   key={value.id}
                   className={`text-center py-3 md:py-4 lg:py-[20px] cursor-pointer relative ${

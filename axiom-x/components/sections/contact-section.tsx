@@ -15,8 +15,8 @@ export function ContactSection() {
     console.log(formData);
   };
 
+  // Section - Responsive padding
   return (
-    {/* Section - Responsive padding */}
     <section id="contact" className="pt-[30px] pb-[50px] md:pt-[40px] md:pb-[65px] lg:pt-[50px] lg:pb-[80px]">
       <div className="container-axiom">
         <div className="max-w-full px-4 md:max-w-[800px] md:px-0 mx-auto">

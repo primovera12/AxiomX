@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function CareersCTASection() {
+  // Section - Responsive padding
   return (
-    {/* Section - Responsive padding */}
     <section className="py-[40px] md:py-[60px] lg:py-[80px]">
       <div className="container-axiom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
