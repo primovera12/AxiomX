@@ -43,7 +43,7 @@ export function PartnersSection() {
               {partners.map((partner) => (
                 <div
                   key={partner.id}
-                  className="flex-shrink-0 px-3 md:px-4 lg:px-6 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
+                  className="flex-shrink-0 px-5 md:px-7 lg:px-10 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
                 >
                   <Image
                     src={partner.logo}
@@ -52,8 +52,8 @@ export function PartnersSection() {
                     height={100}
                     className={
                       partner.type === "long"
-                        ? "w-auto max-h-[30px] md:max-h-[38px] lg:max-h-[45px]"
-                        : "w-auto max-h-[45px] md:max-h-[55px] lg:max-h-[70px]"
+                        ? "w-auto max-h-[40px] md:max-h-[50px] lg:max-h-[60px]"
+                        : "w-auto max-h-[55px] md:max-h-[70px] lg:max-h-[85px]"
                     }
                   />
                 </div>
@@ -62,7 +62,7 @@ export function PartnersSection() {
               {partners.map((partner) => (
                 <div
                   key={`dup-${partner.id}`}
-                  className="flex-shrink-0 px-3 md:px-4 lg:px-6 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
+                  className="flex-shrink-0 px-5 md:px-7 lg:px-10 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
                 >
                   <Image
                     src={partner.logo}
@@ -71,8 +71,8 @@ export function PartnersSection() {
                     height={100}
                     className={
                       partner.type === "long"
-                        ? "w-auto max-h-[30px] md:max-h-[38px] lg:max-h-[45px]"
-                        : "w-auto max-h-[45px] md:max-h-[55px] lg:max-h-[70px]"
+                        ? "w-auto max-h-[40px] md:max-h-[50px] lg:max-h-[60px]"
+                        : "w-auto max-h-[55px] md:max-h-[70px] lg:max-h-[85px]"
                     }
                   />
                 </div>
