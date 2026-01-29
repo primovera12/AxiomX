@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 // Partner logos
@@ -80,26 +79,6 @@ export function PartnersSection() {
             </div>
           </div>
         </div>
-
-      {/* CTA Buttons - Responsive sizing */}
-      <AnimatedElement variant="fadeUp" delay={0.1} className="container-axiom px-4 md:px-0">
-        <div className="flex flex-row justify-center gap-2 md:gap-4 mt-6 md:mt-8 lg:mt-10">
-          {/* Green filled button */}
-          <Link
-            href="#contact"
-            className="inline-flex justify-center items-center py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] bg-[#53ac70] text-white text-[14px] md:text-[15px] lg:text-[16px] rounded-[8px] font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
-          >
-            Speak to an Expert
-          </Link>
-          {/* Dark green filled button */}
-          <Link
-            href="/signup"
-            className="inline-flex justify-center items-center py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] bg-[#19342c] text-white text-[14px] md:text-[15px] lg:text-[16px] rounded-[8px] font-medium border-2 border-[#19342c] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
-          >
-            Create an Account
-          </Link>
-        </div>
-      </AnimatedElement>
 
       {/* CSS for marquee animation */}
       <style jsx>{`
