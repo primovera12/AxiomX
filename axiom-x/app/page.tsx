@@ -22,11 +22,11 @@ export default function Home() {
       {/* Partners with CTAs */}
       <PartnersSection />
 
-      {/* Why Axiom X */}
-      <WhyAxiomSection />
-
       {/* Services Section */}
       <ServicesSection />
+
+      {/* Why Axiom X */}
+      <WhyAxiomSection />
 
       {/* Our Story */}
       <OurStorySection />

@@ -1,91 +1,85 @@
 "use client";
 
+import { Layers, Lightbulb, Zap, Award } from "lucide-react";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
-// Card content data
-const cards = [
+// Feature card data
+const features = [
   {
     id: 1,
-    content:
-      "At Axiom x, we don't sell services. We offer a system. One that thinks, scales, and adapts with your business.",
+    title: "The Single-Window Advantage",
+    icon: Layers,
+    description:
+      "From the first click to final revenue realization, we provide a seamless, end-to-end solution. No more fragmented vendors or data silos—just one partner, one platform, and total accountability.",
   },
   {
     id: 2,
-    content:
-      "At Axiom x, we don't sell services. We offer a system. One that thinks, scales, and adapts with your business.",
+    title: "Innovation with Purpose",
+    icon: Lightbulb,
+    description:
+      "We challenge the status quo by bringing fresh, tech-forward ideas to the table. We don't just follow industry standards; we set them, continuously seeking smarter ways to transform your business outcomes.",
+  },
+  {
+    id: 3,
+    title: "Proven Agility & Bold Execution",
+    icon: Zap,
+    description:
+      "We thrive where others see boundaries. We are agile, proactive, and bold. We don't wait for instructions—we take the initiative to push beyond expectations and deliver results.",
+  },
+  {
+    id: 4,
+    title: "A Culture of Excellence",
+    icon: Award,
+    description:
+      "Our differentiation is built on a culture that refuses to stagnate. We combine years of deep experience with a restless drive to evolve, ensuring that your operations are always powered by strategic excellence.",
   },
 ];
 
 export function WhyAxiomSection() {
   return (
-    <section id="why-axiom" className="py-[40px] md:py-[60px] lg:py-[80px]">
+    <section id="why-axiom" className="pt-[40px] pb-[80px] md:pt-[60px] md:pb-[100px] lg:pt-[80px] lg:pb-[120px]">
       <div className="container-axiom">
-        {/* Full-width container with background image - Responsive min-height and border-radius */}
-        <div
-          className="relative rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden min-h-[720px] md:min-h-[600px] lg:min-h-[750px] bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/backgrounds/bg-2.jpg)" }}
-        >
-          {/* Dark border/frame effect */}
-          <div className="absolute inset-0 rounded-[16px] md:rounded-[18px] lg:rounded-[20px] border-[3px] md:border-[4px] border-[#1a1a2e]" />
+        {/* Header */}
+        <AnimatedElement variant="fadeUp" className="text-center mb-[40px] md:mb-[50px] lg:mb-[60px]">
+          <span className="text-[#334045] text-[12px] md:text-[13px] lg:text-[14px] font-bold uppercase tracking-[0.15em] leading-tight block mb-3 md:mb-4">
+            The Axiom X Factor
+          </span>
+          <h2 className="text-black text-[26px] md:text-[36px] lg:text-[44px] font-bold leading-[1.15] tracking-[-0.01em]">
+            One Platform. One Partner.
+          </h2>
+        </AnimatedElement>
 
-          {/* Content - Responsive padding and min-height */}
-          <div className="relative z-10 py-[25px] px-[20px] md:py-[32px] md:px-[35px] lg:py-[40px] lg:px-[50px] h-full flex flex-col min-h-[720px] md:min-h-[600px] lg:min-h-[750px]">
-            {/* Top row: Title on left, White cards on right */}
-            <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
-              {/* Left column: Title + Dark box below */}
-              <AnimatedElement variant="slideLeft" className="flex flex-col gap-3 md:gap-4 lg:w-[320px] flex-shrink-0">
-                {/* Title - Responsive font size */}
-                <h2 className="text-[26px] md:text-[32px] lg:text-[38px] font-bold text-white leading-tight italic m-0">
-                  Why Axiom <span className="text-[#d4fb50]">x</span> ?
-                </h2>
+        {/* Feature Cards Grid - 2x2 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <AnimatedElement
+                key={feature.id}
+                variant="fadeUp"
+                delay={0.1 + index * 0.1}
+                className="flex flex-col gap-3 md:gap-4 group p-5 md:p-6 bg-[#eeeeee] border border-[#ececec] rounded-[12px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#53ac70] transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="transition-all duration-300 group-hover:-translate-y-1">
+                  <Icon className="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 text-[#334045] group-hover:text-[#3f7537] transition-colors duration-300" strokeWidth={1.5} />
+                </div>
 
-                {/* Dark subtitle box - Responsive padding */}
-                <div className="bg-black/70 py-3 px-4 md:py-4 md:px-5 rounded-[12px] md:rounded-[14px] lg:rounded-[16px]">
-                  <p className="text-white text-[12px] md:text-[13px] lg:text-[14px] leading-[1.5] font-normal m-0">
-                    You don&apos;t just need to outsource.
-                    <br />
-                    You need to outsmart, outscale,
-                    <br />
-                    and out-deliver.
+                {/* Content */}
+                <div className="flex flex-col gap-2 md:gap-3">
+                  {/* Title */}
+                  <h3 className="text-black text-[14px] lg:text-[16px] font-semibold leading-tight">
+                    {feature.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-[#373737] text-[13px] md:text-[14px] lg:text-[15px] leading-relaxed">
+                    {feature.description}
                   </p>
                 </div>
               </AnimatedElement>
-
-              {/* Right column: Two white cards side by side */}
-              <div className="flex flex-col lg:flex-row gap-3 md:gap-4 flex-1">
-                {cards.map((card, index) => (
-                  <AnimatedElement
-                    key={card.id}
-                    variant="slideRight"
-                    delay={0.1 + index * 0.15}
-                    className="bg-white/70 backdrop-blur-sm py-3 px-4 md:py-4 md:px-5 rounded-[16px] md:rounded-[18px] lg:rounded-[20px] flex items-center gap-2 md:gap-3 flex-1"
-                  >
-                    {/* Icon - Responsive sizing */}
-                    <div className="flex-shrink-0 flex items-center">
-                      <img
-                        src="/images/icons/icon-about.png"
-                        alt="About"
-                        width={40}
-                        height={40}
-                        className="w-8 h-8 md:w-10 md:h-10 object-contain"
-                      />
-                    </div>
-                    <p className="text-[11px] md:text-[12px] lg:text-[13px] leading-[1.5] font-normal m-0 text-black">
-                      {card.content}
-                    </p>
-                  </AnimatedElement>
-                ))}
-              </div>
-            </div>
-
-            {/* Bottom text - Responsive padding and font size */}
-            <AnimatedElement variant="fadeUp" delay={0.3} className="mt-auto pt-[25px] md:pt-[32px] lg:pt-[40px]">
-              <p className="text-white/90 text-[11px] md:text-[12px] lg:text-[13px] text-center font-normal m-0">
-                Our AI-enhanced ecosystem was built for the operational complexity
-                that most businesses are only now realizing they need to solve.
-              </p>
-            </AnimatedElement>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
