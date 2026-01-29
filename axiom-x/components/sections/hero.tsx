@@ -28,13 +28,13 @@ export function HeroSection() {
         <div className="relative">
           {/* Hero Container */}
           <div className="overflow-hidden rounded-[10px] md:rounded-[12px] lg:rounded-[15px]">
-            <div className="relative min-h-[567px] md:min-h-[520px] lg:min-h-[640px]">
+            <div className="relative min-h-[567px] md:min-h-[520px] lg:min-h-[600px]">
               {/* Background Image */}
               <Image
                 src={heroContent.backgroundImage}
                 alt="Hero background"
                 fill
-                className="absolute inset-0 w-full h-full object-cover rounded-[10px] md:rounded-[12px] lg:rounded-[15px]"
+                className="absolute inset-0 w-full h-full object-cover object-left rounded-[10px] md:rounded-[12px] lg:rounded-[15px]"
                 priority
               />
 
@@ -48,7 +48,7 @@ export function HeroSection() {
               />
 
               {/* Content - Responsive padding */}
-              <div className="relative z-10 h-full flex items-end pt-[60px] pb-[60px] px-4 md:pt-[60px] md:pb-[80px] md:px-12 lg:pt-[80px] lg:pb-[100px] lg:px-12">
+              <div className="relative z-10 h-full flex items-end pt-[60px] pb-[60px] px-4 md:pt-[60px] md:pb-[80px] md:px-12 lg:pt-[80px] lg:pb-[40px] lg:px-12">
                 <div className="w-full lg:w-[740px]">
                   {/* Headline - Responsive text */}
                   <h1 className="text-white text-[28px] md:text-[38px] lg:text-[50px] font-bold leading-[125%] mb-3 md:mb-4 lg:mb-5 font-heading">
@@ -63,13 +63,18 @@ export function HeroSection() {
                     </p>
                   </div>
 
-                  {/* CTA Buttons - Responsive layout */}
+                  {/* Separator Line */}
                   <div
-                    className="mt-[20px] md:mt-[25px] lg:mt-[30px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-[12px] lg:gap-[15px]"
+                    className="mt-[20px] md:mt-[25px] lg:mt-[30px] w-[calc(100%-30px)]"
                     style={{
                       borderTop: "3px solid rgba(255, 255, 255, 0.6)",
                       borderRadius: "2px",
                     }}
+                  />
+
+                  {/* CTA Buttons - Responsive layout */}
+                  <div
+                    className="pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-[12px] lg:gap-[15px]"
                   >
                     {/* Green filled button - Responsive */}
                     <Link
