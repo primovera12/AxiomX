@@ -1,9 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
+import { CareersModal } from "@/components/features/careers-modal";
 
 export function VisionMissionSection() {
+  const [careersModalOpen, setCareersModalOpen] = useState(false);
+
   return (
     /* Section - Responsive padding */
     <section
@@ -43,23 +47,26 @@ export function VisionMissionSection() {
             </p>
           </div>
 
-          {/* Buttons - Responsive sizing */}
-          <div className="flex items-center gap-[10px] md:gap-[12px] lg:gap-[15px]">
+          {/* Buttons - Matching hero section style */}
+          <div className="flex items-center gap-2 md:gap-[12px] lg:gap-[15px]">
             <Link
-              href="/about"
-              className="w-[130px] md:w-[145px] lg:w-[160px] text-center p-[8px] md:p-[9px] lg:p-[10px] text-[14px] md:text-[15px] lg:text-[16px] uppercase font-semibold bg-[#3f7537] text-white rounded-[8px] border border-[#3f7537] transition-all duration-300 hover:bg-[#53ac71] hover:border-[#53ac71]"
+              href="#contact"
+              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#53ac70] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
             >
-              READ MORE
+              Speak to an Expert
             </Link>
-            <Link
-              href="/careers"
-              className="w-[130px] md:w-[145px] lg:w-[160px] text-center p-[8px] md:p-[9px] lg:p-[10px] text-[14px] md:text-[15px] lg:text-[16px] uppercase font-semibold bg-white text-black rounded-[8px] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+            <button
+              onClick={() => setCareersModalOpen(true)}
+              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-white text-[#53ac70] text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-transparent hover:text-white cursor-pointer"
             >
-              CAREERS
-            </Link>
+              Join the X Team
+            </button>
           </div>
         </AnimatedElement>
       </div>
+
+      {/* Careers Modal */}
+      <CareersModal open={careersModalOpen} onOpenChange={setCareersModalOpen} />
     </section>
   );
 }
