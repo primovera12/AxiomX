@@ -18,7 +18,7 @@ export function VisionMissionSection() {
         }}
       />
 
-      <div className="container-axiom">
+      <div className="container-axiom-left">
         {/* Vision & Mission Content */}
         <AnimatedElement variant="slideLeft">
           {/* Vision - Responsive margin */}

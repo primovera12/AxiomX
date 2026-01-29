@@ -229,6 +229,28 @@
     }
   }
 
+  /* Container variant for full-bleed sections where content should align with
+     other sections but not be centered (e.g., Vision & Mission) */
+  .container-axiom-left {
+    max-width: 1250px;
+    padding: 0 16px;
+    /* Position at same left edge as centered container would be */
+    margin-left: max(16px, calc(50% - 625px));
+    margin-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    .container-axiom-left {
+      padding: 0 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-axiom-left {
+      padding: 0 30px;
+    }
+  }
+
   /* Custom button styles matching PDF design */
   .btn-green {
     background: #53ac70;
