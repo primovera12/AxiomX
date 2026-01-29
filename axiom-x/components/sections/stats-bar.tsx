@@ -5,7 +5,17 @@ import { useInView } from "react-intersection-observer";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 // Stats data matching the document
-const stats = [
+interface Stat {
+  id: number;
+  value: number;
+  suffix: string;
+  label: string;
+  sublabel: string;
+  decimals?: number;
+  prefix?: string;
+}
+
+const stats: Stat[] = [
   { id: 1, value: 20, suffix: "+", label: "Years", sublabel: "Operational Excellence" },
   { id: 2, value: 2, suffix: "M+", label: "Orders / Year", sublabel: "Delivered" },
   { id: 3, value: 98, suffix: "%+", label: "SLA", sublabel: "Achievement" },

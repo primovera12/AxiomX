@@ -49,7 +49,7 @@ export function BrandValuesSection() {
             className="text-[28px] md:text-[36px] lg:text-[42px] text-black font-bold leading-[110%]"
             style={{ fontFamily: "'Alexandria', sans-serif" }}
           >
-            Brand Values
+            Company Values
           </h2>
         </AnimatedElement>
 
