@@ -57,7 +57,7 @@ export function VisionMissionSection() {
             </Link>
             <button
               onClick={() => setCareersModalOpen(true)}
-              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-transparent text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-full font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c] cursor-pointer"
+              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-transparent text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c] cursor-pointer"
             >
               Join the X Team
             </button>
