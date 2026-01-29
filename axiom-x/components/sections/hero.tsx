@@ -48,7 +48,7 @@ export function HeroSection() {
               />
 
               {/* Content - Responsive padding */}
-              <div className="relative z-10 h-full flex items-end pb-[60px] px-4 md:pb-[80px] md:px-12 lg:pb-[100px] lg:px-12">
+              <div className="relative z-10 h-full flex items-end pt-[40px] pb-[60px] px-4 md:pt-[60px] md:pb-[80px] md:px-12 lg:pt-[80px] lg:pb-[100px] lg:px-12">
                 <div className="w-full lg:w-[740px]">
                   {/* Headline - Responsive text */}
                   <h1 className="text-white text-[28px] md:text-[38px] lg:text-[50px] font-semibold leading-[125%] mb-3 md:mb-4 lg:mb-5 font-heading">
