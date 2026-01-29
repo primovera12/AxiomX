@@ -213,6 +213,10 @@
     font-family: 'Aloevera-Regular', sans-serif;
   }
 
+  .font-bold {
+    font-weight: 600 !important;
+  }
+
   /* Container max-width matching original design (1250px) - Responsive padding */
   .container-axiom {
     max-width: 1250px;
