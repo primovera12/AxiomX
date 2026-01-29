@@ -79,7 +79,7 @@ export function HeroSection() {
                     {/* Green filled button - Responsive */}
                     <Link
                       href="#contact"
-                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#19342c] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#19342c] transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537] text-center w-full md:w-auto"
+                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#3f7537] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#3f7537] transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c] text-center w-full md:w-auto"
                     >
                       Speak to an Expert
                     </Link>
@@ -87,7 +87,7 @@ export function HeroSection() {
                     {/* White outlined button - Responsive */}
                     <Link
                       href="#tracking"
-                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-transparent text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537] text-center w-full md:w-auto"
+                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-transparent text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c] text-center w-full md:w-auto"
                     >
                       Track your Shipment
                     </Link>

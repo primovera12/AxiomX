@@ -23,7 +23,7 @@ export function ShipmentTrackingSection() {
       <div className="container-axiom">
         {/* Tracking Wrapper - Green Box - Responsive padding */}
         <AnimatedElement variant="slideUp">
-        <div className="relative pt-[140px] pb-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] bg-[#519b66] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
+        <div className="tracking-gradient-bg relative pt-[140px] pb-[30px] px-4 md:py-[40px] md:px-[40px] lg:py-[50px] lg:px-[60px] rounded-[16px] md:rounded-[20px] lg:rounded-[24px] mb-[30px] md:mb-[40px] lg:mb-[50px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
           {/* Mobile-only Bike Image - Shows before title with overflow effect */}
           <div className="sm:hidden -mt-[140px] mb-4 flex justify-center">
             <Image
@@ -59,7 +59,7 @@ export function ShipmentTrackingSection() {
                 />
                 <button
                   onClick={handleTrackingSubmit}
-                  className="px-3 md:px-[15px] lg:px-[20px] py-2 md:py-[10px] bg-[#19342c] text-white text-[12px] md:text-[14px] rounded-[8px] mr-[5px] font-medium hover:bg-[#0f1f1a] transition-colors flex-shrink-0"
+                  className="px-3 md:px-[15px] lg:px-[20px] py-2 md:py-[10px] bg-[#3f7537] text-white text-[12px] md:text-[14px] rounded-[8px] mr-[5px] font-medium hover:bg-[#19342c] transition-colors flex-shrink-0"
                 >
                   Track
                 </button>
@@ -84,6 +84,40 @@ export function ShipmentTrackingSection() {
         </AnimatedElement>
 
       </div>
+
+      {/* CSS for animated gradient background */}
+      <style jsx>{`
+        .tracking-gradient-bg {
+          background: linear-gradient(
+            135deg,
+            #0a1f15 0%,
+            #19342c 25%,
+            #2a4a3d 50%,
+            #3f7537 75%,
+            #19342c 100%
+          );
+          background-size: 400% 400%;
+          animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          25% {
+            background-position: 50% 100%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          75% {
+            background-position: 50% 0%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 }

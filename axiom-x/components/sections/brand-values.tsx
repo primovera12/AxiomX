@@ -46,7 +46,7 @@ export function BrandValuesSection() {
         {/* Title - Responsive margin and text */}
         <AnimatedElement variant="fadeUp" className="text-center mb-[30px] md:mb-[40px] lg:mb-[50px]">
           <h2
-            className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%]"
+            className="text-[28px] md:text-[36px] lg:text-[42px] text-black font-bold leading-[110%]"
             style={{ fontFamily: "'Alexandria', sans-serif" }}
           >
             Brand Values

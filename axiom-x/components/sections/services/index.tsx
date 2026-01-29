@@ -16,7 +16,7 @@ export function ServicesSection() {
         <div className="services-gradient-bg rounded-[20px] md:rounded-[30px] lg:rounded-[40px] py-[30px] px-4 md:py-[45px] md:px-[40px] lg:py-[60px] lg:px-[80px] mb-[20px] md:mb-[30px] lg:mb-[40px] relative overflow-hidden">
           {/* Title Container - Responsive margin */}
           <AnimatedElement variant="fadeUp" className="mb-[25px] md:mb-[35px] lg:mb-[50px] relative z-10">
-            <h2 className="text-[28px] md:text-[40px] lg:text-[55px] text-white leading-[1] font-bold inline-block border-b-[1.5px] border-[#d4fb50] pb-[8px] md:pb-[10px] pr-[30px] md:pr-[45px] lg:pr-[60px] m-0">
+            <h2 className="text-[28px] md:text-[36px] lg:text-[42px] text-white leading-[1] font-bold inline-block border-b-[1.5px] border-[#d4fb50] pb-[8px] md:pb-[10px] pr-[30px] md:pr-[45px] lg:pr-[60px] m-0">
               Our Services
             </h2>
           </AnimatedElement>

@@ -89,7 +89,7 @@ export function ContactSection() {
           <AnimatedElement variant="fadeUp" className="space-y-6 md:space-y-8">
             <div>
               <h2
-                className="text-[32px] md:text-[42px] lg:text-[50px] font-bold text-[#19342c] leading-tight mb-4"
+                className="text-[32px] md:text-[36px] lg:text-[42px] font-bold text-[#19342c] leading-tight mb-4"
                 style={{ fontFamily: "'Alexandria', sans-serif" }}
               >
                 Let&apos;s talk scale.
@@ -250,7 +250,7 @@ export function ContactSection() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-12 sm:h-14 bg-[#19342c] hover:bg-[#3f7537] text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-[14px] sm:text-base"
+                      className="w-full h-12 sm:h-14 bg-[#3f7537] hover:bg-[#19342c] text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-[14px] sm:text-base"
                     >
                       {isSubmitting ? (
                         <>

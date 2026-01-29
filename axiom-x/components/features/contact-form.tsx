@@ -133,7 +133,7 @@ export function ContactForm() {
             type="submit"
             size="lg"
             disabled={isSubmitting}
-            className="w-full h-12 bg-[#19342c] hover:bg-[#3f7537] text-white font-semibold"
+            className="w-full h-12 bg-[#3f7537] hover:bg-[#19342c] text-white font-semibold"
           >
             {isSubmitting ? (
               <>

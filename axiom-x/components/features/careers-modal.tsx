@@ -197,7 +197,7 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-10 sm:h-12 bg-[#19342c] hover:bg-[#3f7537] text-white font-semibold rounded-full mt-4 sm:mt-6 transition-all duration-300 text-[14px] sm:text-base"
+                className="w-full h-10 sm:h-12 bg-[#3f7537] hover:bg-[#19342c] text-white font-semibold rounded-full mt-4 sm:mt-6 transition-all duration-300 text-[14px] sm:text-base"
               >
                 {isSubmitting ? (
                   <>

@@ -88,7 +88,7 @@ export function Header() {
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, "#contact")}
-                  className="inline-flex justify-center items-center min-w-[110px] px-5 py-[10px] bg-[#19342c] text-white font-medium text-[14px] rounded-[8px] border-2 border-[#19342c] transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537]"
+                  className="inline-flex justify-center items-center min-w-[110px] px-5 py-[10px] bg-[#3f7537] text-white font-medium text-[14px] rounded-[8px] border-2 border-[#3f7537] transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c]"
                 >
                   Let's Talk
                 </a>
@@ -148,7 +148,7 @@ export function Header() {
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, "#contact")}
-                  className="block w-full text-center px-4 py-3 bg-[#19342c] text-white font-medium rounded-[8px] border-2 border-[#19342c] transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537]"
+                  className="block w-full text-center px-4 py-3 bg-[#3f7537] text-white font-medium rounded-[8px] border-2 border-[#3f7537] transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c]"
                 >
                   Let's Talk
                 </a>

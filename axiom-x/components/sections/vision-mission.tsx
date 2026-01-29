@@ -28,7 +28,7 @@ export function VisionMissionSection() {
           {/* Vision - Responsive margin */}
           <div className="mb-[25px] md:mb-[32px] lg:mb-[40px]">
             {/* h2 - Responsive font size */}
-            <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-white font-bold leading-[110%] mb-[8px] md:mb-[9px] lg:mb-[10px]">
+            <h2 className="text-[28px] md:text-[36px] lg:text-[42px] text-white font-bold leading-[110%] mb-[8px] md:mb-[9px] lg:mb-[10px]">
               Vision
             </h2>
             {/* p - Responsive font size */}
@@ -39,7 +39,7 @@ export function VisionMissionSection() {
 
           {/* Mission - Responsive margin */}
           <div className="mb-[25px] md:mb-[32px] lg:mb-[40px]">
-            <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-white font-bold leading-[110%] mb-[8px] md:mb-[9px] lg:mb-[10px]">
+            <h2 className="text-[28px] md:text-[36px] lg:text-[42px] text-white font-bold leading-[110%] mb-[8px] md:mb-[9px] lg:mb-[10px]">
               Mission
             </h2>
             <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-medium max-w-[700px]">
@@ -51,13 +51,13 @@ export function VisionMissionSection() {
           <div className="flex items-center gap-2 md:gap-[12px] lg:gap-[15px]">
             <Link
               href="#contact"
-              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#19342c] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#19342c] transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537]"
+              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#3f7537] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#3f7537] transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c]"
             >
               Speak to an Expert
             </Link>
             <button
               onClick={() => setCareersModalOpen(true)}
-              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-transparent text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537] cursor-pointer"
+              className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-transparent text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-[#19342c] hover:border-[#19342c] cursor-pointer"
             >
               Join the X Team
             </button>

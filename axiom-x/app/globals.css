@@ -23,6 +23,9 @@
   --font-heading: "Alexandria", sans-serif;
   --font-body: "Inter", sans-serif;
 
+  /* Font weights */
+  --font-weight-bold: 600;
+
   /* Shadcn theme colors */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
