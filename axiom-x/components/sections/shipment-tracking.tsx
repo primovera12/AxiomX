@@ -37,7 +37,7 @@ export function ShipmentTrackingSection() {
 
           {/* Tracking Info */}
           <div className="relative z-10">
-            <h3 className="text-[24px] md:text-[30px] lg:text-[36px] text-white font-bold">
+            <h3 className="text-[22px] md:text-[26px] lg:text-[32px] text-white font-semibold">
               Real-time Tracking for your Shipments
             </h3>
 

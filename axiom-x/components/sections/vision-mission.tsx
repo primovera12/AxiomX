@@ -19,7 +19,7 @@ export function VisionMissionSection() {
       />
 
       <div className="container-axiom">
-        <div className="max-w-[700px]">
+        <div className="max-w-[700px] text-left">
           {/* Vision & Mission Content */}
           <AnimatedElement variant="slideLeft">
             {/* Vision - Responsive margin */}
@@ -48,13 +48,13 @@ export function VisionMissionSection() {
             <div className="flex items-center gap-[10px] md:gap-[12px] lg:gap-[15px]">
               <Link
                 href="/about"
-                className="text-center py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] text-[14px] md:text-[15px] lg:text-[16px] font-medium bg-[#53ac70] text-white rounded-[8px] border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
+                className="w-[130px] md:w-[145px] lg:w-[160px] text-center p-[8px] md:p-[9px] lg:p-[10px] text-[14px] md:text-[15px] lg:text-[16px] uppercase font-semibold bg-[#3f7537] text-white rounded-[8px] border border-[#3f7537] transition-all duration-300 hover:bg-[#53ac71] hover:border-[#53ac71]"
               >
                 READ MORE
               </Link>
               <Link
                 href="/careers"
-                className="text-center py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] text-[14px] md:text-[15px] lg:text-[16px] font-medium bg-white text-[#53ac70] rounded-[8px] border-2 border-white transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
+                className="w-[130px] md:w-[145px] lg:w-[160px] text-center p-[8px] md:p-[9px] lg:p-[10px] text-[14px] md:text-[15px] lg:text-[16px] uppercase font-semibold bg-white text-black rounded-[8px] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
               >
                 CAREERS
               </Link>

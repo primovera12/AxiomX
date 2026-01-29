@@ -42,7 +42,7 @@ export function CareersCTASection() {
               {/* Button - Responsive sizing */}
               <Link
                 href="/careers"
-                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[14px] md:text-[15px] lg:text-[16px] font-medium py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] rounded-[8px] border-2 border-[#19342c] gap-[10px] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
+                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[16px] md:text-[22px] lg:text-[28px] font-semibold h-[50px] md:h-[65px] lg:h-[84px] w-full md:w-auto lg:w-[440px] py-2 md:py-[8px] lg:py-[10px] px-6 md:px-[20px] lg:px-[30px] rounded-[100px] gap-[10px] transition-all duration-300 hover:bg-[#3f7537]"
               >
                 Join the <span className="text-[#d4fb51]">X</span> Team
               </Link>

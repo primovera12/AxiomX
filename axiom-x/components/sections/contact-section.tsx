@@ -113,20 +113,25 @@ export function ContactSection() {
         {/* Contact Info - Responsive gap and margin */}
         <AnimatedElement variant="fadeUp" delay={0.2} className="flex items-center justify-center gap-3 md:gap-5 lg:gap-[30px] mt-[40px] md:mt-[60px] lg:mt-[80px] flex-wrap px-4 md:px-0">
           {/* contact-item - Responsive text and padding */}
-          <p className="m-0 text-[14px] md:text-[15px] lg:text-[16px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-[#529b66]">
+          <p
+            className="m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-[#529b66]"
+            style={{ fontFamily: "'Alexandria', sans-serif" }}
+          >
             UAE | KSA | Oman | Kuwait
           </p>
 
           <a
             href="mailto:info@axiomxgroup.com"
-            className="inline-block m-0 text-[14px] md:text-[15px] lg:text-[16px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
+            className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
+            style={{ fontFamily: "'Alexandria', sans-serif" }}
           >
             info@axiomxgroup.com
           </a>
 
           <a
             href="tel:+97143101010"
-            className="inline-block m-0 text-[14px] md:text-[15px] lg:text-[16px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
+            className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
+            style={{ fontFamily: "'Alexandria', sans-serif" }}
           >
             +971 4 3101 010
           </a>
