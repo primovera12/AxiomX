@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function VisionMissionSection() {
@@ -20,8 +19,8 @@ export function VisionMissionSection() {
       />
 
       <div className="container-axiom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-7 lg:gap-8 items-center">
-          {/* Left: Vision & Mission Content */}
+        <div className="max-w-[700px]">
+          {/* Vision & Mission Content */}
           <AnimatedElement variant="slideLeft">
             {/* Vision - Responsive margin */}
             <div className="mb-[25px] md:mb-[32px] lg:mb-[40px]">
@@ -31,7 +30,7 @@ export function VisionMissionSection() {
               </h2>
               {/* p - Responsive font size */}
               <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-medium">
-                To be the unseen force powering the next era of business operations.
+                To be the invisible engine of the world's most ambitious brands.
               </p>
             </div>
 
@@ -41,7 +40,7 @@ export function VisionMissionSection() {
                 Mission
               </h2>
               <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-medium">
-                To simplify, enable, and scale modern operations through intelligent, AI-driven services.
+                To transform operational complexity into a competitive advantage, giving businesses the freedom to scale through precision, insight, and intelligence.
               </p>
             </div>
 
@@ -60,22 +59,6 @@ export function VisionMissionSection() {
                 CAREERS
               </Link>
             </div>
-          </AnimatedElement>
-
-          {/* Right: Play Button - Responsive padding and sizing */}
-          <AnimatedElement variant="scaleUp" delay={0.2} className="pl-0 md:pl-[15px] lg:pl-[25px] flex justify-start lg:justify-end mt-6 lg:mt-0">
-            <button
-              className="transition-all duration-300 hover:scale-110"
-              aria-label="Play video"
-            >
-              <Image
-                src="/images/play-btn.svg"
-                alt="Play"
-                width={140}
-                height={140}
-                className="w-[100px] md:w-[120px] lg:w-[140px] h-auto"
-              />
-            </button>
           </AnimatedElement>
         </div>
       </div>

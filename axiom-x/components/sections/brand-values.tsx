@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Target, Zap, Shield, HeartHandshake, Lightbulb } from "lucide-react";
+import { Target, Zap, Shield, HeartHandshake, Lightbulb } from "lucide-react";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 const brandValues = [
@@ -9,31 +9,31 @@ const brandValues = [
     id: "precision",
     label: "Precision",
     icon: Target,
-    note: "We execute with discipline and clarity",
+    note: "We operate with a discipline that turns 'logistics' into an exact science.",
   },
   {
     id: "agility",
     label: "Agility",
     icon: Zap,
-    note: "We respond, reroute, and adapt in real-time",
+    note: "We don't just react; we reroute and adapt at the speed of the market.",
   },
   {
     id: "reliability",
     label: "Reliability",
     icon: Shield,
-    note: "You can build your business on us",
+    note: "We are the foundation. You can build your biggest ambitions on our infrastructure.",
   },
   {
-    id: "support",
-    label: "Support",
+    id: "impact",
+    label: "Impact",
     icon: HeartHandshake,
-    note: "We extend your capabilities, not just your workload",
+    note: "We don't just add to your workload; we multiply your capabilities.",
   },
   {
     id: "innovation",
     label: "Innovation",
     icon: Lightbulb,
-    note: "Embedded intelligence at every touchpoint",
+    note: "We embed intelligence at every touchpoint—because 'standard' is never enough.",
   },
 ];
 
@@ -52,15 +52,8 @@ export function BrandValuesSection() {
 
         {/* Mobile Layout - Row style with visible lime boxes */}
         <AnimatedElement variant="fadeUp" delay={0.1} className="md:hidden">
-          {/* Video Play Button */}
-          <div className="bg-[#19342c] flex items-center justify-center w-full h-[80px] rounded-t-[12px]">
-            <button className="text-[#d4fb50]" aria-label="Play video">
-              <Play className="w-8 h-8 fill-[#d4fb50]" />
-            </button>
-          </div>
-
           {/* Mobile Value Items - Stacked rows */}
-          <div className="bg-[#eeeeee] rounded-b-[12px] py-4 px-4">
+          <div className="bg-[#eeeeee] rounded-[12px] py-4 px-4">
             {brandValues.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -98,15 +91,8 @@ export function BrandValuesSection() {
           </div>
         </AnimatedElement>
 
-        {/* Desktop/Tablet Layout - Original grid with hover effect */}
-        <AnimatedElement variant="fadeUp" delay={0.1} className="hidden md:flex flex-row items-center relative bg-[#eeeeee] rounded-[12px] p-0">
-          {/* Video Play Button - Responsive sizing */}
-          <div className="bg-[#19342c] flex items-center justify-center w-[120px] lg:w-[150px] h-[180px] lg:h-[220px] rounded-tl-[12px] rounded-bl-[12px] flex-shrink-0">
-            <button className="text-[#d4fb50]" aria-label="Play video">
-              <Play className="w-9 h-9 lg:w-10 lg:h-10 fill-[#d4fb50]" />
-            </button>
-          </div>
-
+        {/* Desktop/Tablet Layout - Grid with hover effect */}
+        <AnimatedElement variant="fadeUp" delay={0.1} className="hidden md:block bg-[#eeeeee] rounded-[12px]">
           {/* Value Items Grid - Responsive columns */}
           <div className="grid grid-cols-3 lg:grid-cols-5 items-center w-full relative">
             {brandValues.map((value, index) => {
