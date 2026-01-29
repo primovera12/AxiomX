@@ -1,10 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
+import { CareersModal } from "@/components/features/careers-modal";
 
 export function CareersCTASection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   // Section - Responsive padding
   return (
     <section className="py-[40px] md:py-[60px] lg:py-[80px]">
@@ -40,12 +42,12 @@ export function CareersCTASection() {
               </p>
 
               {/* Button - Responsive sizing */}
-              <Link
-                href="/careers"
-                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[16px] md:text-[22px] lg:text-[28px] font-semibold h-[50px] md:h-[65px] lg:h-[84px] w-full md:w-auto lg:w-[440px] py-2 md:py-[8px] lg:py-[10px] px-6 md:px-[20px] lg:px-[30px] rounded-[100px] gap-[10px] transition-all duration-300 hover:bg-[#3f7537]"
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[16px] md:text-[22px] lg:text-[28px] font-semibold h-[50px] md:h-[65px] lg:h-[84px] w-full md:w-auto lg:w-[440px] py-2 md:py-[8px] lg:py-[10px] px-6 md:px-[20px] lg:px-[30px] rounded-[100px] gap-[10px] transition-all duration-300 hover:bg-[#3f7537] cursor-pointer"
               >
                 Join the <span className="text-[#d4fb51]">X</span> Team
-              </Link>
+              </button>
             </div>
           </AnimatedElement>
 
@@ -68,6 +70,8 @@ export function CareersCTASection() {
           </AnimatedElement>
         </div>
       </div>
+
+      <CareersModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }
