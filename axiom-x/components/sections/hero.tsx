@@ -16,19 +16,19 @@ const heroSlides = [
     id: 1,
     headline: "Are you Searching\nfor X ?",
     description:
-      "Your last-mile delivery, warehousing, and back-office operations hold untapped potential. Axiom X unlocks it — transforming complexity into execution, insight, and measurable growth. From inception to final revenue touchpoint, we power the unseen.",
+      "Your last-mile delivery, warehousing, and back-office operations hold untapped potential. Axiom X unlocks it. Experience the X Factor: where we transform logistical complexity into precision execution and valuable insights—giving you the peace of mind to focus entirely on driving sales. From the first click to the final revenue touchpoint, we power the unseen.",
+    tagline: "Scale with confidence, we'll handle the rest",
     backgroundVideo: "/videos/video-1.mov",
     backgroundImage: "",
-    ctaPrimary: "Speak to an Expert",
   },
   {
     id: 2,
     headline: "Are you Searching\nfor X ?",
     description:
-      "Your operations have untapped potential. Axiom x helps you find it and turn it into execution, insight, and growth. From first mile to final revenue touchpoint, we power the unseen.",
+      "Your last-mile delivery, warehousing, and back-office operations hold untapped potential. Axiom X unlocks it. Experience the X Factor: where we transform logistical complexity into precision execution and valuable insights—giving you the peace of mind to focus entirely on driving sales. From the first click to the final revenue touchpoint, we power the unseen.",
+    tagline: "Scale with confidence, we'll handle the rest",
     backgroundVideo: "",
     backgroundImage: "/images/backgrounds/bg-1.jpg",
-    ctaPrimary: "Speak to an Expert",
   },
 ];
 
@@ -158,15 +158,15 @@ export function HeroSection() {
                           href="#contact"
                           className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#53ac70] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
                         >
-                          {slide.ctaPrimary}
+                          Speak to an Expert
                         </Link>
 
                         {/* White outlined button - Responsive */}
                         <Link
-                          href="#signup"
+                          href="#tracking"
                           className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-white text-[#53ac70] text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-transparent hover:text-white"
                         >
-                          Create an Account
+                          Track your Shipment
                         </Link>
                       </div>
                     </div>

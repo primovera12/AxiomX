@@ -19,7 +19,7 @@ export function ShipmentTrackingSection() {
   };
 
   return (
-    <section className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
+    <section id="tracking" className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
       <div className="container-axiom">
         {/* Tracking Wrapper - Green Box - Responsive padding */}
         <AnimatedElement variant="slideUp">
