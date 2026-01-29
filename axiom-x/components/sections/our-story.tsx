@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function OurStorySection() {
@@ -34,15 +33,6 @@ export function OurStorySection() {
                   fulfillment.
                 </p>
 
-                {/* Button - Responsive margin and padding */}
-                <div className="mt-[18px] md:mt-[22px] lg:mt-[25px]">
-                  <Link
-                    href="/about"
-                    className="inline-block bg-white text-[#53ac70] font-medium text-[14px] md:text-[15px] lg:text-[16px] py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] rounded-[8px] border-2 border-white transition-all duration-300 hover:bg-transparent hover:text-white"
-                  >
-                    Read full story
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
