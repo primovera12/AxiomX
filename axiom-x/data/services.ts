@@ -24,7 +24,7 @@ export const services: Service[] = [
       "Reverse Logistics",
       "Customized delivery solutions",
     ],
-    image: "/images/service-1.jpg",
+    image: "/images/service-last-mile.png",
   },
   {
     id: "warehousing",
@@ -39,7 +39,7 @@ export const services: Service[] = [
       "Real-time dashboards via WMS integrations",
       "Modular zoning, temperature-controlled environments",
     ],
-    image: "/images/service-1.jpg",
+    image: "/images/service-warehouse.png",
   },
   {
     id: "call-center",
@@ -54,7 +54,7 @@ export const services: Service[] = [
       "Inbound Customer Care",
       "Outbound Engagement",
     ],
-    image: "/images/service-1.jpg",
+    image: "/images/service-call-center.png",
   },
   {
     id: "back-office",
@@ -68,7 +68,7 @@ export const services: Service[] = [
       "Offshore Back Office Services",
       "Multi level technical support",
     ],
-    image: "/images/service-1.jpg",
+    image: "/images/service-back-office.png",
   },
   {
     id: "vas",
@@ -83,7 +83,7 @@ export const services: Service[] = [
       "Returns, Exchange & Reverse Processing",
       "Refurbishment & Repair Services",
     ],
-    image: "/images/service-1.jpg",
+    image: "/images/service-vas.png",
   },
   {
     id: "upselling",
@@ -96,6 +96,6 @@ export const services: Service[] = [
       "Embedded Upselling at Every Touchpoint",
       "Brand presentation & merchandising activity",
     ],
-    image: "/images/service-1.jpg",
+    image: "/images/service-upselling.png",
   },
 ];
