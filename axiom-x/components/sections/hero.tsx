@@ -51,13 +51,13 @@ export function HeroSection() {
               <div className="relative z-10 h-full flex items-end pt-[60px] pb-[60px] px-4 md:pt-[60px] md:pb-[80px] md:px-12 lg:pt-[80px] lg:pb-[100px] lg:px-12">
                 <div className="w-full lg:w-[740px]">
                   {/* Headline - Responsive text */}
-                  <h1 className="text-white text-[28px] md:text-[38px] lg:text-[50px] font-semibold leading-[125%] mb-3 md:mb-4 lg:mb-5 font-heading">
+                  <h1 className="text-white text-[28px] md:text-[38px] lg:text-[50px] font-bold leading-[125%] mb-3 md:mb-4 lg:mb-5 font-heading">
                     Are you Searching <br /> for{" "}
                     <span className="text-[#d4fb51]">X</span> ?
                   </h1>
 
                   {/* Description - Responsive max-width */}
-                  <div className="max-w-full md:max-w-[500px] lg:max-w-[600px]">
+                  <div className="max-w-full md:max-w-[580px] lg:max-w-[700px]">
                     <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed">
                       {heroContent.description}
                     </p>
@@ -65,7 +65,7 @@ export function HeroSection() {
 
                   {/* CTA Buttons - Responsive layout */}
                   <div
-                    className="mt-[30px] md:mt-[45px] lg:mt-[60px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-[12px] lg:gap-[15px]"
+                    className="mt-[20px] md:mt-[25px] lg:mt-[30px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-[12px] lg:gap-[15px]"
                     style={{
                       borderTop: "3px solid rgba(255, 255, 255, 0.6)",
                       borderRadius: "2px",
@@ -74,7 +74,7 @@ export function HeroSection() {
                     {/* Green filled button - Responsive */}
                     <Link
                       href="#contact"
-                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#53ac70] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white text-center w-full md:w-auto"
+                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#19342c] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#19342c] transition-all duration-300 hover:bg-[#3f7537] hover:border-[#3f7537] text-center w-full md:w-auto"
                     >
                       Speak to an Expert
                     </Link>

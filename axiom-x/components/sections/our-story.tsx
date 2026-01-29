@@ -14,12 +14,12 @@ export function OurStorySection() {
               <div>
                 {/* h2 - Responsive font size */}
                 <h2
-                  className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white leading-[120%] m-0 font-extrabold"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
+                  className="text-[24px] md:text-[30px] lg:text-[36px] text-white leading-[120%] m-0 font-bold"
+                  style={{ fontFamily: "'Alexandria', sans-serif" }}
                 >
-                  OUR STORY: FROM
+                  Our Story: From
                   <br />
-                  1997 TO THE AI ERA
+                  1997 to the AI Era
                 </h2>
               </div>
 

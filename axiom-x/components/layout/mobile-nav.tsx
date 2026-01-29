@@ -53,7 +53,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           </Button>
           <Button
             asChild
-            className="w-full justify-center bg-primary hover:bg-primary-forest"
+            className="w-full justify-center bg-[#19342c] hover:bg-[#3f7537]"
           >
             <Link href="/login" onClick={onClose}>
               Login

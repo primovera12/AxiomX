@@ -86,7 +86,7 @@ export function TrackingWidget() {
             type="submit"
             size="lg"
             disabled={isLoading}
-            className="h-12 px-6 bg-primary hover:bg-primary-forest"
+            className="h-12 px-6 bg-[#19342c] hover:bg-[#3f7537]"
           >
             {isLoading ? (
               <Loader2 className="h-5 w-5 animate-spin" />
