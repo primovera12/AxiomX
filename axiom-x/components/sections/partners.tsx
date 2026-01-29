@@ -24,7 +24,7 @@ const partners = [
 
 export function PartnersSection() {
   return (
-    <section id="partners" className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
+    <section id="partners" className="pb-[20px] md:pb-[30px] lg:pb-[40px]">
       {/* Partners Title - Responsive sizing */}
       <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
         <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-light uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">

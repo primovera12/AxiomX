@@ -18,7 +18,7 @@ const cards = [
 
 export function WhyAxiomSection() {
   return (
-    <section id="why-axiom" className="py-[30px] md:py-[40px] lg:py-[40px]">
+    <section id="why-axiom" className="py-[40px] md:py-[60px] lg:py-[80px]">
       <div className="container-axiom">
         {/* Full-width container with background image - Responsive min-height and border-radius */}
         <div
