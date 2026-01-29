@@ -61,7 +61,7 @@ export function CareersCTASection() {
 
             {/* Team Member Image - Responsive */}
             <Image
-              src="/images/member-1.png"
+              src="/images/careers-member.png"
               alt="Team Member"
               width={420}
               height={600}
