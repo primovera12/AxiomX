@@ -41,9 +41,6 @@ export function WhyAxiomSection() {
       <div className="container-axiom">
         {/* Header */}
         <AnimatedElement variant="fadeUp" className="text-center mb-[40px] md:mb-[50px] lg:mb-[60px]">
-          <span className="text-[#334045] text-[12px] md:text-[13px] lg:text-[14px] font-bold uppercase tracking-[0.15em] leading-tight block mb-3 md:mb-4">
-            The Axiom X Factor
-          </span>
           <h2 className="text-black text-[26px] md:text-[36px] lg:text-[44px] font-bold leading-[1.15] tracking-[-0.01em]">
             One Platform. One Partner.
           </h2>

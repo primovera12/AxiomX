@@ -27,7 +27,10 @@ export function PartnersSection() {
     <section id="partners" className="pt-[40px] pb-[80px] md:pt-[60px] md:pb-[90px] lg:pt-[40px] lg:pb-[100px]">
       {/* Partners Title - Responsive sizing */}
       <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
-        <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-bold font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
+        <h2
+          className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%]"
+          style={{ fontFamily: "'Alexandria', sans-serif" }}
+        >
           Become a Partner
         </h2>
       </AnimatedElement>

@@ -45,7 +45,10 @@ export function BrandValuesSection() {
       <div className="container-axiom">
         {/* Title - Responsive margin and text */}
         <AnimatedElement variant="fadeUp" className="text-center mb-[30px] md:mb-[40px] lg:mb-[50px]">
-          <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-[#529b66] font-bold tracking-[0.4px]">
+          <h2
+            className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%]"
+            style={{ fontFamily: "'Alexandria', sans-serif" }}
+          >
             Brand Values
           </h2>
         </AnimatedElement>
