@@ -1,141 +1,278 @@
 "use client";
 
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2, Send, Globe, Mail, Phone } from "lucide-react";
+import { toast } from "sonner";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
+import { contactSchema, type ContactFormData } from "@/lib/validations";
+
+const services = [
+  "Last Mile Delivery",
+  "Warehousing & Inventory",
+  "Call Center Support",
+  "Back Office Services",
+  "Value-Added Services (VAS)",
+  "Upselling Revenue Programs",
+];
+
+const contactInfo = [
+  {
+    icon: Globe,
+    title: "Global Presence",
+    value: "UAE | KSA | Oman | Kuwait",
+    href: null,
+  },
+  {
+    icon: Mail,
+    title: "Email Us",
+    value: "info@axiomxgroup.com",
+    href: "mailto:info@axiomxgroup.com",
+  },
+  {
+    icon: Phone,
+    title: "Call Us",
+    value: "+971 4 3101 010",
+    href: "tel:+97143101010",
+  },
+];
+
 export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-  };
+  async function onSubmit(data: ContactFormData) {
+    setIsSubmitting(true);
 
-  // Section - Responsive padding
+    try {
+      // Simulate form submission
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log(data);
+      toast.success("Message sent successfully! We'll be in touch soon.");
+      form.reset();
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
-    <section id="contact" className="pt-[30px] pb-[50px] md:pt-[40px] md:pb-[65px] lg:pt-[50px] lg:pb-[80px]">
+    <section id="contact" className="py-[50px] md:py-[80px] lg:py-[100px] bg-[#fcfcfc]">
       <div className="container-axiom">
-        <div className="max-w-full px-4 md:max-w-[800px] md:px-0 mx-auto">
-          {/* Section Title - Responsive margin */}
-          <AnimatedElement variant="fadeUp" className="mb-[30px] md:mb-[40px] lg:mb-[50px]">
-            {/* h2 - Responsive font size */}
-            <h2
-              className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] mb-[10px]"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
-              Contact Us
-            </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Left Column - Info */}
+          <AnimatedElement variant="fadeUp" className="space-y-6 md:space-y-8">
+            <div>
+              <span className="inline-block py-1.5 px-4 rounded-full bg-[#e8f8f3] text-[#3f7537] text-[11px] md:text-xs font-bold tracking-wider uppercase mb-4">
+                Contact Us
+              </span>
+              <h2
+                className="text-[32px] md:text-[42px] lg:text-[50px] font-bold text-[#19342c] leading-tight mb-4"
+                style={{ fontFamily: "'Alexandria', sans-serif" }}
+              >
+                Let&apos;s talk scale.
+              </h2>
+              <p className="text-[15px] md:text-[16px] lg:text-[17px] text-gray-600 leading-relaxed max-w-md">
+                Whether you&apos;re looking to optimize delivery, centralize
+                operations, or unlock new revenue — Axiom X is your growth
+                partner.
+              </p>
+            </div>
 
-            {/* h3 - Responsive font size */}
-            <h3 className="text-[18px] md:text-[22px] lg:text-[28px] text-black font-semibold leading-[110%] mb-[10px]">
-              Let&apos;s talk scale.
-            </h3>
-
-            {/* p - Responsive font size */}
-            <p className="text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-relaxed">
-              Whether you&apos;re looking to optimize delivery, centralize
-              operations, or unlock new revenue — Axiom x is your growth
-              partner.
-            </p>
+            {/* Contact Info Items */}
+            <div className="space-y-5 pt-2">
+              {contactInfo.map((item) => (
+                <div key={item.title} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <span className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-white shadow-sm text-[#3f7537] ring-1 ring-gray-200">
+                      <item.icon className="h-5 w-5" />
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-[13px] font-semibold text-[#19342c] uppercase tracking-wide">
+                      {item.title}
+                    </h3>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-gray-600 mt-1 hover:text-[#3f7537] transition-colors text-[15px]"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-gray-600 mt-1 text-[15px]">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </AnimatedElement>
 
-          {/* Contact Form */}
-          <AnimatedElement variant="fadeUp" delay={0.1}>
-          <form onSubmit={handleSubmit}>
-            {/* Name Field - Responsive spacing */}
-            <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
-              {/* label - Responsive text and padding */}
-              <label className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[14px] md:text-[15px] lg:text-[16px] font-semibold pl-4 md:pl-6 lg:pl-[40px]">
-                Your Name
-              </label>
-              {/* input - Responsive height and padding */}
-              <input
-                type="text"
-                placeholder="Your Full Name Here|"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                className="w-full h-[50px] md:h-[70px] lg:h-[90px] py-3 md:py-[12px] lg:py-[15px] px-4 md:px-6 lg:px-[40px] text-[14px] md:text-[16px] lg:text-[18px] text-white rounded-[80px] bg-[#519b66] border-none outline-none placeholder:text-white placeholder:opacity-50"
-              />
-            </div>
+          {/* Right Column - Form Card */}
+          <AnimatedElement variant="fadeUp" delay={0.15}>
+            <div className="bg-white p-6 md:p-8 lg:p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden">
+              {/* Decorative blur */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#d4fb50]/20 rounded-full blur-2xl pointer-events-none" />
 
-            {/* Email Field - Responsive */}
-            <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
-              <label className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[14px] md:text-[15px] lg:text-[16px] font-semibold pl-4 md:pl-6 lg:pl-[40px]">
-                Your Mail
-              </label>
-              <input
-                type="email"
-                placeholder="Your Mail Here|"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                className="w-full h-[50px] md:h-[70px] lg:h-[90px] py-3 md:py-[12px] lg:py-[15px] px-4 md:px-6 lg:px-[40px] text-[14px] md:text-[16px] lg:text-[18px] text-white rounded-[80px] bg-[#519b66] border-none outline-none placeholder:text-white placeholder:opacity-50"
-              />
-            </div>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 relative z-10">
+                  <FormField
+                    control={form.control}
+                    name="fullName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
+                          Your Name
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your full name"
+                            className="h-11 sm:h-12 bg-gray-50 border-gray-300 focus:border-[#3f7537] focus:ring-[#3f7537] text-[14px] sm:text-base"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-            {/* Message Field - Responsive */}
-            <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
-              <label className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[14px] md:text-[15px] lg:text-[16px] font-semibold pl-4 md:pl-6 lg:pl-[40px]">
-                Write your question or Message
-              </label>
-              {/* textarea - Responsive height and padding */}
-              <textarea
-                placeholder="What's on your mind ?"
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                className="w-full h-[150px] md:h-[200px] lg:h-[250px] py-4 md:py-5 lg:py-[20px] px-4 md:px-6 lg:px-[40px] text-[14px] md:text-[16px] lg:text-[18px] text-white rounded-[24px] bg-[#519b66] border-none outline-none resize-none placeholder:text-white placeholder:opacity-50"
-              />
-            </div>
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
+                          Email Address
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="your.email@example.com"
+                            className="h-11 sm:h-12 bg-gray-50 border-gray-300 focus:border-[#3f7537] focus:ring-[#3f7537] text-[14px] sm:text-base"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-            {/* Submit Button - Responsive sizing */}
-            <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[18px] md:text-[26px] lg:text-[36px] font-semibold h-[50px] md:h-[70px] lg:h-[94px] w-full md:w-[380px] lg:w-[440px] py-2 md:py-[8px] lg:py-[10px] px-6 md:px-[20px] lg:px-[30px] rounded-[100px] gap-[10px] transition-all duration-300 hover:bg-black"
-              >
-                Submit
-              </button>
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
+                          Phone Number
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="tel"
+                            placeholder="+971 XX XXX XXXX"
+                            className="h-11 sm:h-12 bg-gray-50 border-gray-300 focus:border-[#3f7537] focus:ring-[#3f7537] text-[14px] sm:text-base"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="service"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
+                          Service Interested In
+                        </FormLabel>
+                        <FormControl>
+                          <select
+                            className="flex h-11 sm:h-12 w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-[14px] sm:text-base ring-offset-background focus:outline-none focus:ring-2 focus:ring-[#3f7537] focus:ring-offset-2 focus:border-[#3f7537] disabled:cursor-not-allowed disabled:opacity-50"
+                            {...field}
+                          >
+                            <option value="">Select a service</option>
+                            {services.map((service) => (
+                              <option key={service} value={service}>
+                                {service}
+                              </option>
+                            ))}
+                          </select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
+                          What&apos;s on your mind?
+                        </FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Tell us about your project or requirements..."
+                            className="min-h-[100px] sm:min-h-[120px] bg-gray-50 border-gray-300 focus:border-[#3f7537] focus:ring-[#3f7537] resize-none text-[14px] sm:text-base"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <div className="pt-2">
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full h-12 sm:h-14 bg-[#19342c] hover:bg-[#3f7537] text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-[14px] sm:text-base"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <span>Submit Message</span>
+                          <Send className="ml-2 h-5 w-5" />
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </form>
+              </Form>
             </div>
-          </form>
           </AnimatedElement>
         </div>
-
-        {/* Contact Info - Responsive gap and margin */}
-        <AnimatedElement variant="fadeUp" delay={0.2} className="flex items-center justify-center gap-3 md:gap-5 lg:gap-[30px] mt-[40px] md:mt-[60px] lg:mt-[80px] flex-wrap px-4 md:px-0">
-          {/* contact-item - Responsive text and padding */}
-          <p
-            className="m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-[#529b66]"
-            style={{ fontFamily: "'Alexandria', sans-serif" }}
-          >
-            UAE | KSA | Oman | Kuwait
-          </p>
-
-          <a
-            href="mailto:info@axiomxgroup.com"
-            className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
-            style={{ fontFamily: "'Alexandria', sans-serif" }}
-          >
-            info@axiomxgroup.com
-          </a>
-
-          <a
-            href="tel:+97143101010"
-            className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
-            style={{ fontFamily: "'Alexandria', sans-serif" }}
-          >
-            +971 4 3101 010
-          </a>
-        </AnimatedElement>
       </div>
     </section>
   );

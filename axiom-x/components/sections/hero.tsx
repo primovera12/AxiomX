@@ -99,7 +99,7 @@ export function HeroSection() {
         <div className="container-axiom">
           <div className="flex justify-center py-[3px] px-[10px] md:p-0">
             <div className="w-full max-w-[500px] lg:max-w-none lg:w-7/12 lg:ml-auto lg:pr-20">
-              <div className="bg-[#f5f7f6] p-4 px-4 md:p-5 md:px-5 lg:px-6 flex gap-3 md:gap-4 lg:gap-5 rounded-[12px] md:rounded-[14px] lg:rounded-[15px] -mt-[40px] md:-mt-[55px] lg:-mt-[75px] relative z-10">
+              <div className="bg-[#fafbfa] p-4 px-4 md:p-5 md:px-5 lg:px-6 flex gap-3 md:gap-4 lg:gap-5 rounded-[12px] md:rounded-[14px] lg:rounded-[15px] -mt-[40px] md:-mt-[55px] lg:-mt-[75px] relative z-10">
                 {/* X Logo Icon - Responsive */}
                 <div className="w-[50px] md:w-[60px] lg:w-[70px] flex-shrink-0">
                   <Image

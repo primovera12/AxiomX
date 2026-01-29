@@ -58,7 +58,7 @@ export function WhyAxiomSection() {
                 key={feature.id}
                 variant="fadeUp"
                 delay={0.1 + index * 0.1}
-                className="flex flex-col gap-3 md:gap-4 group p-5 md:p-6 bg-[#eeeeee] border border-[#ececec] rounded-[12px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#53ac70] transition-all duration-300"
+                className="flex flex-col gap-3 md:gap-4 group p-5 md:p-6 bg-[#f7f7f7] border border-[#f0f0f0] rounded-[12px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#53ac70] transition-all duration-300"
               >
                 {/* Icon */}
                 <div className="transition-all duration-300 group-hover:-translate-y-1">

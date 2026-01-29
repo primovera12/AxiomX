@@ -33,7 +33,7 @@ export function PartnersSection() {
       </AnimatedElement>
 
       {/* Partners Wrapper - Responsive padding and height */}
-      <div className="bg-[#ececec] py-[20px] md:py-[30px] lg:py-[40px] relative overflow-hidden">
+      <div className="bg-[#f7f7f7] py-[20px] md:py-[30px] lg:py-[40px] relative overflow-hidden">
         {/* Marquee - Edge to edge infinite loop */}
         <div className="flex items-center overflow-hidden">
             {/* Marquee animation container - Responsive height */}

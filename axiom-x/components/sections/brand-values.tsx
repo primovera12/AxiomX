@@ -53,7 +53,7 @@ export function BrandValuesSection() {
         {/* Mobile Layout - Row style with visible lime boxes */}
         <AnimatedElement variant="fadeUp" delay={0.1} className="md:hidden">
           {/* Mobile Value Items - Stacked rows */}
-          <div className="bg-[#eeeeee] rounded-[12px] py-4 px-4">
+          <div className="bg-[#f7f7f7] rounded-[12px] py-4 px-4">
             {brandValues.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -73,9 +73,9 @@ export function BrandValuesSection() {
                     {value.label}
                   </h4>
 
-                  {/* Lime Description Box - Always visible on mobile */}
+                  {/* Description - Always visible on mobile */}
                   <div className="flex-1">
-                    <span className="inline-block bg-[#d4fb50] py-1.5 px-3 rounded-[100px] text-[11px] font-normal text-black">
+                    <span className="text-[11px] font-normal text-black">
                       {value.note}
                     </span>
                   </div>
@@ -86,7 +86,7 @@ export function BrandValuesSection() {
         </AnimatedElement>
 
         {/* Desktop/Tablet Layout - Grid with hover effect */}
-        <AnimatedElement variant="fadeUp" delay={0.1} className="hidden md:block bg-[#eeeeee] rounded-[12px]">
+        <AnimatedElement variant="fadeUp" delay={0.1} className="hidden md:block bg-[#f7f7f7] rounded-[12px]">
           {/* Value Items Grid - Responsive columns */}
           <div className="grid grid-cols-3 lg:grid-cols-5 items-center w-full relative">
             {brandValues.map((value, index) => {

@@ -28,7 +28,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-white">
+    <footer className="bg-white px-[10px] md:px-0">
       {/* Main Footer Content - Responsive padding */}
       <div className="border-t border-[#e0e0e0] pt-8 md:pt-10 lg:pt-12 pb-4 md:pb-5">
         <div className="container-axiom">
