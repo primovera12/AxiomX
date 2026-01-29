@@ -14,10 +14,7 @@ export function OurStorySection() {
               {/* Left: Title */}
               <div>
                 {/* h2 - Responsive font size */}
-                <h2
-                  className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white leading-[120%] m-0 font-extrabold"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
+                <h2 className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white leading-[120%] m-0 font-bold tracking-[0.4px]">
                   OUR STORY: FROM
                   <br />
                   1997 TO THE AI ERA
@@ -27,10 +24,7 @@ export function OurStorySection() {
               {/* Right: Content */}
               <div>
                 {/* p - Responsive font size */}
-                <p
-                  className="text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0 leading-relaxed">
                   We started in 1997 as Axiom x Telecom — building the Middle East&apos;s
                   largest mobility distribution engine. We helped global brands scale
                   through precision logistics, resilient warehousing, and high-volume
@@ -41,7 +35,7 @@ export function OurStorySection() {
                 <div className="mt-[18px] md:mt-[22px] lg:mt-[25px]">
                   <Link
                     href="/about"
-                    className="inline-block bg-white text-[#53ac70] font-medium text-[13px] md:text-[13px] lg:text-[14px] py-[8px] px-[20px] md:px-[28px] lg:px-[35px] rounded-[8px] md:rounded-[200px] leading-[130%] border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                    className="inline-block bg-white text-[#53ac70] font-medium text-[14px] md:text-[15px] lg:text-[16px] py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] rounded-[8px] border-2 border-white transition-all duration-300 hover:bg-transparent hover:text-white"
                   >
                     Read full story
                   </Link>

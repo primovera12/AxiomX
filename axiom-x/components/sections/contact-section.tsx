@@ -24,26 +24,17 @@ export function ContactSection() {
           {/* Section Title - Responsive margin */}
           <AnimatedElement variant="fadeUp" className="mb-[30px] md:mb-[40px] lg:mb-[50px]">
             {/* h2 - Responsive font size */}
-            <h2
-              className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] mb-[10px]"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
-              Contact Us
+            <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-black font-bold uppercase tracking-[0.4px] mb-[10px]">
+              CONTACT US
             </h2>
 
             {/* h3 - Responsive font size */}
-            <h3
-              className="text-[18px] md:text-[22px] lg:text-[28px] text-black font-semibold leading-[110%] mb-[10px]"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
+            <h3 className="text-[18px] md:text-[20px] lg:text-[24px] text-black font-semibold mb-[10px]">
               Let&apos;s talk scale.
             </h3>
 
             {/* p - Responsive font size */}
-            <p
-              className="text-[14px] md:text-[18px] lg:text-[24px] font-light"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
+            <p className="text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-relaxed">
               Whether you&apos;re looking to optimize delivery, centralize
               operations, or unlock new revenue — Axiom x is your growth
               partner.
@@ -56,10 +47,7 @@ export function ContactSection() {
             {/* Name Field - Responsive spacing */}
             <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
               {/* label - Responsive text and padding */}
-              <label
-                className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[16px] md:text-[18px] lg:text-[22px] font-semibold pl-4 md:pl-6 lg:pl-[40px]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
+              <label className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[14px] md:text-[15px] lg:text-[16px] font-semibold pl-4 md:pl-6 lg:pl-[40px]">
                 Your Name
               </label>
               {/* input - Responsive height and padding */}
@@ -76,10 +64,7 @@ export function ContactSection() {
 
             {/* Email Field - Responsive */}
             <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
-              <label
-                className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[16px] md:text-[18px] lg:text-[22px] font-semibold pl-4 md:pl-6 lg:pl-[40px]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
+              <label className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[14px] md:text-[15px] lg:text-[16px] font-semibold pl-4 md:pl-6 lg:pl-[40px]">
                 Your Mail
               </label>
               <input
@@ -95,10 +80,7 @@ export function ContactSection() {
 
             {/* Message Field - Responsive */}
             <div className="mb-[15px] md:mb-[20px] lg:mb-[25px]">
-              <label
-                className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[16px] md:text-[18px] lg:text-[22px] font-semibold pl-4 md:pl-6 lg:pl-[40px]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
+              <label className="block w-full mb-[10px] md:mb-[12px] lg:mb-[15px] text-[14px] md:text-[15px] lg:text-[16px] font-semibold pl-4 md:pl-6 lg:pl-[40px]">
                 Write your question or Message
               </label>
               {/* textarea - Responsive height and padding */}
@@ -128,25 +110,20 @@ export function ContactSection() {
         {/* Contact Info - Responsive gap and margin */}
         <AnimatedElement variant="fadeUp" delay={0.2} className="flex items-center justify-center gap-3 md:gap-5 lg:gap-[30px] mt-[40px] md:mt-[60px] lg:mt-[80px] flex-wrap px-4 md:px-0">
           {/* contact-item - Responsive text and padding */}
-          <p
-            className="m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-[#529b66]"
-            style={{ fontFamily: "'Alexandria', sans-serif" }}
-          >
+          <p className="m-0 text-[14px] md:text-[15px] lg:text-[16px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-[#529b66]">
             UAE | KSA | Oman | Kuwait
           </p>
 
           <a
             href="mailto:info@axiomxgroup.com"
-            className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
-            style={{ fontFamily: "'Alexandria', sans-serif" }}
+            className="inline-block m-0 text-[14px] md:text-[15px] lg:text-[16px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
           >
             info@axiomxgroup.com
           </a>
 
           <a
             href="tel:+97143101010"
-            className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
-            style={{ fontFamily: "'Alexandria', sans-serif" }}
+            className="inline-block m-0 text-[14px] md:text-[15px] lg:text-[16px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
           >
             +971 4 3101 010
           </a>

@@ -13,26 +13,17 @@ export function CareersCTASection() {
           {/* Left: Team Info - Responsive padding */}
           <AnimatedElement variant="slideLeft" className="pt-0 lg:pt-[40px] px-4 md:px-0">
             {/* h2 - Responsive font size */}
-            <h2
-              className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] mb-[10px]"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
-              Careers
+            <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-black font-bold uppercase tracking-[0.4px] mb-[10px]">
+              CAREERS
             </h2>
 
             {/* h3 - Responsive font size */}
-            <h3
-              className="text-[18px] md:text-[22px] lg:text-[28px] text-black font-semibold leading-[110%] mb-[10px]"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
+            <h3 className="text-[18px] md:text-[20px] lg:text-[24px] text-black font-semibold mb-[10px]">
               Build the future of operations.
             </h3>
 
             {/* p - Responsive font size */}
-            <p
-              className="text-[14px] md:text-[18px] lg:text-[24px] font-light"
-              style={{ fontFamily: "'Alexandria', sans-serif" }}
-            >
+            <p className="text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-relaxed">
               We&apos;re looking for operators, strategists, and technologists
               ready to redesign what B2B execution looks like in the Middle
               East.
@@ -41,17 +32,14 @@ export function CareersCTASection() {
             {/* Join Team - Responsive margin */}
             <div className="mt-[30px] md:mt-[40px] lg:mt-[50px]">
               {/* p - Responsive sizing */}
-              <p
-                className="mb-[15px] md:mb-[18px] lg:mb-[20px] text-[14px] md:text-[18px] lg:text-[24px] font-light"
-                style={{ fontFamily: "'Alexandria', sans-serif" }}
-              >
+              <p className="mb-[15px] md:mb-[18px] lg:mb-[20px] text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-relaxed">
                 Ready to build with us?
               </p>
 
               {/* Button - Responsive sizing */}
               <Link
                 href="/careers"
-                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[16px] md:text-[22px] lg:text-[28px] font-semibold h-[50px] md:h-[65px] lg:h-[84px] w-full md:w-auto lg:w-[440px] py-2 md:py-[8px] lg:py-[10px] px-6 md:px-[20px] lg:px-[30px] rounded-[100px] gap-[10px] transition-all duration-300 hover:bg-[#3f7537]"
+                className="inline-flex items-center justify-center bg-[#19342c] text-white text-[14px] md:text-[15px] lg:text-[16px] font-medium py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] rounded-[8px] border-2 border-[#19342c] gap-[10px] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
               >
                 Join the <span className="text-[#d4fb51]">X</span> Team
               </Link>

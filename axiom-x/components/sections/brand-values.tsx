@@ -45,7 +45,7 @@ export function BrandValuesSection() {
       <div className="container-axiom">
         {/* Title - Responsive margin and text */}
         <AnimatedElement variant="fadeUp" className="text-center mb-[30px] md:mb-[40px] lg:mb-[50px]">
-          <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-[#529b66] font-bold tracking-[0.4px]">
+          <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-[#529b66] font-bold uppercase tracking-[0.4px]">
             BRAND VALUES
           </h2>
         </AnimatedElement>
@@ -69,19 +69,13 @@ export function BrandValuesSection() {
                   </div>
 
                   {/* Title */}
-                  <h4
-                    className="text-[14px] text-black font-semibold min-w-[80px]"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                  <h4 className="text-[14px] text-black font-semibold min-w-[80px]">
                     {value.label}
                   </h4>
 
                   {/* Lime Description Box - Always visible on mobile */}
                   <div className="flex-1">
-                    <span
-                      className="inline-block bg-[#d4fb50] py-1.5 px-3 rounded-[100px] text-[11px] font-normal text-black"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
+                    <span className="inline-block bg-[#d4fb50] py-1.5 px-3 rounded-[100px] text-[11px] font-normal text-black">
                       {value.note}
                     </span>
                   </div>
@@ -121,25 +115,21 @@ export function BrandValuesSection() {
 
                   {/* Label - Responsive text size */}
                   <h4
-                    className={`m-0 text-[17px] lg:text-[22px] text-black transition-all duration-300 ${
+                    className={`m-0 text-[14px] lg:text-[16px] text-black transition-all duration-300 ${
                       isHovered ? "font-semibold" : "font-normal"
                     }`}
-                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {value.label}
                   </h4>
 
                   {/* Tooltip Note - Responsive sizing and positioning */}
                   <span
-                    className={`absolute left-1/2 -translate-x-1/2 bg-[#d4fb50] py-3 px-5 lg:py-[18px] lg:px-[30px] rounded-[200px] max-w-[90vw] text-[14px] lg:text-[20px] font-normal z-[9] shadow-[0px_7px_15px_rgba(0,0,0,0.2)] transition-all duration-300 text-center whitespace-nowrap ${
+                    className={`absolute left-1/2 -translate-x-1/2 bg-[#d4fb50] py-3 px-5 lg:py-[18px] lg:px-[30px] rounded-[200px] max-w-[90vw] text-[14px] lg:text-[16px] font-normal z-[9] shadow-[0px_7px_15px_rgba(0,0,0,0.2)] transition-all duration-300 text-center whitespace-nowrap ${
                       isHovered
                         ? "opacity-100 visible mt-[35px] lg:mt-[45px]"
                         : "opacity-0 invisible mt-[50px] lg:mt-[60px]"
                     }`}
-                    style={{
-                      fontFamily: "'Inter', sans-serif",
-                      top: "100%",
-                    }}
+                    style={{ top: "100%" }}
                   >
                     {value.note}
                   </span>

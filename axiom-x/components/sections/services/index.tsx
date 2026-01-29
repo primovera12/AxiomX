@@ -16,8 +16,8 @@ export function ServicesSection() {
         <div className="services-gradient-bg rounded-[20px] md:rounded-[30px] lg:rounded-[40px] py-[30px] px-4 md:py-[45px] md:px-[40px] lg:py-[60px] lg:px-[80px] mb-[20px] md:mb-[30px] lg:mb-[40px] relative overflow-hidden">
           {/* Title Container - Responsive margin */}
           <AnimatedElement variant="fadeUp" className="mb-[25px] md:mb-[35px] lg:mb-[50px] relative z-10">
-            <h2 className="text-[28px] md:text-[40px] lg:text-[55px] text-white leading-[1] font-bold inline-block border-b-[1.5px] border-[#d4fb50] pb-[8px] md:pb-[10px] pr-[30px] md:pr-[45px] lg:pr-[60px] m-0">
-              Our Services
+            <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-white font-bold uppercase tracking-[0.4px] inline-block border-b-[1.5px] border-[#d4fb50] pb-[8px] md:pb-[10px] pr-[30px] md:pr-[45px] lg:pr-[60px] m-0">
+              OUR SERVICES
             </h2>
           </AnimatedElement>
 
@@ -58,8 +58,7 @@ export function ServicesSection() {
                 {/* Accordion Button - Responsive text */}
                 <button
                   onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between py-2 md:py-[8px] lg:py-[10px] px-0 bg-transparent text-white text-[16px] md:text-[24px] lg:text-[36px] font-semibold tracking-[0.5px] border-none outline-none cursor-pointer"
-                  style={{ fontFamily: "'Alexandria', sans-serif" }}
+                  className="w-full flex items-center justify-between py-2 md:py-[8px] lg:py-[10px] px-0 bg-transparent text-white text-[18px] md:text-[22px] lg:text-[28px] font-semibold tracking-[0.5px] border-none outline-none cursor-pointer"
                 >
                   <span>{service.title}</span>
                   {/* Arrow - Responsive sizing */}
@@ -100,10 +99,7 @@ export function ServicesSection() {
                     </div>
 
                     {/* Description - Responsive text */}
-                    <p
-                      className="text-[14px] md:text-[17px] lg:text-[22px] text-white mb-0 tracking-[0.3px] font-normal"
-                      style={{ fontFamily: "'Alexandria', sans-serif" }}
-                    >
+                    <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white mb-0 font-normal leading-relaxed">
                       {service.boldText} {service.description}
                     </p>
 
@@ -113,7 +109,6 @@ export function ServicesSection() {
                         <span
                           key={tagIndex}
                           className="inline-block bg-[#d4fb50] text-black text-[12px] md:text-[14px] lg:text-[16px] py-2 px-3 md:py-3 md:px-4 lg:py-[14px] lg:px-[24px] rounded-[40px] border border-[#d4fb50] transition-all duration-300 hover:bg-transparent hover:text-[#d4fb50] cursor-pointer"
-                          style={{ fontFamily: "'Aloevera-Regular', sans-serif" }}
                         >
                           {tag}
                         </span>

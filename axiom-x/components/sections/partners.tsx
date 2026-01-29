@@ -25,10 +25,10 @@ const partners = [
 
 export function PartnersSection() {
   return (
-    <section id="partners" className="pb-6 md:pb-8 lg:pb-10">
+    <section id="partners" className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
       {/* Partners Title - Responsive sizing */}
       <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
-        <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-light uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
+        <h2 className="text-[24px] md:text-[30px] lg:text-[36px] font-bold uppercase tracking-[0.4px] mb-[10px] md:mb-[15px] lg:mb-[20px]">
           BE A PART OF OUR PARTNERS
         </h2>
       </AnimatedElement>
@@ -106,14 +106,14 @@ export function PartnersSection() {
           {/* Green filled button */}
           <Link
             href="#contact"
-            className="inline-flex justify-center items-center px-4 py-3 md:px-5 md:py-3.5 lg:px-6 lg:py-4 bg-[#53ac70] text-white text-[14px] md:text-[15px] lg:text-base rounded-lg font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
+            className="inline-flex justify-center items-center py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] bg-[#53ac70] text-white text-[14px] md:text-[15px] lg:text-[16px] rounded-[8px] font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
           >
             Speak to an Expert
           </Link>
           {/* Dark green filled button */}
           <Link
             href="/signup"
-            className="inline-flex justify-center items-center px-4 py-3 md:px-5 md:py-3.5 lg:px-6 lg:py-4 bg-[#19342c] text-white text-[14px] md:text-[15px] lg:text-base rounded-lg font-medium border-2 border-[#19342c] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
+            className="inline-flex justify-center items-center py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] bg-[#19342c] text-white text-[14px] md:text-[15px] lg:text-[16px] rounded-[8px] font-medium border-2 border-[#19342c] transition-all duration-300 hover:bg-[#2a4a3d] hover:border-[#2a4a3d]"
           >
             Create an Account
           </Link>

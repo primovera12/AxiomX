@@ -141,7 +141,7 @@ export function HeroSection() {
                           transitionDelay: selectedIndex === index ? "0.3s" : "0s",
                         }}
                       >
-                        <p className="text-white text-[12px] md:text-[13px] lg:text-sm">{slide.description}</p>
+                        <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed">{slide.description}</p>
                       </div>
 
                       {/* CTA Buttons - Responsive layout */}
@@ -156,7 +156,7 @@ export function HeroSection() {
                         {/* Green filled button - Responsive */}
                         <Link
                           href="#contact"
-                          className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#53ac70] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
+                          className="inline-block py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] bg-[#53ac70] text-white text-[14px] md:text-[15px] lg:text-[16px] rounded-[8px] font-medium border-2 border-[#53ac70] transition-all duration-300 hover:bg-[#3f8f5a] hover:border-[#3f8f5a]"
                         >
                           {slide.ctaPrimary}
                         </Link>
@@ -164,7 +164,7 @@ export function HeroSection() {
                         {/* White outlined button - Responsive */}
                         <Link
                           href="#signup"
-                          className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-white text-[#53ac70] text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                          className="inline-block py-[10px] px-[20px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[28px] bg-white text-[#53ac70] text-[14px] md:text-[15px] lg:text-[16px] rounded-[8px] font-medium border-2 border-white transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
                         >
                           Create an Account
                         </Link>
