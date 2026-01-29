@@ -62,7 +62,7 @@ export function Footer() {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full border-0 border-b border-[#eee] p-2.5 text-base outline-none"
+                    className="w-full border-0 border-b border-[#999] p-2.5 text-base outline-none"
                   />
                   <button
                     type="submit"
@@ -133,10 +133,10 @@ export function Footer() {
             </AnimatedElement>
 
             {/* Column 4: Social Links */}
-            <AnimatedElement variant="fadeUp" delay={0.2} className="lg:col-span-2 text-left md:text-left lg:text-right">
+            <AnimatedElement variant="fadeUp" delay={0.2} className="lg:col-span-2 text-left">
               <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Follow Us</h4>
               {/* Social Links - Touch-friendly sizing */}
-              <ul className="flex items-center justify-start lg:justify-end gap-3 md:gap-4">
+              <ul className="flex items-center justify-start gap-3 md:gap-4">
                 <li>
                   <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
                     <Facebook className="h-5 w-5" />
