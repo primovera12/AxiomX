@@ -19,7 +19,7 @@ export function VisionMissionSection() {
       />
 
       <div className="container-axiom">
-        <div className="max-w-[700px] text-left">
+        <div className="w-full lg:max-w-[700px]">
           {/* Vision & Mission Content */}
           <AnimatedElement variant="slideLeft">
             {/* Vision - Responsive margin */}
