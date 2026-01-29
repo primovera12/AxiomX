@@ -35,7 +35,7 @@ export function WhyAxiomSection() {
               {/* Left column: Title + Dark box below */}
               <AnimatedElement variant="slideLeft" className="flex flex-col gap-3 md:gap-4 lg:w-[320px] flex-shrink-0">
                 {/* Title - Responsive font size */}
-                <h2 className="text-[24px] md:text-[30px] lg:text-[36px] font-bold text-white uppercase tracking-[0.4px] m-0">
+                <h2 className="text-[26px] md:text-[32px] lg:text-[38px] font-bold text-white leading-tight italic m-0">
                   Why Axiom <span className="text-[#d4fb50]">x</span> ?
                 </h2>
 

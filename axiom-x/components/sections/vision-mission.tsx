@@ -25,21 +25,21 @@ export function VisionMissionSection() {
             {/* Vision - Responsive margin */}
             <div className="mb-[25px] md:mb-[32px] lg:mb-[40px]">
               {/* h2 - Responsive font size */}
-              <h2 className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white font-bold tracking-[0.4px] mb-[8px] md:mb-[9px] lg:mb-[10px]">
+              <h2 className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white font-bold leading-[110%] mb-[8px] md:mb-[9px] lg:mb-[10px]">
                 Vision
               </h2>
               {/* p - Responsive font size */}
-              <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-normal leading-relaxed">
+              <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-medium">
                 To be the invisible engine of the world's most ambitious brands.
               </p>
             </div>
 
             {/* Mission - Responsive margin */}
             <div className="mb-[25px] md:mb-[32px] lg:mb-[40px]">
-              <h2 className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white font-bold tracking-[0.4px] mb-[8px] md:mb-[9px] lg:mb-[10px]">
+              <h2 className="text-[24px] md:text-[30px] lg:text-[36px] uppercase text-white font-bold leading-[110%] mb-[8px] md:mb-[9px] lg:mb-[10px]">
                 Mission
               </h2>
-              <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-normal leading-relaxed">
+              <p className="text-[14px] md:text-[15px] lg:text-[16px] text-white font-medium">
                 To transform operational complexity into a competitive advantage, giving businesses the freedom to scale through precision, insight, and intelligence.
               </p>
             </div>

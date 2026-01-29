@@ -24,12 +24,15 @@ export function ContactSection() {
           {/* Section Title - Responsive margin */}
           <AnimatedElement variant="fadeUp" className="mb-[30px] md:mb-[40px] lg:mb-[50px]">
             {/* h2 - Responsive font size */}
-            <h2 className="text-[24px] md:text-[30px] lg:text-[36px] text-black font-bold uppercase tracking-[0.4px] mb-[10px]">
-              CONTACT US
+            <h2
+              className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] mb-[10px]"
+              style={{ fontFamily: "'Alexandria', sans-serif" }}
+            >
+              Contact Us
             </h2>
 
             {/* h3 - Responsive font size */}
-            <h3 className="text-[18px] md:text-[20px] lg:text-[24px] text-black font-semibold mb-[10px]">
+            <h3 className="text-[18px] md:text-[22px] lg:text-[28px] text-black font-semibold leading-[110%] mb-[10px]">
               Let&apos;s talk scale.
             </h3>
 

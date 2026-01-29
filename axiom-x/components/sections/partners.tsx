@@ -28,7 +28,7 @@ export function PartnersSection() {
     <section id="partners" className="pb-[40px] md:pb-[60px] lg:pb-[80px]">
       {/* Partners Title - Responsive sizing */}
       <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
-        <h2 className="text-[24px] md:text-[30px] lg:text-[36px] font-bold uppercase tracking-[0.4px] mb-[10px] md:mb-[15px] lg:mb-[20px]">
+        <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-light uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
           BE A PART OF OUR PARTNERS
         </h2>
       </AnimatedElement>
