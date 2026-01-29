@@ -34,26 +34,9 @@ export function PartnersSection() {
       </AnimatedElement>
 
       {/* Partners Wrapper - Responsive padding and height */}
-      <div className="bg-[#ececec] p-[60px] lg:py-[10px] lg:px-0 relative overflow-hidden">
-        {/* Left mask - hides logos that pass behind the PARTNERS box (desktop only) */}
-        <div className="hidden lg:block absolute inset-y-0 left-0 w-[calc(50%-640px+200px)] bg-[#ececec] z-10" />
-
-        {/* Container for PARTNERS box (boxed width on left) */}
-        <div className="container-axiom relative z-20">
-          <div className="flex items-center">
-            {/* PARTNERS Box - Hidden on mobile/tablet, visible on desktop */}
-            <div className="hidden lg:flex w-[160px] h-[160px] bg-[#53ac70] rounded-[15px] justify-center items-center flex-shrink-0 relative z-20">
-              <h3 className="text-white text-[40px] font-bold leading-[75%] m-0 text-center">
-                PA<br />RT<br />NE<br />RS
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        {/* Marquee - Responsive sizing and positioning */}
-        <div className="absolute inset-y-0 left-0 right-0 flex items-center overflow-hidden z-0">
-          {/* On mobile: start from edge, on desktop: offset for PARTNERS box */}
-          <div className="ml-0 lg:ml-[200px] flex-1 overflow-hidden">
+      <div className="bg-[#ececec] py-[20px] md:py-[30px] lg:py-[40px] relative overflow-hidden">
+        {/* Marquee - Edge to edge infinite loop */}
+        <div className="flex items-center overflow-hidden">
             {/* Marquee animation container - Responsive height */}
             <div className="flex animate-marquee items-center h-[80px] md:h-[120px] lg:h-[160px]">
               {/* First set of logos */}
@@ -97,8 +80,6 @@ export function PartnersSection() {
             </div>
           </div>
         </div>
-
-      </div>
 
       {/* CTA Buttons - Responsive sizing */}
       <AnimatedElement variant="fadeUp" delay={0.1} className="container-axiom px-4 md:px-0">
