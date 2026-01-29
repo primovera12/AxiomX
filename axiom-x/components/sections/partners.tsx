@@ -24,11 +24,11 @@ const partners = [
 
 export function PartnersSection() {
   return (
-    <section id="partners" className="pb-[80px] md:pb-[90px] lg:pb-[100px]">
+    <section id="partners" className="pt-[40px] pb-[80px] md:pt-[60px] md:pb-[90px] lg:pt-[80px] lg:pb-[100px]">
       {/* Partners Title - Responsive sizing */}
       <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
-        <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-light uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
-          BE A PART OF OUR PARTNERS
+        <h2 className="text-[18px] md:text-[22px] lg:text-[28px] tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] font-bold uppercase font-heading mb-[10px] md:mb-[15px] lg:mb-[20px]">
+          BECOME A PARTNER
         </h2>
       </AnimatedElement>
 

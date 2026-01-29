@@ -82,15 +82,12 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-[50px] md:py-[80px] lg:py-[100px] bg-[#fcfcfc]">
+    <section id="contact" className="pt-[50px] pb-[70px] md:pt-[80px] md:pb-[80px] lg:pt-0 lg:pb-[100px]">
       <div className="container-axiom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column - Info */}
           <AnimatedElement variant="fadeUp" className="space-y-6 md:space-y-8">
             <div>
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#e8f8f3] text-[#3f7537] text-[11px] md:text-xs font-bold tracking-wider uppercase mb-4">
-                Contact Us
-              </span>
               <h2
                 className="text-[32px] md:text-[42px] lg:text-[50px] font-bold text-[#19342c] leading-tight mb-4"
                 style={{ fontFamily: "'Alexandria', sans-serif" }}
