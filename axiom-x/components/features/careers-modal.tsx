@@ -76,34 +76,34 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px] md:max-w-[520px]">
         <DialogHeader>
           <DialogTitle
-            className="text-[24px] md:text-[28px] font-bold"
+            className="text-[20px] sm:text-[24px] md:text-[28px] font-bold pr-8"
             style={{ fontFamily: "'Alexandria', sans-serif" }}
           >
             Join the <span className="text-[#3f7537]">X</span> Team
           </DialogTitle>
-          <DialogDescription className="text-[14px] md:text-[15px]">
+          <DialogDescription className="text-[13px] sm:text-[14px] md:text-[15px]">
             Ready to build the future of operations? Fill out the form below and we&apos;ll get back to you.
           </DialogDescription>
         </DialogHeader>
 
-        <div className="p-6 pt-2">
+        <div className="p-4 sm:p-6 pt-2">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
               <FormField
                 control={form.control}
                 name="fullName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#19342c] font-medium">
+                    <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
                       Full Name
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Your full name"
-                        className="h-12 bg-gray-50 border-gray-200 focus:border-[#19342c] focus:ring-[#19342c]"
+                        className="h-10 sm:h-12 bg-gray-50 border-gray-400 focus:border-[#19342c] focus:ring-[#19342c] text-[14px] sm:text-base"
                         {...field}
                       />
                     </FormControl>
@@ -117,14 +117,14 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#19342c] font-medium">
+                    <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
                       Email
                     </FormLabel>
                     <FormControl>
                       <Input
                         type="email"
                         placeholder="your.email@example.com"
-                        className="h-12 bg-gray-50 border-gray-200 focus:border-[#19342c] focus:ring-[#19342c]"
+                        className="h-10 sm:h-12 bg-gray-50 border-gray-400 focus:border-[#19342c] focus:ring-[#19342c] text-[14px] sm:text-base"
                         {...field}
                       />
                     </FormControl>
@@ -138,14 +138,14 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#19342c] font-medium">
+                    <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
                       Phone Number
                     </FormLabel>
                     <FormControl>
                       <Input
                         type="tel"
                         placeholder="+971 XX XXX XXXX"
-                        className="h-12 bg-gray-50 border-gray-200 focus:border-[#19342c] focus:ring-[#19342c]"
+                        className="h-10 sm:h-12 bg-gray-50 border-gray-400 focus:border-[#19342c] focus:ring-[#19342c] text-[14px] sm:text-base"
                         {...field}
                       />
                     </FormControl>
@@ -159,13 +159,13 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
                 name="position"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#19342c] font-medium">
+                    <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
                       Position Applying For
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="e.g. Operations Manager, Logistics Coordinator"
-                        className="h-12 bg-gray-50 border-gray-200 focus:border-[#19342c] focus:ring-[#19342c]"
+                        className="h-10 sm:h-12 bg-gray-50 border-gray-400 focus:border-[#19342c] focus:ring-[#19342c] text-[14px] sm:text-base"
                         {...field}
                       />
                     </FormControl>
@@ -179,13 +179,13 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#19342c] font-medium">
+                    <FormLabel className="text-[#19342c] font-medium text-[13px] sm:text-sm">
                       Why do you want to join Axiom X?
                     </FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Tell us about yourself and why you'd be a great fit..."
-                        className="min-h-[120px] bg-gray-50 border-gray-200 focus:border-[#19342c] focus:ring-[#19342c] resize-none"
+                        className="min-h-[100px] sm:min-h-[120px] bg-gray-50 border-gray-400 focus:border-[#19342c] focus:ring-[#19342c] resize-none text-[14px] sm:text-base"
                         {...field}
                       />
                     </FormControl>
@@ -197,7 +197,7 @@ export function CareersModal({ open, onOpenChange }: CareersModalProps) {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-12 bg-[#19342c] hover:bg-[#3f7537] text-white font-semibold rounded-full mt-6 transition-all duration-300"
+                className="w-full h-10 sm:h-12 bg-[#19342c] hover:bg-[#3f7537] text-white font-semibold rounded-full mt-4 sm:mt-6 transition-all duration-300 text-[14px] sm:text-base"
               >
                 {isSubmitting ? (
                   <>

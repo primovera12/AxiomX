@@ -55,14 +55,14 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "bg-white data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-2xl shadow-xl duration-200 max-h-[90vh] overflow-y-auto",
+          "bg-white data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed left-1/2 top-1/2 z-50 w-[calc(100%-32px)] sm:w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-xl sm:rounded-2xl shadow-xl duration-200 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto",
           className
         )}
         {...props}
       >
         {children}
-        <DialogPrimitive.Close className="absolute top-4 right-4 rounded-full p-2 opacity-70 transition-all hover:opacity-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#19342c] focus:ring-offset-2 disabled:pointer-events-none">
-          <XIcon className="size-5 text-[#19342c]" />
+        <DialogPrimitive.Close className="absolute top-3 right-3 sm:top-4 sm:right-4 rounded-full p-1.5 sm:p-2 opacity-70 transition-all hover:opacity-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#19342c] focus:ring-offset-2 disabled:pointer-events-none">
+          <XIcon className="size-4 sm:size-5 text-[#19342c]" />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
@@ -74,7 +74,7 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="dialog-header"
-      className={cn("flex flex-col gap-2 p-6 pb-0", className)}
+      className={cn("flex flex-col gap-1.5 sm:gap-2 p-4 sm:p-6 pb-0", className)}
       {...props}
     />
   )
