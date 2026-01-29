@@ -48,7 +48,7 @@ export function HeroSection() {
               />
 
               {/* Content - Responsive padding */}
-              <div className="relative z-10 h-full flex items-end pt-[40px] pb-[60px] px-4 md:pt-[60px] md:pb-[80px] md:px-12 lg:pt-[80px] lg:pb-[100px] lg:px-12">
+              <div className="relative z-10 h-full flex items-end pt-[60px] pb-[60px] px-4 md:pt-[60px] md:pb-[80px] md:px-12 lg:pt-[80px] lg:pb-[100px] lg:px-12">
                 <div className="w-full lg:w-[740px]">
                   {/* Headline - Responsive text */}
                   <h1 className="text-white text-[28px] md:text-[38px] lg:text-[50px] font-semibold leading-[125%] mb-3 md:mb-4 lg:mb-5 font-heading">
@@ -65,7 +65,7 @@ export function HeroSection() {
 
                   {/* CTA Buttons - Responsive layout */}
                   <div
-                    className="mt-[30px] md:mt-[45px] lg:mt-[60px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-row items-center gap-2 md:gap-[12px] lg:gap-[15px]"
+                    className="mt-[30px] md:mt-[45px] lg:mt-[60px] pt-[15px] md:pt-[20px] lg:pt-[25px] flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-[12px] lg:gap-[15px]"
                     style={{
                       borderTop: "3px solid rgba(255, 255, 255, 0.6)",
                       borderRadius: "2px",
@@ -74,7 +74,7 @@ export function HeroSection() {
                     {/* Green filled button - Responsive */}
                     <Link
                       href="#contact"
-                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#53ac70] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white"
+                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-[#53ac70] text-white text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-white hover:border-white text-center w-full md:w-auto"
                     >
                       Speak to an Expert
                     </Link>
@@ -82,7 +82,7 @@ export function HeroSection() {
                     {/* White outlined button - Responsive */}
                     <Link
                       href="#tracking"
-                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-white text-[#53ac70] text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                      className="inline-block py-[10px] px-[18px] md:py-[11px] md:px-[20px] lg:py-[12px] lg:px-[24px] bg-white text-[#53ac70] text-[12px] md:text-[13px] lg:text-[14px] rounded-[8px] font-medium border-[1.5px] border-white transition-all duration-300 hover:bg-transparent hover:text-white text-center w-full md:w-auto"
                     >
                       Track your Shipment
                     </Link>
