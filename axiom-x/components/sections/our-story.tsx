@@ -17,22 +17,30 @@ export function OurStorySection() {
                   className="text-[24px] md:text-[30px] lg:text-[36px] text-white leading-[120%] m-0 font-bold"
                   style={{ fontFamily: "'Alexandria', sans-serif" }}
                 >
-                  Our Story: From
-                  <br />
-                  1997 to the AI Era
+                  Our Story: Decades in the Making. Reimagined for the AI Era.
                 </h2>
               </div>
 
               {/* Right: Content */}
-              <div>
-                {/* p - Responsive font size */}
-                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] mb-0 leading-relaxed">
-                  We started in 1997 as Axiom x Telecom — building the Middle East&apos;s
-                  largest mobility distribution engine. We helped global brands scale
-                  through precision logistics, resilient warehousing, and high-volume
-                  fulfillment.
+              <div className="space-y-4">
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed">
+                  In 1997, we began as Axiom Telecom. To become the Middle East&apos;s largest mobility distribution engine, we had to build what didn&apos;t yet exist: a logistics infrastructure capable of moving high-value technology with absolute precision.
                 </p>
-
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed">
+                  For over 25 years, we operated as the silent engine behind a multi-billion dollar industry—mastering customs clearing, resilient warehousing, and high-volume fulfillment. At our peak, we were managing thousands of deliveries every day, protecting and moving over $100M in inventory value every month. We didn&apos;t just follow market standards; we built the benchmark for speed and reliability in the region&apos;s most demanding sector.
+                </p>
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed font-semibold">
+                  Today, that engine has evolved. Welcome to Axiom X.
+                </p>
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed">
+                  We have unbundled our decades of accumulated expertise to serve you. Axiom X is a platform-based, AI-enhanced operational partner designed for the next generation of B2B scale-ups, telcos, and e-commerce leaders.
+                </p>
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed">
+                  The &quot;X&quot; represents our commitment to the X Factor—a level of precision and insight that is, quite simply, unlike others. We have mastered the complexity of high-value operations so that you don&apos;t have to.
+                </p>
+                <p className="text-white text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed font-semibold">
+                  We&apos;ve powered the region&apos;s giants. Now, we&apos;re powering you.
+                </p>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ export function PartnersSection() {
       {/* Partners Title - Responsive sizing */}
       <AnimatedElement variant="fadeUp" className="container-axiom text-center mb-[30px] md:mb-[45px] lg:mb-[60px]">
         <h2
-          className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%]"
+          className="text-[28px] md:text-[40px] lg:text-[55px] text-black font-bold leading-[110%] pb-[20px]"
           style={{ fontFamily: "'Alexandria', sans-serif" }}
         >
           Become a Partner

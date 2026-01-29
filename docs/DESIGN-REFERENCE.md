@@ -862,29 +862,142 @@ Bottom Row:      99.9%    |    29+
 
 ---
 
-## ⚠️ NEXT PHASES: Responsiveness & Animations
+## ✅ COMPLETED PHASES
 
-### Phase 1: Responsiveness (HIGH PRIORITY)
+### Phase 1: Desktop Design - ✅ 100% COMPLETE
+All 13 sections pixel-perfect match with PDF design.
 
-All sections need to be made responsive for the following breakpoints:
+### Phase 2: Responsiveness - ✅ 100% COMPLETE
+All sections responsive across all breakpoints (320px to 1440px+).
 
-1. **Large Desktop**: 1440px+ (current implementation - DONE)
-2. **Desktop**: 1024px - 1439px
-3. **Tablet**: 768px - 1023px
-4. **Mobile**: 320px - 767px
+---
 
-### Phase 2: Animations (AFTER Responsiveness)
+## 🎬 CURRENT PHASE: Animations (Phase 3)
 
-Animations to add across the site:
+### Animation Implementation Plan
 
-1. **Scroll animations** - Elements fade/slide in as user scrolls
-2. **Hover effects** - Enhanced micro-interactions
-3. **Page transitions** - Smooth transitions between sections
-4. **Loading states** - Skeleton loaders or spinners where needed
-5. **Button animations** - Press/click feedback
-6. **Card animations** - Hover lift effects, shadows
-7. **Counter animations** - Stats numbers counting up on scroll
-8. **Parallax effects** - Subtle depth on background images (if applicable)
+#### Priority 1: Scroll Animations (Reveal on Scroll)
+Elements should fade/slide in as user scrolls down the page.
+
+**Sections to animate:**
+1. **Stats Bar** - Numbers count up when section enters viewport
+2. **Partners** - Logos fade in before marquee starts
+3. **Why Axiom X** - Cards slide in from sides
+4. **Services** - Accordion items fade in sequentially
+5. **Our Story** - Text slides in from left
+6. **Vision/Mission** - Content fades in
+7. **Brand Values** - Icons pop in one by one
+8. **Careers** - Image slides in from right
+9. **Contact** - Form elements fade in
+
+**Recommended Library:** Framer Motion or AOS (Animate On Scroll)
+
+#### Priority 2: Counter Animations
+- Stats Bar numbers should count up from 0 to final value
+- Use intersection observer to trigger when visible
+- Duration: ~2 seconds per counter
+
+#### Priority 3: Hover Micro-interactions
+- **Buttons**: Scale up slightly (1.02-1.05), shadow lift
+- **Cards**: Subtle lift effect with shadow
+- **Links**: Underline animations
+- **Service tags**: Background color transition
+- **Partner logos**: Slight scale on hover
+
+#### Priority 4: Loading States
+- Skeleton loaders for images
+- Spinner for form submission
+- Smooth image fade-in on load
+
+#### Priority 5: Special Animations
+- **Hero carousel**: Already has fade transition ✓
+- **Services gradient**: Already animated ✓
+- **Partners marquee**: Already animated ✓
+- **Play button**: Pulse/glow effect on hover
+- **Brand values tooltip**: Smooth fade in/out
+
+### Animation Specifications
+
+```jsx
+// Recommended Framer Motion variants
+
+// Fade up on scroll
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
+// Stagger children
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+// Scale on hover
+const hoverScale = {
+  whileHover: { scale: 1.05 },
+  whileTap: { scale: 0.98 }
+};
+
+// Counter animation (use useCountUp hook or similar)
+```
+
+### Animation Checklist
+
+#### Scroll Reveal Animations
+- [ ] Hero section content
+- [ ] Stats bar (with counter animation)
+- [ ] Partners title and logos
+- [ ] Why Axiom X cards
+- [ ] Services accordion items
+- [ ] Our Story text content
+- [ ] Vision/Mission content
+- [ ] Brand Values icons
+- [ ] Careers section
+- [ ] Shipment Tracking section
+- [ ] Contact form
+
+#### Hover Effects
+- [ ] All buttons (scale + shadow)
+- [ ] Navigation links
+- [ ] Service accordion items
+- [ ] Partner logos
+- [ ] Brand value icons
+- [ ] Social media icons
+- [ ] CTA cards
+
+#### Special Animations
+- [ ] Stats counter animation
+- [ ] Play button pulse effect
+- [ ] Form input focus animations
+- [ ] Success/error state animations
+- [ ] Image lazy load fade-in
+
+### Performance Considerations
+
+1. **Use `will-change` sparingly** - Only on elements about to animate
+2. **Prefer `transform` and `opacity`** - GPU accelerated
+3. **Avoid layout shifts** - Don't animate width/height
+4. **Use `prefers-reduced-motion`** - Respect user preferences
+5. **Lazy load below-fold content** - Improve initial load
+
+```css
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
 
 ---
 
@@ -1128,6 +1241,10 @@ block md:hidden  // show only on mobile
 
 ---
 
-*Last Updated: January 2026 (Responsiveness 100% Complete)*
+*Last Updated: January 2026*
 *Reference PDF: docs/Full Website Design.pdf*
-*Current Phase: RESPONSIVENESS COMPLETE ✅ | Next: Phase 2 - Animations*
+
+**Project Status:**
+- ✅ Phase 1: Desktop Design - COMPLETE
+- ✅ Phase 2: Responsiveness - COMPLETE
+- 🎬 Phase 3: Animations - IN PROGRESS

@@ -253,8 +253,8 @@
 
   /* Custom button styles matching PDF design */
   .btn-green {
-    background: #53ac70;
-    border: 1px solid #53ac70;
+    background: #3f7537;
+    border: 1px solid #3f7537;
     color: #fff;
     padding: 15px 24px;
     border-radius: 8px;
@@ -263,8 +263,9 @@
   }
 
   .btn-green:hover {
-    background: transparent;
-    color: #53ac70;
+    background: #19342c;
+    border-color: #19342c;
+    color: #fff;
   }
 
   .btn-dark {
