@@ -76,20 +76,15 @@ export function Header() {
                 </ul>
               </nav>
 
-              {/* Header Buttons */}
-              <div className="flex items-center gap-[15px]">
-                <Link
-                  href="/signup"
+              {/* Header Button */}
+              <div className="flex items-center">
+                <a
+                  href="#contact"
+                  onClick={(e) => handleNavClick(e, "#contact")}
                   className="inline-flex justify-center items-center min-w-[110px] px-5 py-[7px] bg-[#53ac70] text-white font-medium text-[14px] rounded-[200px] border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-[#53ac70]"
                 >
-                  Sign Up
-                </Link>
-                <Link
-                  href="/login"
-                  className="inline-flex justify-center items-center min-w-[110px] px-5 py-[7px] bg-[#53ac70] text-white font-medium text-[14px] rounded-[200px] border-[1.5px] border-[#53ac70] transition-all duration-300 hover:bg-transparent hover:text-[#53ac70]"
-                >
-                  Login
-                </Link>
+                  Let's Talk
+                </a>
               </div>
             </div>
 
@@ -141,22 +136,15 @@ export function Header() {
                 ))}
               </ul>
 
-              {/* Mobile CTAs */}
-              <div className="mt-8 space-y-3">
-                <Link
-                  href="/signup"
+              {/* Mobile CTA */}
+              <div className="mt-8">
+                <a
+                  href="#contact"
+                  onClick={(e) => handleNavClick(e, "#contact")}
                   className="block w-full text-center px-4 py-3 bg-[#53ac70] text-white font-medium rounded-[200px] transition-all duration-300 hover:bg-[#428f5c]"
-                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Sign Up
-                </Link>
-                <Link
-                  href="/login"
-                  className="block w-full text-center px-4 py-3 bg-[#53ac70] text-white font-medium rounded-[200px] transition-all duration-300 hover:bg-[#428f5c]"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Login
-                </Link>
+                  Let's Talk
+                </a>
               </div>
             </nav>
           </div>

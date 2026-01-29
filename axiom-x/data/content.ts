@@ -19,13 +19,13 @@ export const content = {
   vision: {
     headline: "Vision",
     content:
-      "To be the unseen force powering the next era of business operations.",
+      "To be the invisible engine of the world's most ambitious brands.",
   },
 
   mission: {
     headline: "Mission",
     content:
-      "To simplify, enable, and scale modern operations through intelligent, AI-driven services.",
+      "To transform operational complexity into a competitive advantage, giving businesses the freedom to scale through precision, insight, and intelligence.",
   },
 
   careers: {

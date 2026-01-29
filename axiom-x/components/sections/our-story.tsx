@@ -9,7 +9,7 @@ export function OurStorySection() {
       <div className="container-axiom">
         {/* Story Wrapper - Responsive padding and border-radius */}
         <AnimatedElement variant="slideUp">
-          <div className="bg-[#3f8f5a] p-[25px] md:p-[35px] lg:p-[50px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px]">
+          <div className="story-gradient-bg p-[25px] md:p-[35px] lg:p-[50px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 lg:gap-8 items-start">
               {/* Left: Title */}
               <div>
@@ -51,6 +51,40 @@ export function OurStorySection() {
           </div>
         </AnimatedElement>
       </div>
+
+      {/* CSS for animated gradient background */}
+      <style jsx>{`
+        .story-gradient-bg {
+          background: linear-gradient(
+            135deg,
+            #0a1f15 0%,
+            #19342c 25%,
+            #2a4a3d 50%,
+            #3f7537 75%,
+            #19342c 100%
+          );
+          background-size: 400% 400%;
+          animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          25% {
+            background-position: 50% 100%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          75% {
+            background-position: 50% 0%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 }

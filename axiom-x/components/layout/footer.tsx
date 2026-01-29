@@ -34,7 +34,7 @@ export function Footer() {
         <div className="container-axiom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-7 lg:gap-8">
             {/* Column 1: Logo + Subscribe */}
-            <AnimatedElement variant="fadeUp" className="lg:col-span-4 pr-0 md:pr-2.5">
+            <AnimatedElement variant="fadeUp" className="lg:col-span-5 pr-0 md:pr-2.5">
               {/* Logo - Responsive sizing */}
               <div className="mb-6 md:mb-7 lg:mb-8">
                 <Link href="/">
@@ -54,7 +54,7 @@ export function Footer() {
                   Subscribe
                 </h4>
                 <label className="text-[14px] md:text-[15px] font-medium text-black opacity-90 block">
-                  Get 10% off your first order
+                  Get the latest updates and news
                 </label>
                 <form onSubmit={handleNewsletterSubmit} className="mt-5 relative h-10">
                   <input
@@ -75,98 +75,89 @@ export function Footer() {
               </div>
             </AnimatedElement>
 
-            {/* Columns 2 & 3: Account + Quick Link - Side by side on mobile */}
+            {/* Columns 2 & 3: Our Services + Quick Link - Side by side on mobile */}
             <AnimatedElement variant="fadeUp" delay={0.1} className="grid grid-cols-2 md:contents gap-6">
-              {/* Column 2: Account - Responsive text */}
-              <div className="lg:col-span-2">
-                <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Account</h4>
+              {/* Column 2: Our Services */}
+              <div className="lg:col-span-3">
+                <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Our Services</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                      My Account
-                    </Link>
+                    <a href="#services" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Last Mile Delivery
+                    </a>
                   </li>
                   <li>
-                    <Link href="/login" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                      Login / Register
-                    </Link>
+                    <a href="#services" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Warehousing & Inventory
+                    </a>
                   </li>
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                      Cart
-                    </Link>
+                    <a href="#services" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Call Center Support
+                    </a>
                   </li>
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                      Wishlist
-                    </Link>
+                    <a href="#services" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Back Office Services
+                    </a>
                   </li>
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                      Shop
-                    </Link>
+                    <a href="#services" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                      Value-Added Services
+                    </a>
                   </li>
                 </ul>
               </div>
 
-              {/* Column 3: Quick Link - Responsive text */}
+              {/* Column 3: Quick Link */}
               <div className="lg:col-span-2">
                 <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Quick Link</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    <Link href="/privacy-policy" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                       Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    <Link href="/terms" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                       Terms Of Use
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
-                      FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#contact" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
+                    <a href="#contact" className="text-[14px] md:text-[15px] text-black opacity-90 hover:text-[#53ac71] transition-colors">
                       Contact
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
             </AnimatedElement>
 
-            {/* Column 4: Download App - Responsive */}
-            <AnimatedElement variant="fadeUp" delay={0.2} className="lg:col-span-4 text-left md:text-left lg:text-center">
-              <h4 className="text-base md:text-lg font-semibold mb-2">Download App</h4>
-              <p className="text-[12px] md:text-[13px] mb-3 md:mb-4">Save $3 with App New User Only</p>
-
+            {/* Column 4: Social Links */}
+            <AnimatedElement variant="fadeUp" delay={0.2} className="lg:col-span-2 text-left md:text-left lg:text-right">
+              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Follow Us</h4>
               {/* Social Links - Touch-friendly sizing */}
-              <div className="mt-6 md:mt-8 lg:mt-10">
-                <ul className="flex items-center justify-start md:justify-start lg:justify-center gap-4 md:gap-5 lg:gap-6">
-                  <li>
-                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                      <Facebook className="h-5 w-5" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                      <Instagram className="h-5 w-5" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <ul className="flex items-center justify-start lg:justify-end gap-3 md:gap-4">
+                <li>
+                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </li>
+              </ul>
             </AnimatedElement>
           </div>
         </div>

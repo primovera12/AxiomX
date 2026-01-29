@@ -10,31 +10,31 @@ export const brandValues: BrandValue[] = [
     id: "precision",
     label: "Precision",
     icon: "Target",
-    description: "We execute with discipline and clarity",
+    description: "We operate with a discipline that turns 'logistics' into an exact science.",
   },
   {
     id: "agility",
     label: "Agility",
     icon: "Zap",
-    description: "We respond, reroute, and adapt in real-time",
+    description: "We don't just react; we reroute and adapt at the speed of the market.",
   },
   {
     id: "reliability",
     label: "Reliability",
     icon: "Shield",
-    description: "You can build your business on us",
+    description: "We are the foundation. You can build your biggest ambitions on our infrastructure.",
   },
   {
-    id: "support",
-    label: "Support",
+    id: "impact",
+    label: "Impact",
     icon: "HeartHandshake",
-    description: "We extend your capabilities, not just your workload",
+    description: "We don't just add to your workload; we multiply your capabilities.",
   },
   {
     id: "innovation",
     label: "Innovation",
     icon: "Lightbulb",
-    description: "Embedded intelligence at every touchpoint",
+    description: "We embed intelligence at every touchpoint—because 'standard' is never enough.",
   },
 ];
 
@@ -54,38 +54,36 @@ export interface WhyAxiomSlide {
 export const whyAxiomSlides: WhyAxiomSlide[] = [
   {
     id: 1,
-    headline: "Why Axiom X?",
-    description:
-      "One platform. One partner. A single-window solution from inception to final revenue realization.",
+    headline: "The Axiom X Factor",
+    description: "One Platform. One Partner.",
     cards: [
       {
         icon: "/images/icons/idea.png",
-        title: "Challenge Status Quo",
-        text: "We challenge the status quo – Continuously seeking smarter, more efficient ways to improve and transform the business.",
+        title: "The Single-Window Advantage",
+        text: "From the first click to final revenue realization, we provide a seamless, end-to-end solution. No more fragmented vendors or data silos—just one partner, one platform, and total accountability.",
       },
       {
         icon: "/images/icons/innovation.png",
-        title: "Innovate With Purpose",
-        text: "We innovate with purpose – Bringing fresh ideas and embracing new approaches to enhance outcomes.",
+        title: "Innovation with Purpose",
+        text: "We challenge the status quo by bringing fresh, tech-forward ideas to the table. We don't just follow industry standards; we set them, continuously seeking smarter ways to transform your business outcomes.",
       },
     ],
-    note: "Our excellence, leadership, and differentiation are not just built on experience, but on a culture that drives us to constantly evolve and excel.",
+    note: "Our differentiation is built on a culture that refuses to stagnate.",
   },
   {
     id: 2,
-    headline: "Why Axiom X?",
-    description:
-      "You don't just need to outsource. You need to outsmart, outscale, and out-deliver.",
+    headline: "The Axiom X Factor",
+    description: "One Platform. One Partner.",
     cards: [
       {
         icon: "/images/icons/adaptation.png",
-        title: "Agile and Adaptable",
-        text: "We are agile and adaptable – Demonstrated in past projects where we break conventional boundaries to deliver results.",
+        title: "Proven Agility & Bold Execution",
+        text: "We thrive where others see boundaries. As demonstrated in our high-stakes work with major partners, we are agile, proactive, and bold. We don't wait for instructions—we take the initiative to push beyond expectations and deliver results.",
       },
       {
         icon: "/images/icons/iteration.png",
-        title: "Proactive and Bold",
-        text: "We are proactive and bold – Always looking ahead, taking initiative, and pushing beyond expectations.",
+        title: "A Culture of Excellence",
+        text: "Our differentiation is built on a culture that refuses to stagnate. We combine years of deep experience with a restless drive to evolve, ensuring that your operations are always powered by the latest in strategic excellence.",
       },
     ],
     note: "Our excellence, leadership, and differentiation are not just built on experience, but on a culture that drives us to constantly evolve and excel.",

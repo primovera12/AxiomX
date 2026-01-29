@@ -8,8 +8,24 @@ export interface Service {
   image: string;
 }
 
-// 5 services as shown in PDF (NO Last Mile Delivery)
+// 6 services including Last Mile Delivery
 export const services: Service[] = [
+  {
+    id: "last-mile",
+    emoji: "🚚",
+    title: "Last Mile Delivery",
+    boldText: "The promise of speed, delivered.",
+    description:
+      "From AI-based dispatch to branded delivery fleets, we make sure the last step of your customer journey reflects everything you stand for.",
+    tags: [
+      "Same-Day & Next-Day Delivery",
+      "On-Demand & Express Delivery",
+      "B2C & B2B Deliveries",
+      "Reverse Logistics",
+      "Customized delivery solutions",
+    ],
+    image: "/images/service-1.jpg",
+  },
   {
     id: "warehousing",
     emoji: "🏪",

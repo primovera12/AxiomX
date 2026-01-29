@@ -144,11 +144,11 @@ export function ContactSection() {
           </a>
 
           <a
-            href="tel:+97141234567"
+            href="tel:+97143101010"
             className="inline-block m-0 text-[14px] md:text-[20px] lg:text-[28px] bg-[#e8f8f3] py-2 px-3 md:py-[8px] md:px-[16px] lg:py-[10px] lg:px-[24px] rounded-[12px] font-medium text-black no-underline transition-all duration-300 hover:text-[#373737]"
             style={{ fontFamily: "'Alexandria', sans-serif" }}
           >
-            +971 4 123 4567
+            +971 4 3101 010
           </a>
         </AnimatedElement>
       </div>
