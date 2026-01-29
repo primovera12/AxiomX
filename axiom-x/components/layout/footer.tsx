@@ -138,23 +138,23 @@ export function Footer() {
               {/* Social Links - Touch-friendly sizing */}
               <ul className="flex items-center justify-start gap-3 md:gap-4">
                 <li>
-                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                    <Facebook className="h-5 w-5" />
+                  <a href="#" aria-label="Follow us on Facebook" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Facebook className="h-5 w-5" aria-hidden="true" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                    <Twitter className="h-5 w-5" />
+                  <a href="#" aria-label="Follow us on Twitter" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Twitter className="h-5 w-5" aria-hidden="true" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                    <Instagram className="h-5 w-5" />
+                  <a href="#" aria-label="Follow us on Instagram" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Instagram className="h-5 w-5" aria-hidden="true" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
-                    <Linkedin className="h-5 w-5" />
+                  <a href="#" aria-label="Follow us on LinkedIn" className="inline-flex items-center justify-center w-10 h-10 text-black hover:text-[#53ac71] transition-colors">
+                    <Linkedin className="h-5 w-5" aria-hidden="true" />
                   </a>
                 </li>
               </ul>

@@ -1,0 +1,8 @@
+# Robots.txt for Axiom X
+# https://axiomxgroup.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://axiomxgroup.com/sitemap.xml
