@@ -5,41 +5,34 @@ import Image from "next/image";
 
 export function OurStorySection() {
   return (
-    <section id="our-story" className="mt-[20px] md:mt-[25px] lg:mt-[10px] mb-[40px] md:mb-[50px] lg:mb-[60px]">
+    <section id="our-story" className="mt-[20px] md:mt-[25px] lg:mt-[10px] mb-[40px] md:mb-[50px] lg:mb-[100px]">
       <div className="container-axiom">
         <AnimatedElement variant="slideUp">
           <div className="story-gradient-bg p-[25px] md:p-[40px] lg:p-[60px] rounded-[16px] md:rounded-[24px] lg:rounded-[30px]">
             <div className="flex flex-col gap-6 md:gap-8 lg:gap-10">
               {/* Heading */}
-              <h2
-                className="text-white text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[110%]"
-                style={{ fontFamily: "'Alexandria', sans-serif" }}
-              >
-                Decades in the Making
-              </h2>
+              <div>
+                <h2
+                  className="text-white text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[110%]"
+                  style={{ fontFamily: "'Alexandria', sans-serif" }}
+                >
+                  Decades in the Making.
+                </h2>
+                <p className="text-[#d4fb50] text-[18px] md:text-[22px] lg:text-[26px] font-medium mt-1">
+                  Reimagined for the AI Era.
+                </p>
+              </div>
 
               {/* Body Text */}
               <div className="flex flex-col gap-5 md:gap-6 text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-relaxed text-white/90">
                 <p>
-                  Born from the complexities of global logistics, our journey began over{" "}
-                  <span className="font-bold text-[#d4fb50]">25 years</span> ago. We didn&apos;t
-                  just observe the supply chain; we lived it, managing massive infrastructures
-                  and optimizing routes for the region&apos;s most demanding carriers. This
-                  foundation gave us a unique perspective on the intersection of physical
-                  movement and digital intelligence.
+                  In <span className="font-bold text-[#d4fb50]">1997</span>, we began as Axiom Telecom. To become the Middle East&apos;s largest mobility distribution engine, we had to build what didn&apos;t yet exist: a logistics infrastructure capable of moving high-value technology with absolute precision.
                 </p>
                 <p>
-                  As the world evolved, so did we. We pivoted to AI-enhanced operations,
-                  translating decades of hard-won data into predictive models. Today, we manage
-                  over <span className="font-bold text-[#d4fb50]">$100M in inventory</span>{" "}
-                  annually, bridging the gap between legacy infrastructure and futuristic
-                  mobility solutions.
+                  For over <span className="font-bold text-[#d4fb50]">25 years</span>, we operated as the silent engine behind a multi-billion dollar industry—mastering customs clearing, resilient warehousing, and high-volume fulfillment. At our peak, we were managing thousands of deliveries every day, protecting and moving over <span className="font-bold text-[#d4fb50]">$100M in inventory</span> value every month. We didn&apos;t just follow market standards; we built the benchmark for speed and reliability in the region&apos;s most demanding sector.
                 </p>
                 <p>
-                  We ensure that our partners don&apos;t just survive the transition—they lead
-                  it. By combining deep operational wisdom with cutting-edge artificial
-                  intelligence, we are rewriting the rules of what&apos;s possible in modern
-                  logistics.
+                  Today, that engine has evolved. <span className="font-bold text-white">Welcome to Axiom X.</span> We have unbundled our decades of accumulated expertise to serve you. Axiom X is a platform-based, AI-enhanced operational partner designed for the next generation of B2B scale-ups, telcos, and e-commerce leaders. The &quot;X&quot; represents our commitment to the <span className="font-bold text-[#d4fb50]">X Factor</span>—a level of precision and insight that is, quite simply, unlike others. We have mastered the complexity of high-value operations so that you don&apos;t have to.
                 </p>
               </div>
 

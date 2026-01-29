@@ -29,15 +29,16 @@ export const services: Service[] = [
   {
     id: "warehousing",
     emoji: "🏪",
-    title: "Warehousing & Inventory",
+    title: "Warehousing & Inventory Management",
     boldText: "Storage built for action, not stagnation.",
     description:
       "From inventory intelligence to optimized flow, our fulfillment-first warehouses are ready for your growth — and your complexity.",
     tags: [
-      "29 warehouses, 122K+ sqft capacity",
-      "99.9% inventory accuracy",
-      "Real-time dashboards via WMS integrations",
-      "Modular zoning, temperature-controlled environments",
+      "Inventory Management",
+      "Storage Solutions",
+      "Inbound & Outbound",
+      "Order Fulfillment",
+      "Customized 3PL/4PL Solutions",
     ],
     image: "/images/service-warehouse.png",
   },

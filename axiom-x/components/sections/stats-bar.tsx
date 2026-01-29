@@ -4,24 +4,25 @@ import { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 
-// Stats data matching the PDF design
+// Stats data matching the document
 const stats = [
-  { id: 1, value: 2, suffix: "M+", label: "Orders Delivered", sublabel: "Yearly" },
-  { id: 2, value: 600, suffix: "K+", label: "Monthly Upsells", sublabel: "Activated" },
-  { id: 3, value: 98, suffix: "%", label: "SLA Delivery", sublabel: "Rate" },
-  { id: 4, value: 140, suffix: "K", label: "Tech Support", sublabel: "Cases Resolved" },
+  { id: 1, value: 20, suffix: "+", label: "Years", sublabel: "Operational Excellence" },
+  { id: 2, value: 2, suffix: "M+", label: "Orders / Year", sublabel: "Delivered" },
+  { id: 3, value: 98, suffix: "%+", label: "SLA", sublabel: "Achievement" },
+  { id: 4, value: 160, suffix: "K+", label: "Technical Cases", sublabel: "Resolutions / Yearly" },
   { id: 5, value: 99.9, suffix: "%", label: "Inventory", sublabel: "Accuracy", decimals: 1 },
-  { id: 6, value: 29, suffix: "+", label: "Warehousing", sublabel: "Facilities" },
+  { id: 6, value: 5, suffix: "", label: "ISO Certifications", sublabel: "Compliance" },
 ];
 
 interface CounterProps {
   value: number;
   suffix: string;
+  prefix?: string;
   decimals?: number;
   isInView: boolean;
 }
 
-function Counter({ value, suffix, decimals = 0, isInView }: CounterProps) {
+function Counter({ value, suffix, prefix = "", decimals = 0, isInView }: CounterProps) {
   const [count, setCount] = useState(0);
   const hasAnimated = useRef(false);
 
@@ -49,6 +50,7 @@ function Counter({ value, suffix, decimals = 0, isInView }: CounterProps) {
 
   return (
     <span>
+      {prefix}
       {decimals > 0 ? count.toFixed(decimals) : Math.floor(count)}
       {suffix}
     </span>
@@ -77,6 +79,7 @@ export function StatsBar() {
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
+                  prefix={stat.prefix}
                   decimals={stat.decimals}
                   isInView={inView}
                 />
@@ -106,6 +109,7 @@ export function StatsBar() {
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
+                  prefix={stat.prefix}
                   decimals={stat.decimals}
                   isInView={inView}
                 />
