@@ -1,16 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
+import { X } from "lucide-react";
 
 export function ShipmentTrackingSection() {
   const [trackingNumber, setTrackingNumber] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTrackingNumber, setActiveTrackingNumber] = useState("");
 
-  // Placeholder - API integration pending
   const handleTrackingSubmit = () => {
-    // TODO: Integrate with tracking API when documentation is available
+    if (trackingNumber.trim()) {
+      setActiveTrackingNumber(trackingNumber.trim());
+      setIsModalOpen(true);
+    }
   };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setActiveTrackingNumber("");
+  };
+
+  const getTrackingUrl = (pmId: string) => {
+    return `https://gcc.fareye.co/track.html?com_code=axm&pm_Id=${encodeURIComponent(pmId)}&track_page_version=v1&only_latest=false&embed=true`;
+  };
+
+  // Lock body scroll and handle escape key when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === "Escape") closeModal();
+      };
+
+      window.addEventListener("keydown", handleEscape);
+      return () => {
+        document.body.style.overflow = "";
+        window.removeEventListener("keydown", handleEscape);
+      };
+    }
+  }, [isModalOpen]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -84,6 +115,52 @@ export function ShipmentTrackingSection() {
         </AnimatedElement>
 
       </div>
+
+      {/* Tracking Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8"
+          onClick={closeModal}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+
+          {/* Modal Content */}
+          <div
+            className="relative w-full h-full max-w-[95vw] max-h-[90vh] sm:max-w-[90vw] sm:max-h-[85vh] md:max-w-4xl md:max-h-[80vh] lg:max-w-5xl bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] shadow-2xl flex flex-col overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-4 border-b border-gray-200 bg-gray-50 flex-shrink-0">
+              <div>
+                <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold text-[#19342c]">
+                  Shipment Tracking
+                </h3>
+                <p className="text-[12px] sm:text-[13px] md:text-[14px] text-gray-500 mt-0.5">
+                  Tracking ID: <span className="font-medium text-[#3f7537]">{activeTrackingNumber}</span>
+                </p>
+              </div>
+              <button
+                onClick={closeModal}
+                className="p-2 sm:p-2.5 rounded-full hover:bg-gray-200 transition-colors text-gray-500 hover:text-gray-700"
+                aria-label="Close modal"
+              >
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            </div>
+
+            {/* Iframe Container */}
+            <div className="flex-1 w-full min-h-0">
+              <iframe
+                src={getTrackingUrl(activeTrackingNumber)}
+                className="w-full h-full border-none"
+                title="Shipment Tracking"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CSS for animated gradient background */}
       <style jsx>{`
