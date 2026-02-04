@@ -16,7 +16,7 @@ export function OurStorySection() {
                   className="text-white text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[110%]"
                   style={{ fontFamily: "'Alexandria', sans-serif" }}
                 >
-                  Decades in the Making.
+                  Our Story: Decades in the Making.
                 </h2>
                 <p className="text-[#d4fb50] text-[18px] md:text-[22px] lg:text-[26px] font-medium mt-1">
                   Reimagined for the AI Era.

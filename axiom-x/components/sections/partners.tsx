@@ -6,7 +6,7 @@ import { AnimatedElement } from "@/components/shared/section-wrapper";
 // Partner logos
 const partners = [
   { id: 1, logo: "/images/l-1.png", name: "Partner 1", type: "long" },
-  { id: 2, logo: "/images/l-2.png", name: "Partner 2", type: "box" },
+  { id: 2, logo: "/images/partners/du-seeklogo.png", name: "du", type: "box" },
   { id: 3, logo: "/images/l-11.png", name: "Partner 3", type: "long" },
   { id: 4, logo: "/images/l-3.png", name: "Partner 4", type: "long" },
   { id: 5, logo: "/images/l-4.png", name: "Partner 5", type: "long" },
@@ -16,7 +16,7 @@ const partners = [
   { id: 9, logo: "/images/l-7.png", name: "Partner 9", type: "box" },
   { id: 10, logo: "/images/l-8.png", name: "Partner 10", type: "long" },
   { id: 11, logo: "/images/l-9.jpeg", name: "Partner 11", type: "long" },
-  { id: 12, logo: "/images/l-10.png", name: "Partner 12", type: "box" },
+  { id: 12, logo: "/images/partners/VM Logo.png", name: "VM", type: "box" },
   { id: 13, logo: "/images/l-13.png", name: "Partner 13", type: "long" },
   { id: 14, logo: "/images/l-12.png", name: "Partner 14", type: "box" },
   { id: 15, logo: "/images/l-20.png", name: "Partner 15", type: "long" },

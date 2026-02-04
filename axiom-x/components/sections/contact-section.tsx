@@ -34,7 +34,7 @@ const contactInfo = [
   {
     icon: Globe,
     title: "Global Presence",
-    value: "UAE | KSA | Oman | Kuwait",
+    value: "UAE",
     href: null,
   },
   {

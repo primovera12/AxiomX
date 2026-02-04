@@ -11,7 +11,7 @@ const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#why-axiom", label: "Why AxiomX" },
   { href: "#contact", label: "Contact" },
-  { href: "#about", label: "About" },
+  { href: "#our-story", label: "About" },
 ];
 
 export function Header() {
