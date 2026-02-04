@@ -106,7 +106,10 @@ export function HeroSection() {
             <div className="w-full lg:w-[96%] lg:mx-auto">
               <div className="bg-[#fafbfa] p-4 md:p-5 lg:p-6 rounded-[12px] md:rounded-[14px] lg:rounded-[15px] -mt-[40px] md:-mt-[55px] lg:-mt-[75px] relative z-10">
                 {/* Title */}
-                <h3 className="text-[14px] md:text-[15px] lg:text-[16px] font-bold mb-4 md:mb-5 lg:mb-6 text-black text-center">
+                <h3
+                  className="text-[28px] md:text-[36px] lg:text-[42px] font-bold mb-4 md:mb-5 lg:mb-6 text-black text-center leading-[110%]"
+                  style={{ fontFamily: "'Alexandria', sans-serif" }}
+                >
                   Service Snapshot
                 </h3>
 
