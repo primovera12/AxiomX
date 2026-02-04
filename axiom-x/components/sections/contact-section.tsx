@@ -33,7 +33,7 @@ const services = [
 const contactInfo = [
   {
     icon: Globe,
-    title: "Global Presence",
+    title: "Our Headquarters",
     value: "UAE",
     href: null,
   },
@@ -46,8 +46,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "+971 4 3101 010",
-    href: "tel:+97143101010",
+    value: null,
+    href: null,
+    phones: [
+      { label: "UAE Toll-free", number: "80029466", href: "tel:80029466" },
+      { label: "International", number: "+971 430 75607", href: "tel:+97143075607" },
+    ],
   },
 ];
 
@@ -114,7 +118,19 @@ export function ContactSection() {
                     <h3 className="text-[13px] font-semibold text-[#19342c] uppercase tracking-wide">
                       {item.title}
                     </h3>
-                    {item.href ? (
+                    {item.phones ? (
+                      <div className="mt-1 space-y-1">
+                        {item.phones.map((phone) => (
+                          <a
+                            key={phone.number}
+                            href={phone.href}
+                            className="block text-gray-600 hover:text-[#3f7537] transition-colors text-[15px]"
+                          >
+                            <span className="text-[#19342c] font-medium">{phone.label}:</span> {phone.number}
+                          </a>
+                        ))}
+                      </div>
+                    ) : item.href ? (
                       <a
                         href={item.href}
                         className="text-gray-600 mt-1 hover:text-[#3f7537] transition-colors text-[15px]"
