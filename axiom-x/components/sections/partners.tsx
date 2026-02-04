@@ -22,6 +22,25 @@ const partners = [
   { id: 15, logo: "/images/l-20.png", name: "Partner 15", type: "long" },
 ];
 
+// Render a single logo item
+function LogoItem({ partner }: { partner: typeof partners[0] }) {
+  return (
+    <div className="flex-shrink-0 px-5 md:px-7 lg:px-10 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]">
+      <Image
+        src={partner.logo}
+        alt={partner.name}
+        width={150}
+        height={100}
+        className={
+          partner.type === "long"
+            ? "w-auto max-h-[40px] md:max-h-[50px] lg:max-h-[60px]"
+            : "w-auto max-h-[55px] md:max-h-[70px] lg:max-h-[85px]"
+        }
+      />
+    </div>
+  );
+}
+
 export function PartnersSection() {
   return (
     <section id="partners" className="pt-[40px] pb-[80px] md:pt-[60px] md:pb-[90px] lg:pt-[40px] lg:pb-[100px]">
@@ -35,69 +54,46 @@ export function PartnersSection() {
         </h2>
       </AnimatedElement>
 
-      {/* Partners Wrapper - Responsive padding and height */}
-      <div className="bg-[#f7f7f7] py-[20px] md:py-[30px] lg:py-[40px] relative overflow-hidden">
-        {/* Marquee - Edge to edge infinite loop */}
-        <div className="flex items-center overflow-hidden">
-            {/* Marquee animation container - Responsive height */}
-            <div className="flex animate-marquee items-center h-[80px] md:h-[120px] lg:h-[160px]">
-              {/* First set of logos */}
-              {partners.map((partner) => (
-                <div
-                  key={partner.id}
-                  className="flex-shrink-0 px-5 md:px-7 lg:px-10 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
-                >
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={150}
-                    height={100}
-                    className={
-                      partner.type === "long"
-                        ? "w-auto max-h-[40px] md:max-h-[50px] lg:max-h-[60px]"
-                        : "w-auto max-h-[55px] md:max-h-[70px] lg:max-h-[85px]"
-                    }
-                  />
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {partners.map((partner) => (
-                <div
-                  key={`dup-${partner.id}`}
-                  className="flex-shrink-0 px-5 md:px-7 lg:px-10 flex items-center justify-center h-[80px] md:h-[120px] lg:h-[160px]"
-                >
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={150}
-                    height={100}
-                    className={
-                      partner.type === "long"
-                        ? "w-auto max-h-[40px] md:max-h-[50px] lg:max-h-[60px]"
-                        : "w-auto max-h-[55px] md:max-h-[70px] lg:max-h-[85px]"
-                    }
-                  />
-                </div>
-              ))}
-            </div>
+      {/* Partners Wrapper */}
+      <div className="bg-[#f7f7f7] py-[20px] md:py-[30px] lg:py-[40px] overflow-hidden">
+        {/* Marquee container */}
+        <div className="marquee-container h-[80px] md:h-[120px] lg:h-[160px]">
+          {/* First track */}
+          <div className="marquee-track">
+            {partners.map((partner) => (
+              <LogoItem key={partner.id} partner={partner} />
+            ))}
+          </div>
+          {/* Second track (duplicate for seamless loop) */}
+          <div className="marquee-track" aria-hidden="true">
+            {partners.map((partner) => (
+              <LogoItem key={`dup-${partner.id}`} partner={partner} />
+            ))}
           </div>
         </div>
+      </div>
 
-      {/* CSS for marquee animation */}
+      {/* CSS for true infinite marquee */}
       <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translate3d(0, 0, 0);
-          }
-          100% {
-            transform: translate3d(-50%, 0, 0);
-          }
+        .marquee-container {
+          display: flex;
+          width: 100%;
+          position: relative;
         }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
+        .marquee-track {
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          animation: scroll 30s linear infinite;
           will-change: transform;
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
+        }
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-100%);
+          }
         }
       `}</style>
     </section>
