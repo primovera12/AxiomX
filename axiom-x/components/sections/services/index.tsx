@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { services } from "@/data/services";
 import { cn } from "@/lib/utils";
@@ -8,6 +8,36 @@ import { AnimatedElement } from "@/components/shared/section-wrapper";
 
 export function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+  // Auto-open accordion from URL hash (e.g., #services-last-mile)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith("#services-")) {
+        const serviceId = hash.replace("#services-", "");
+        const index = services.findIndex((s) => s.id === serviceId);
+        if (index !== -1) {
+          setActiveIndex(index);
+          // Scroll to services section
+          const element = document.getElementById("services");
+          if (element) {
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+          }
+        }
+      }
+    };
+
+    // Check on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   return (
     <section id="services" className="pb-[30px] md:pb-[45px] lg:pb-[10px]">

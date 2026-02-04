@@ -1,6 +1,8 @@
+import { Truck, Warehouse, Phone, Building2, Wrench, TrendingUp, LucideIcon } from "lucide-react";
+
 export interface Service {
   id: string;
-  emoji: string;
+  icon: LucideIcon;
   title: string;
   boldText: string;
   description: string;
@@ -12,7 +14,7 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "last-mile",
-    emoji: "🚚",
+    icon: Truck,
     title: "Last Mile Delivery",
     boldText: "The promise of speed, delivered.",
     description:
@@ -28,7 +30,7 @@ export const services: Service[] = [
   },
   {
     id: "warehousing",
-    emoji: "🏪",
+    icon: Warehouse,
     title: "Warehousing & Inventory Management",
     boldText: "Storage built for action, not stagnation.",
     description:
@@ -44,7 +46,7 @@ export const services: Service[] = [
   },
   {
     id: "call-center",
-    emoji: "📞",
+    icon: Phone,
     title: "Call Center Support",
     boldText: "Where customer empathy meets automated efficiency.",
     description:
@@ -59,7 +61,7 @@ export const services: Service[] = [
   },
   {
     id: "back-office",
-    emoji: "💼",
+    icon: Building2,
     title: "Back Office Services",
     boldText: "Because the backend shouldn't slow you down.",
     description:
@@ -73,7 +75,7 @@ export const services: Service[] = [
   },
   {
     id: "vas",
-    emoji: "📦",
+    icon: Wrench,
     title: "Value-Added Services (VAS)",
     boldText: "Your packaging, presentation, and post-sale excellence — all handled.",
     description:
@@ -88,7 +90,7 @@ export const services: Service[] = [
   },
   {
     id: "upselling",
-    emoji: "📈",
+    icon: TrendingUp,
     title: "Upselling Revenue Programs",
     boldText: "We don't just fulfill demand — we create it.",
     description:

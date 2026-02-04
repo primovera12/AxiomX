@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { AnimatedElement } from "@/components/shared/section-wrapper";
 import { motion } from "framer-motion";
+import { services } from "@/data/services";
 
 const heroContent = {
   headline: "Are you Searching\nfor X ?",
@@ -103,42 +103,30 @@ export function HeroSection() {
       <AnimatedElement variant="slideUp" delay={0.3}>
         <div className="container-axiom">
           <div className="flex justify-center py-[3px] px-[10px] md:p-0">
-            <div className="w-full max-w-[500px] lg:max-w-none lg:w-7/12 lg:ml-auto lg:pr-20">
-              <div className="bg-[#fafbfa] p-4 px-4 md:p-5 md:px-5 lg:px-6 flex gap-3 md:gap-4 lg:gap-5 rounded-[12px] md:rounded-[14px] lg:rounded-[15px] -mt-[40px] md:-mt-[55px] lg:-mt-[75px] relative z-10">
-                {/* X Logo Icon - Responsive */}
-                <div className="w-[50px] md:w-[60px] lg:w-[70px] flex-shrink-0">
-                  <Image
-                    src="/images/logo/x-logo.svg"
-                    alt="Axiom X"
-                    width={70}
-                    height={70}
-                    className="w-full"
-                  />
-                </div>
+            <div className="w-full lg:w-[96%] lg:mx-auto">
+              <div className="bg-[#fafbfa] p-4 md:p-5 lg:p-6 rounded-[12px] md:rounded-[14px] lg:rounded-[15px] -mt-[40px] md:-mt-[55px] lg:-mt-[75px] relative z-10">
+                {/* Title */}
+                <h3 className="text-[14px] md:text-[15px] lg:text-[16px] font-bold mb-4 md:mb-5 lg:mb-6 text-black text-center">
+                  Service Snapshot
+                </h3>
 
-                {/* Snapshot Info */}
-                <div>
-                  <h3 className="text-[13px] md:text-[14px] lg:text-[15px] font-bold mb-2 md:mb-2.5 text-black">
-                    Service Snapshot
-                  </h3>
-                  <p className="text-black text-[9px] md:text-[10px] leading-[120%]">
-                    Axiom x isn&apos;t just a service provider we&apos;re your
-                    operational growth engine. Our AI-augmented ecosystem brings
-                    together logistics, warehousing, customer engagement, and
-                    back-office performance into one unified infrastructure designed
-                    to move as fast as your ambition.
-                  </p>
-                  <div className="mt-[10px] md:mt-[12px] lg:mt-[15px]">
-                    <Link
-                      href="#services"
-                      className="flex items-center gap-[8px] md:gap-[10px] lg:gap-[12px] text-[#53ac70] font-bold text-[10px] md:text-[11px] group"
-                    >
-                      See more
-                      <span className="w-5 h-5 md:w-6 md:h-6 bg-[#53ac70] text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <ArrowRight className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                      </span>
-                    </Link>
-                  </div>
+                {/* 6-column service grid */}
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 lg:gap-6">
+                  {services.map((service) => {
+                    const Icon = service.icon;
+                    return (
+                      <a
+                        key={service.id}
+                        href={`#services-${service.id}`}
+                        className="flex flex-col items-center text-center group cursor-pointer"
+                      >
+                        <Icon className="w-[28px] h-[28px] md:w-[32px] md:h-[32px] lg:w-[40px] lg:h-[40px] mb-2 text-[#334045] group-hover:text-[#3f7537] group-hover:scale-110 transition-all" />
+                        <span className="text-[9px] md:text-[10px] lg:text-[11px] text-black font-medium leading-tight group-hover:text-[#3f7537] transition-colors">
+                          {service.title}
+                        </span>
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
