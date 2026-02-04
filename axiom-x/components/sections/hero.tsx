@@ -124,7 +124,7 @@ export function HeroSection() {
                         className="flex flex-col items-center text-center group cursor-pointer"
                       >
                         <Icon className="w-[28px] h-[28px] md:w-[32px] md:h-[32px] lg:w-[40px] lg:h-[40px] mb-2 text-[#334045] group-hover:text-[#3f7537] group-hover:scale-110 transition-all" />
-                        <span className="text-[9px] md:text-[10px] lg:text-[11px] text-black font-medium leading-tight group-hover:text-[#3f7537] transition-colors">
+                        <span className="text-[14px] lg:text-[16px] text-black font-medium leading-tight group-hover:text-[#3f7537] transition-colors">
                           {service.title}
                         </span>
                       </a>
